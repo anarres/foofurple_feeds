@@ -1,81 +1,97 @@
 from jinja2 import Template
+import re
 import utils_foo
 
-item_template = """
-<div class='streamItem'>
-    <div class="feed_icon">
-        <a href='{{ feed_link }}'>
-            <img src='{{ feed_logo }}' alt='{{ feed_title }}' style="width:60px;clear:both;" />
-        </a>
-    </div> <!--.feed_icon-->
-    <a href='{{ entry_link }}'>{{ entry_title }}</a> by {{ entry_author }}, {{ entry_date }}<br>
 
-    <br>
+_slugify_strip_re = re.compile(r'[^\w\s-]')
+_slugify_hyphenate_re = re.compile(r'[-\s]+')
+def _slugify(value):
+    """
+    Normalizes string, converts to lowercase, removes non-alpha characters,
+    and converts spaces to hyphens.
+    
+    From Django's "django/template/defaultfilters.py".
+    """
+    import unicodedata
+    if not isinstance(value, unicode):
+        value = unicode(value)
+    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
+    value = unicode(_slugify_strip_re.sub('', value).strip().lower())
+    return _slugify_hyphenate_re.sub('-', value)
 
-    {{ entry_content }}
-    <div class='read_more'>
-        <a href='{{ entry_link }}'>Read more</a>
-    </div> <!--.read_more-->
-</div>
+
+
+item_template = open('item_template','r').read()
+page_template =  open('page_template','r').read()
+
+class SetOfFeeds(object):
+    """ A 'stream' or set of feeds grouped together """
+
+    def __init__(self, title, feeds_list):
+        self.title = title
+        self.feeds_list = feeds_list
+
+    def __str__(self):
+        return "SetOfFeeds object with title: %s" % self.title
+
+    def get_urls(self):
+        urls = []
+        for f in self.feeds_list:
+            urls.append(f['url'])
+        return urls
+
+    def get_filename(self):
+        return "%s.html" % _slugify(self.title)
+
+
+
+feeds1 = SetOfFeeds('Feeds page 1', 
+    [{'name':'Captain awkward','url':'http://www.captainawkward.com/feed'}, 
+    {'name':'BoingBoing','url':'http://boingboing.net/feed'}])
+
+feeds2 = SetOfFeeds('Feeds page 2 - auf Deutsch', 
+    [{'name':'SWR Wissen','url':'http://www1.swr.de/podcast/xml/swr2/wissen.xml'}, 
+    {'name':'DW.DW Journal Reporer','url':'http://rss.dw.de/xml/podcast_journal-reporter'}])
+
+sets_of_feeds = [feeds1, feeds2]
+
+nav_template = """<ul>%s<li><a href='about.html'>About</a></li></ul>"""
+html = ""
+for s in sets_of_feeds:
+    html += """<li><a href='%s'>%s</a></li>""" % (s.get_filename(), s.title)
+nav = nav_template % html
+
+t = Template(item_template)
+t2 = Template(page_template)
+
+for s in sets_of_feeds:
+
+    parsed_datums = utils_foo.feedcache_foo(s.get_urls())
+    entry_info_objects = utils_foo.get_info(parsed_datums)
+    items_html = ""
+    for e in entry_info_objects:
+        items_html += t.render( e.get_dict() )
+    output_html = t2.render({'main_content':items_html, 'title':s.title, 'nav':nav}) 
+
+    f = open(s.get_filename(), 'w')
+    f.write(output_html)
+    f.close()
 """
+############# FEEDS2
 
-page_template = """
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Super awesome fun custom feed reader</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<div id="nav">
-<ul>
-    <li><a href="">Alligators</a></li>
-    <li><a href="">Some other stuff</a></li>
-    <li><a href="">Gazelles</a></li>
-    <li><a href="">Aardvarks</a></li>
-</ul>
-</div> <!--#nav-->
-<div id="header">
-<h1>Super awesome fun custom feed reader</h1>
-</div> <!--#header-->
-<div id="main">
-
-{{ main_content }}
-
-</div> <!--#main-->
-<div id="footer">
-<p>This is the bottom of the page. Hope you've enjoyed reading.</p>
-</div> <!--#footer-->
-</body>
-</html>"""
-
-urls = ['http://www.captainawkward.com/feed/', 'http://www.feministactioncambridge.wordpress.com/feed/', 'http://boingboing.net/feed', 'http://identi.ca/api/statuses/public_timeline.rss', 'http://www1.swr.de/podcast/xml/swr2/wissen.xml']
-
-parsed_datums = utils_foo.let_feedcache_do_its_thing(urls)
-entry_info_objects = utils_foo.get_entry_info_objects( parsed_datums )
-
-
-
-#entry_info_objects = entry_info_objects.sort(key=lambda e: e.date)
-
-
-
-
-
+parsed_datums2 = utils_foo.feedcache_foo(feeds2)
+entry_info_objects2 = utils_foo.get_info( parsed_datums2 )
 t = Template(item_template)
 
 items_html = ""
-for e in entry_info_objects:
+for e in entry_info_objects2:
     items_html += t.render( e.get_dict() )
 
 t2 = Template(page_template)
 
 output_html = t2.render({'main_content':items_html}) 
 
-f = open('output.html', 'w')
+f = open('feeds2.html', 'w')
 f.write(output_html)
 f.close()
-
-
-
+"""

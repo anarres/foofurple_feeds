@@ -1,0 +1,15 @@
+<div class='streamItem'>
+    <div class="feed_icon">
+        <a href='{{ feed_link }}'>
+            <img src='{{ feed_logo }}' alt='{{ feed_title }}' style="width:60px;clear:both;" />
+        </a>
+    </div> <!--.feed_icon-->
+    <div class='item_main'>
+        <a href='{{ entry_link }}'>{{ entry_title }}</a> by {{ entry_author }}, {{ entry_date }}
+        <br>
+        {{ entry_content }}
+        <div class='read_more'>
+            <a href='{{ entry_link }}'>Read more</a>
+        </div> <!--.read_more-->
+    </div> <!--.item_main-->
+</div>

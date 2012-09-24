@@ -103,12 +103,20 @@ a:hover {
     border-radius: 5px;
 }
 div.feed_icon {
-    width: 100px;
+    width: 80px;
     float: left;
+}
+div.feed_icon img {
+    max-width: 60px;
+    height: auto;
 }
 div.item_main {
     width: 800px;
     margin-left: 100px;
+}
+div.item_main img {
+    max-width: 200px;
+    height: auto;
 }
 div.wp-caption {
     font-size: 0.8em;

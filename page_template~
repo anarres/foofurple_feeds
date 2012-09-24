@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>{{ title }}</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="nav">
+<ul>
+    <li><a href="">Alligators</a></li>
+    <li><a href="">Some other stuff</a></li>
+    <li><a href="">Gazelles</a></li>
+    <li><a href="">About</a></li>
+</ul>
+</div> <!--#nav-->
+<div id="header">
+<h1>{{ title }}</h1>
+</div> <!--#header-->
+<div id="main">
+
+{{ main_content }}
+
+</div> <!--#main-->
+<div id="footer">
+<p>This is the bottom of the page. Hope you've enjoyed reading.</p>
+</div> <!--#footer-->
+</body>
+</html>

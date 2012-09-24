@@ -113,7 +113,7 @@ def get_entry_date(e):
 """
 "
 """
-def let_feedcache_do_its_thing(urls=[]):
+def feedcache_foo(urls=[]):
     """ Returns a list containing parsed data for each feed url """
     print 'Saving feed data to ./.feedcache'
     storage = shelve.open('.feedcache')
