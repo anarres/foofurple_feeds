@@ -8,10 +8,7 @@
         <div class='item_meta'>
             <a href='{{ entry_link }}'>{{ entry_title }}</a> by {{ entry_author }}, {{ entry_date }}
         </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            {{ entry_description }}
-        </div> <!--.item_main_main-->
+        {{ entry_description }} <br>
 
         <div class='enclosures'>
             {% for i in images %}

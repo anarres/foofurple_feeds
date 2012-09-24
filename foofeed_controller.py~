@@ -70,28 +70,11 @@ for s in sets_of_feeds:
     entry_info_objects = utils_foo.get_info(parsed_datums)
     items_html = ""
     for e in entry_info_objects:
+        print e.get_dict().keys()
         items_html += t.render( e.get_dict() )
     output_html = t2.render({'main_content':items_html, 'title':s.title, 'nav':nav}) 
 
     f = open(s.get_filename(), 'w')
     f.write(output_html)
     f.close()
-"""
-############# FEEDS2
 
-parsed_datums2 = utils_foo.feedcache_foo(feeds2)
-entry_info_objects2 = utils_foo.get_info( parsed_datums2 )
-t = Template(item_template)
-
-items_html = ""
-for e in entry_info_objects2:
-    items_html += t.render( e.get_dict() )
-
-t2 = Template(page_template)
-
-output_html = t2.render({'main_content':items_html}) 
-
-f = open('feeds2.html', 'w')
-f.write(output_html)
-f.close()
-"""
