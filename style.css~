@@ -1,0 +1,120 @@
+/* Overall layout */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    max-width:1000px;
+    margin: 0px auto;
+    background-color: #ffffff;
+}
+#main {
+    max-width: 1100px;
+    min-width: 100px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    float: left;
+}
+#main img {
+    margin: 5px;
+    //width:  150px;
+    //height: auto;
+}
+#footer {
+    clear: both;
+}
+
+/* Typography */
+body {
+    font-family: Helvetica, sans-serif;
+    color: #1e0f01;
+}
+h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+h2, h3, h4, h5, h6 {
+    font-size: 1.3em;
+    font-weight: normal;
+    padding: 5px 0px;
+}
+p {
+    line-height: 1.2em;
+    padding: 3px 0px;
+}
+a {
+    color: #056c9b;
+    font-weight: normal;
+    text-decoration: none;
+}
+a:hover {
+    color: #056fec;
+}
+
+/* Nav */
+ 
+#nav {
+    margin: 10px 0px;
+}
+#nav li {
+    display: inline;
+    list-style: none;
+}
+#nav a {
+    padding: 3px 10px;
+    background-color: #ffffff;
+    border-radius: 3px;
+
+}
+
+/* Header */
+
+#header {
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+#header p {
+    color: grey;
+    padding: 0px;
+    margin-right: 5px;
+}
+
+/* Widgets */
+
+.widget {
+    font-size: 0.9em;
+    padding-left: 50px;
+}
+
+/* Footer */
+
+#footer {
+    font-size: 0.85em;
+    text-align: center;
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+/* Specific styles */
+.streamItem {
+    border-bottom: 3px solid #dddddd;
+    padding-top: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+div.feed_icon {
+    width: 100px;
+    float: left;
+}
+div.item_main {
+    width: 800px;
+    margin-left: 100px;
+}
+div.wp-caption {
+    font-size: 0.8em;
+}
+div.read_more {
+    padding-top: 40px;
+    font-size: 0.8em;
+    text-align: right;
+}
