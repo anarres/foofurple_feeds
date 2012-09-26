@@ -1,0 +1,37 @@
+feeds = [
+
+{ 'feedname':'Blogs, in general',
+'feeds':
+[{'name':'Captain awkward','url':'http://www.captainawkward.com/feed'}, 
+{'name':'BoingBoing','url':'http://boingboing.net/feed'}] },
+
+
+{ 'feedname':'Blogs, less frequently updated',
+'feeds':
+[{'name':'Hoyden About Town','url':'http://hoydenabouttown.com/feed/'}, 
+{'name':'Feminist Action Cambridge','url':'http://www.feministactioncambridge.wordpress.com/feed'}] },
+
+
+
+{ 'feedname':'Blogs, in general',
+'feeds':
+[{'name':'Captain awkward','url':'http://www.captainawkward.com/feed'}, 
+{'name':'BoingBoing','url':'http://boingboing.net/feed'}] },
+
+
+{ 'feedname':'Blogs, in general',
+'feeds':
+[{'name':'Captain awkward','url':'http://www.captainawkward.com/feed'}, 
+{'name':'BoingBoing','url':'http://boingboing.net/feed'}] },
+
+
+
+{ 'feedname':'Blogs, in general',
+'feeds':
+[{'name':'Captain awkward','url':'http://www.captainawkward.com/feed'}, 
+{'name':'BoingBoing','url':'http://boingboing.net/feed'}] },
+
+
+
+
+]

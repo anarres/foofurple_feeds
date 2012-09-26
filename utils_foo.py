@@ -8,7 +8,7 @@ CLASSES FOR PUTTING FEED DATA INTO THE FORMAT I WANT TO DISPLAY,
 (NOTHING TO DO WITH FEEDPARSER OR FEEDCACHE)
 """
 class EntryInfo(object):
-    def __init__(self, feed_obj, link, title, author, description, content, date, images, audio_video):
+    def __init__(self, feed_obj, link, title, author, description, content, date, images, audio, video):
         self.feed_obj = feed_obj
         self.link = link
         self.title = title
@@ -16,15 +16,16 @@ class EntryInfo(object):
         self.description = description
         self.content = content
         self.date = date
-        self.nice_date = time.asctime(date)
-        self.images = images                 # A list of urls
-        self.audio_video = audio_video       # A list of urls
+        self.nice_date = time.strftime("%a, %d %b %Y", date)
+        self.images = images               # A list of urls
+        self.audio = audio                 # A list of urls
+        self.video = video                 # A list of urls
 
     def __str__(self):
         return "EntryInfo object, title: %s." % self.title
 
     def get_dict(self):
-        my_dict = {'entry_link':self.link, 'entry_title':self.title, 'entry_author':self.author, 'entry_description':self.description, 'entry_content':self.content, 'entry_date':self.nice_date, 'feed_link':self.feed_obj.link, 'feed_title':self.feed_obj.title, 'feed_logo':self.feed_obj.logo, 'images':self.images, 'audio_video':self.audio_video, 'test':[1,2,3,4,5]}
+        my_dict = {'entry_link':self.link, 'entry_title':self.title, 'entry_author':self.author, 'entry_description':self.description, 'entry_content':self.content, 'entry_date':self.nice_date, 'feed_link':self.feed_obj.link, 'feed_title':self.feed_obj.title, 'feed_logo':self.feed_obj.logo, 'images':self.images, 'audio':self.audio, 'video':self.video}
 
         if self.content == 0:
             my_dict['entry_content'] = "<p>%s</p>" % self.description
@@ -37,7 +38,6 @@ class FeedInfo(object):
         self.logo = logo     
     def __str__(self):
         return "FeedInfo object: title: %s, link: %s, logo: %s." % (self.title, self.link, self.logo)
-
 
 
 """
@@ -65,7 +65,10 @@ def get_feed_logo(feed):
         try:
             return feed.image.href
         except:
-            return "FEED LOGO UNKNOWN"
+            try:
+                return feed.image
+            except:
+                return "FEED LOGO UNKNOWN"
 
 def get_entry_link(e):
     """ Takes a feedparser entry object """
@@ -122,14 +125,22 @@ def get_images(e):
             images.append(enclo.url)
     return images
 
-def get_audio_video(e):
+def get_audio(e):
     """ Returns a list of urls """
     urls = []
     for enclo in e.enclosures:
-        if enclo.type[:5] == 'audio' or enclo.type[:5] == 'video':
+        if enclo.type[:5] == 'audio':
             urls.append(enclo.url)
-    #print urls
     return urls
+
+def get_video(e):
+    """ Returns a list of urls """
+    urls = []
+    for enclo in e.enclosures:
+        if enclo.type[:5] == 'video':
+            urls.append(enclo.url)
+    return urls
+
 
 """
 "
@@ -155,7 +166,7 @@ def get_info( parsed_datums ):
         feed_info_obj = FeedInfo( get_feed_link(f), get_feed_title(f), get_feed_logo(f) )
 
         for e in d.entries:
-            e_info_obj = EntryInfo( feed_info_obj, get_entry_link(e), get_entry_title(e), get_entry_author(e), get_entry_description(e), get_entry_content(e), get_entry_date(e), get_images(e), get_audio_video(e) )
+            e_info_obj = EntryInfo( feed_info_obj, get_entry_link(e), get_entry_title(e), get_entry_author(e), get_entry_description(e), get_entry_content(e), get_entry_date(e), get_images(e), get_audio(e), get_video(e) )
             entry_info_objs.append(e_info_obj)
     return sorted(entry_info_objs, key=lambda e: e.date, reverse=True)
 

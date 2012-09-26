@@ -1,0 +1,7 @@
+<div class='list_item'>
+    <a href='{{ feed_link }}'>
+        <!--<img src='{{ feed_logo }}' alt='{{ feed_title }}' />-->
+        {{ feed_title }}
+    </a>
+    <a href='{{ entry_link }}'>{{ entry_title }}</a> {{ entry_date }}
+</div>
