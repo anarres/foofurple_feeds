@@ -137,3 +137,8 @@ div.list_item img {
     width: 40px;
     height: 40px;
 }
+.removeFeed {
+    font-size: 0.8em;
+    color: red;
+    cursor: pointer;
+)

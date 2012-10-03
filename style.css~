@@ -122,6 +122,7 @@ div.wp-caption {
 }
 div.enclosures {
     font-size: 0.8em;
+    padding-top: 5px;
 }
 div.read_more {
     padding-top: 20px;
@@ -136,3 +137,7 @@ div.list_item img {
     width: 40px;
     height: 40px;
 }
+.removeFeed {
+    font-size: 0.8em;
+    color: red;
+)
