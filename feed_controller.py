@@ -3,7 +3,9 @@ import re
 import utils_foo
 from config import feeds_config
 
-OUTPUT_DIR = "output/"
+OUTPUT_DIR = "/home/katie/prog/foofurple_feeds/output/"
+MEDIA_DIR = "/home/katie/prog/foofurple_feeds/media/"
+TEMPLATES_DIR = "/home/katie/prog/foofurple_feeds/templates/"
 
 _slugify_strip_re = re.compile(r'[^\w\s-]')
 _slugify_hyphenate_re = re.compile(r'[-\s]+')
@@ -22,9 +24,9 @@ def _slugify(value):
     return _slugify_hyphenate_re.sub('-', value)
 
 
-item_template = open('templates/item','r').read()
-page_template = open('templates/page','r').read()
-list_template = open('templates/list','r').read()
+item_template = open('%sitem' % TEMPLATES_DIR,'r').read()
+page_template = open('%spage' % TEMPLATES_DIR,'r').read()
+list_template = open('%slist' % TEMPLATES_DIR,'r').read()
 
 class SetOfFeeds(object):
     """ A 'stream' or set of feeds grouped together """

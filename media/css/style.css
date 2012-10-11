@@ -87,7 +87,7 @@ div.feed_icon {
     float: left;
 }
 div.default_icon {
-    background-image: url('default.png');
+    background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');
     padding: 3px;
     min-height: 60px;
     text-align: center;
