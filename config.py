@@ -1,3 +1,7 @@
+OUTPUT_DIR = "/home/katie/prog/foofurple_feeds/output/"
+MEDIA_DIR = "/home/katie/prog/foofurple_feeds/media/"
+TEMPLATES_DIR = "/home/katie/prog/foofurple_feeds/templates/"
+
 feeds_config = [
 
 { 'stream_name':'Blogs, in general',

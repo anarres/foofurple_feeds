@@ -1,11 +1,7 @@
 from jinja2 import Template
 import re
 import feed_sifter
-from config import feeds_config
-
-OUTPUT_DIR = "/home/katie/prog/foofurple_feeds/output/"
-MEDIA_DIR = "/home/katie/prog/foofurple_feeds/media/"
-TEMPLATES_DIR = "/home/katie/prog/foofurple_feeds/templates/"
+from config import *
 
 _slugify_strip_re = re.compile(r'[^\w\s-]')
 _slugify_hyphenate_re = re.compile(r'[-\s]+')

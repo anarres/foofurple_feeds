@@ -142,7 +142,7 @@ def get_video(e):
 
 
 """
-"
+Feedcache - FIXME credit
 """
 def feedcache_foo(urls=[]):
     """ Uses feedcache to return a list containing parsed data for each feed url """
