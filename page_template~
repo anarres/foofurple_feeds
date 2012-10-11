@@ -4,23 +4,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>{{ title }}</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="media/css/style.css">
 </head>
 <body>
+
 <div id="nav">
-
-{{ nav }}
-
+    {{ nav }}
 </div> <!--#nav-->
+
 <div id="header">
-<img src="logo8.png" />
-<h1>{{ title }}</h1>
+    <img src="logo8.png" />
+    <h1>{{ title }}</h1>
 </div> <!--#header-->
+
 <div id="main">
     {{ main_content }}
 </div> <!--#main-->
+
 <div id="footer">
 <p>This is the bottom of the page. Hope you've enjoyed reading.</p>
 </div> <!--#footer-->
+
 </body>
 </html>

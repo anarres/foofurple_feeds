@@ -3,6 +3,8 @@ import re
 import utils_foo
 from config import feeds_config
 
+OUTPUT_DIR = "output/"
+
 _slugify_strip_re = re.compile(r'[^\w\s-]')
 _slugify_hyphenate_re = re.compile(r'[-\s]+')
 def _slugify(value):
@@ -20,9 +22,9 @@ def _slugify(value):
     return _slugify_hyphenate_re.sub('-', value)
 
 
-item_template = open('item_template','r').read()
-page_template = open('page_template','r').read()
-list_template = open('list_template','r').read()
+item_template = open('templates/item','r').read()
+page_template = open('templates/page','r').read()
+list_template = open('templates/list','r').read()
 
 class SetOfFeeds(object):
     """ A 'stream' or set of feeds grouped together """
@@ -41,7 +43,7 @@ class SetOfFeeds(object):
         return urls
 
     def get_filename(self):
-        return "%s.html" % _slugify(self.title)
+        return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
 
 """
 feeds1 = SetOfFeeds('Blogs, in general', 

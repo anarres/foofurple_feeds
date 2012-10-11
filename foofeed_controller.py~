@@ -3,6 +3,8 @@ import re
 import utils_foo
 from config import feeds_config
 
+OUTPUT_DIR = "output/"
+
 _slugify_strip_re = re.compile(r'[^\w\s-]')
 _slugify_hyphenate_re = re.compile(r'[-\s]+')
 def _slugify(value):
@@ -41,7 +43,7 @@ class SetOfFeeds(object):
         return urls
 
     def get_filename(self):
-        return "%s.html" % _slugify(self.title)
+        return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
 
 """
 feeds1 = SetOfFeeds('Blogs, in general', 
@@ -70,9 +72,10 @@ feeds4 = SetOfFeeds('Auf Deutsch',
 
 sets_of_feeds = [feeds1, feeds2, feeds3, feeds4]
 """
+sets_of_feeds = []
 
-for s in sets_of_feeds:
-    s = SetOfFeeds(s['stream_name'], s['feeds'])
+for s in feeds_config:
+    sets_of_feeds.append( SetOfFeeds(s['stream_name'], s['feeds']) )
 
 
 nav_template = """<ul>%s<li><a href='about.html'>About</a></li><li><a href='config.html'>Configuration</a></li></ul>"""
