@@ -1,0 +1,19 @@
+
+
+<div class='stream'>
+
+    <br>
+
+    <h2><a href='{{ stream_url }}'>{{ stream_title }}</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+
+    <ul>
+
+        {% for f in stream_feeds %}
+
+        <li><a href='{{ f.url }}'>{{ f.name }}</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        {% endfor %}
+
+    </ul>
+
+</div> <!--.stream-->

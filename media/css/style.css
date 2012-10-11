@@ -9,7 +9,7 @@ body {
     background-color: #f0f3db;
 }
 #header img {
-    width: 150px;
+    width: 120px;
     height: auto;
 }
 #main {
@@ -38,7 +38,7 @@ h1 {
 h2, h3, h4, h5, h6 {
     font-size: 1.3em;
     font-weight: normal;
-    padding: 5px 0px;
+    padding: 10px 0px;
 }
 p {
     line-height: 1.2em;
@@ -46,11 +46,13 @@ p {
 }
 a {
     color: #aa0000;
-    font-weight: bold;
     text-decoration: none;
 }
 a:hover {
     color: #aa00b1;
+}
+li {
+    list-style: none;
 }
 
 /* Nav */ 
@@ -137,8 +139,12 @@ div.list_item img {
     width: 40px;
     height: 40px;
 }
-.removeFeed {
-    font-size: 0.8em;
+.remove_stream, .remove_feed {
+    font-size: 0.6em;
     color: red;
     cursor: pointer;
 )
+
+div.stream {
+    margin: 20px 0px;
+}
