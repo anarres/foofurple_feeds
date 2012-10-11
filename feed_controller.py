@@ -1,6 +1,6 @@
 from jinja2 import Template
 import re
-import utils_foo
+import feed_sifter
 from config import feeds_config
 
 OUTPUT_DIR = "/home/katie/prog/foofurple_feeds/output/"
@@ -47,35 +47,8 @@ class SetOfFeeds(object):
     def get_filename(self):
         return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
 
-"""
-feeds1 = SetOfFeeds('Blogs, in general', 
-    [{'name':'Captain awkward','url':'http://www.captainawkward.com/feed'}, 
-    {'name':'BoingBoing','url':'http://boingboing.net/feed'}])
 
-feeds2 = SetOfFeeds("Blogs, less frequently updated", 
-    [{'name':'Hoyden About Town','url':'http://hoydenabouttown.com/feed/'}, 
-    {'name':'Feminist Action Cambridge','url':'http://www.feministactioncambridge.wordpress.com/feed'}])
-
-feeds3 = SetOfFeeds("Data, programming", 
-    [{'name':'Whimsley','url':'http://whimsley.typepad.com/whimsley/atom.xml'}, 
-    {'name':'Social Media Collective','url':'http://socialmediacollective.org/feed/'},
-    {'name': 'Bad Science', 'url':'http://www.badscience.net/feed/'},
-    {'name': 'Buddycloud blog', 'url':'http://blog.buddycloud.com/rss'},
-    {'name': 'Dreamwidth news', 'url':'http://dw-news.dreamwidth.org/data/atom'},
-    {'name': 'Dreamwidth dev', 'url':'http://dw-dev.dreamwidth.org/data/atom'},
-    {'name': 'bengoldacre secondary blog', 'url':'http://bengoldacre.posterous.com/rss.xml'}])
-
-feeds4 = SetOfFeeds('Auf Deutsch',
-    [{'name':'SWR Wissen','url':'http://www1.swr.de/podcast/xml/swr2/wissen.xml'},
-    {'name':'Softmetz', 'url':'http://identi.ca/api/statuses/user_timeline/85379.atom'},
-    {'name':'Sendung mit der Maus','url':'http://podcast.wdr.de/maus.xml'},
-    {'name':'Quanks und co', 'url':'http://podcast.wdr.de/quarks.xml'},
-    {'name':'DW.DW Journal Reporer','url':'http://rss.dw.de/xml/podcast_journal-reporter'}])
-
-sets_of_feeds = [feeds1, feeds2, feeds3, feeds4]
-"""
 sets_of_feeds = []
-
 for s in feeds_config:
     sets_of_feeds.append( SetOfFeeds(s['stream_name'], s['feeds']) )
 
@@ -103,8 +76,8 @@ f.close()
 
 for s in sets_of_feeds:
 
-    parsed_datums = utils_foo.feedcache_foo(s.get_urls())
-    entry_info_objects = utils_foo.get_info(parsed_datums)
+    parsed_datums = feed_sifter.feedcache_foo(s.get_urls())
+    entry_info_objects = feed_sifter.get_info(parsed_datums)
     #list_html = ""
     items_html = ""
     for e in entry_info_objects:
@@ -115,4 +88,6 @@ for s in sets_of_feeds:
     f = open(s.get_filename(), 'w')
     f.write(output_html)
     f.close()
+
+    print "%s written." % s.get_filename()
 
