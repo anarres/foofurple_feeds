@@ -11,6 +11,9 @@
 function removeFeed() {
     alert('foo');
 }
+function removeStream() {
+    alert('bar');
+}
 
 </script>
 
@@ -33,7 +36,7 @@ function removeFeed() {
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a> <span class='remove_stream'>(remove stream)</span></h2>
+    <h2><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
 
     <ul>
 
@@ -51,7 +54,17 @@ function removeFeed() {
 
         
 
+        <li><a href='http://www.space-invaders.eu/?feed=rss2'>Space Invaders</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
     </ul>
+
+    <strong>Add a new feed</strong>
+
+    Name: <input type='text' />
+    Web addres: <input type='text' value='http://'
+    <button onclick='newFeed()'>Add another feed</a>
 
 </div> <!--.stream-->
 
@@ -59,7 +72,7 @@ function removeFeed() {
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a> <span class='remove_stream'>(remove stream)</span></h2>
+    <h2><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
 
     <ul>
 
@@ -95,13 +108,19 @@ function removeFeed() {
 
     </ul>
 
+    <strong>Add a new feed</strong>
+
+    Name: <input type='text' />
+    Web addres: <input type='text' value='http://'
+    <button onclick='newFeed()'>Add another feed</a>
+
 </div> <!--.stream-->
 
 <div class='stream'>
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a> <span class='remove_stream'>(remove stream)</span></h2>
+    <h2><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
 
     <ul>
 
@@ -128,6 +147,12 @@ function removeFeed() {
         
 
     </ul>
+
+    <strong>Add a new feed</strong>
+
+    Name: <input type='text' />
+    Web addres: <input type='text' value='http://'
+    <button onclick='newFeed()'>Add another feed</a>
 
 </div> <!--.stream-->
 </div> <!--#main-->

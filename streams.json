@@ -4,7 +4,8 @@
     "feeds": 
         [{"name":"Captain awkward","url":"http://www.captainawkward.com/feed"}, 
          {"name":"Hoyden About Town","url":"http://hoydenabouttown.com/feed/"},
-         {"name":"Feminist Action Cambridge","url":"http://www.feministactioncambridge.wordpress.com/feed"}
+         {"name":"Feminist Action Cambridge","url":"http://www.feministactioncambridge.wordpress.com/feed"},
+        {"name":"Space Invaders","url":"http://www.space-invaders.eu/?feed=rss2"}
         ]
     },
     { 

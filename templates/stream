@@ -16,4 +16,10 @@
 
     </ul>
 
+    <strong>Add a new feed</strong>
+
+    Name: <input type='text' />
+    Web addres: <input type='text' value='http://'
+    <button onclick='newFeed()'>Add another feed</a>
+
 </div> <!--.stream-->
