@@ -47,14 +47,14 @@ FUNCTIONS FOR CONVERTING PARSED FEED INTO THE INFO I WANT TO DISPLAY
 def get_feed_title(feed):
     """ Takes a feedparser feed object """
     try:
-        return feed.title.encode('ascii', 'ignore')
+        return feed.title.encode('ascii', 'replace')
     except:
         return "FEED TITLE UNKNOWN"
 
 def get_feed_link(feed):
     """ Takes a feedparser feed object """
     try:
-        return feed.link.encode('ascii', 'ignore')
+        return feed.link.encode('ascii', 'replace')
     except:
         return "FEED LINK UNKNOWN"
 
@@ -74,28 +74,35 @@ def get_feed_logo(feed):
 def get_entry_link(e):
     """ Takes a feedparser entry object """
     try:
-        return e.link.encode('ascii', 'ignore')
+        return e.link.encode('ascii', 'replace')
     except:
         return "ENTRY LINK UNKNOWN"
+
+
+
+
 
 def get_entry_title(e):
     """ Takes a feedparser entry object """
     try:
-        return e.title.encode('ascii', 'ignore')
+        return e.title.encode('ascii', 'replace')
     except:
         return "ENTRY TITLE UNKNOWN"
 
 def get_entry_author(e):
     try:
-        return e.author.encode('ascii', 'ignore')
+        return e.author.encode('ascii', 'replace')
     except:
         return "?"
 
 def get_entry_description(e):
+    return e.description
+    """
     try:
-        return e.description.encode('ascii', 'ignore')
+        return e.description.encode('ascii', 'replace')
     except:
         return "UNKNOWN"
+    """
 
 def get_entry_content(e):
     try:
@@ -141,6 +148,17 @@ def get_video(e):
         if enclo.type[:5] == 'video':
             urls.append(enclo.url)
     return urls
+
+
+
+
+
+
+
+
+
+
+
 
 
 """

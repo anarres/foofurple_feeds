@@ -54,7 +54,7 @@ for s in sets_of_feeds:
     output_html = page.render({'main_content':items_html, 'title':s.title, 'nav':nav})
 
     f = open(s.get_filename(), 'w')
-    f.write(output_html)
+    f.write(output_html.encode('ascii', 'replace'))
     f.close()
 
     print "%s written." % s.get_filename()

@@ -1,4 +1,11 @@
 [
+    {
+    "stream_name":"Fotostream",
+    "feeds":
+        [{"name":"Govangocrafts","url":"http://api.flickr.com/services/feeds/photos_public.gne?id=30475375@N04&lang=en-us&format=rss_200"},
+        {"name":"Super-cute", "url":"http://backend.deviantart.com/rss.xml?q=gallery%3Asuper-cute%2F5987508&type=deviation"},
+        {"name":"XKCD", "url":"http://xkcd.com/atom.xml"}] 
+    },
     { 
     "stream_name":"Blogs",
     "feeds": 
@@ -17,7 +24,8 @@
         {"name": "Buddycloud blog", "url":"http://blog.buddycloud.com/rss"},
         {"name": "Dreamwidth news", "url":"http://dw-news.dreamwidth.org/data/atom"},
         {"name": "Dreamwidth dev", "url":"http://dw-dev.dreamwidth.org/data/atom"},
-        {"name": "bengoldacre secondary blog", "url":"http://bengoldacre.posterous.com/rss.xml"}
+        {"name": "bengoldacre secondary blog", "url":"http://bengoldacre.posterous.com/rss.xml"},
+        {"name": "Foofurple blog", "url":"https://foofurple.wordpress.com/feed/"}
         ]
     },
     {

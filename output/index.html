@@ -21,7 +21,7 @@ function removeStream() {
 <body>
 
 <div id="nav">
-    <ul><li><a href='/home/katie/prog/foofurple_feeds/output/index.html'>Home</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li></ul>
+    <ul><li><a href='/home/katie/prog/foofurple_feeds/output/index.html'>Home</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li></ul>
 </div> <!--#nav-->
 
 <div id="header">
@@ -31,6 +31,38 @@ function removeStream() {
 
 <div id="main">
     <p>Feeds can be grouped together in streams</p>
+
+<div class='stream'>
+
+    <br>
+
+    <h2><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+
+    <ul>
+
+        
+
+        <li><a href='http://api.flickr.com/services/feeds/photos_public.gne?id=30475375@N04&lang=en-us&format=rss_200'>Govangocrafts</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='http://backend.deviantart.com/rss.xml?q=gallery%3Asuper-cute%2F5987508&type=deviation'>Super-cute</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='http://xkcd.com/atom.xml'>XKCD</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+    </ul>
+
+    <strong>Add a new feed</strong>
+
+    Name: <input type='text' />
+    Web addres: <input type='text' value='http://'
+    <button onclick='newFeed()'>Add another feed</a>
+
+</div> <!--.stream-->
 
 <div class='stream'>
 
@@ -103,6 +135,10 @@ function removeStream() {
         
 
         <li><a href='http://bengoldacre.posterous.com/rss.xml'>bengoldacre secondary blog</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='https://foofurple.wordpress.com/feed/'>Foofurple blog</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
 
