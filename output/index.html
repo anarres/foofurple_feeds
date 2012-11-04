@@ -3,22 +3,54 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Setup: streams and feeds</title>
+<title>Streams and feeds</title>
 <link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
-
 <script type="text/javascript">
 
-function removeFeed() {
-    alert('foo');
+/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
+http://stackoverflow.com/questions/1933602/
+how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
 }
-function removeStream() {
-    alert('bar');
+
+function init() {
+    var objs = getElementsByClassName(document, 'remove_stream');
+    for (var i=0; i<objs.length; i++) {
+        objs[i].addEventListener('click', function (e) {
+            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
+        }, false);
+    }
+    var fobjs = getElementsByClassName(document, 'remove_feed');
+    for (var j=0; j<fobjs.length; j++) {
+        fobjs[j].addEventListener('click', function (e) {
+            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
+        }, false);
+    }
 }
 
 </script>
-
 </head>
-<body>
+<body onload="init()">
 
 <div id="nav">
     <ul><li><a href='/home/katie/prog/foofurple_feeds/output/index.html'>Home</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li></ul>
@@ -26,11 +58,11 @@ function removeStream() {
 
 <div id="header">
     <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png" />
-    <h1>Setup: streams and feeds</h1>
+    <h1>Streams and feeds</h1>
 </div> <!--#header-->
 
 <div id="main">
-    <p>Feeds can be grouped together in streams</p>
+    
 
 <div class='stream'>
 
@@ -46,7 +78,23 @@ function removeStream() {
 
         
 
+        <li><a href='http://www.nataliedee.com/rss/rss.php'>Natalie Dee</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
         <li><a href='http://backend.deviantart.com/rss.xml?q=gallery%3Asuper-cute%2F5987508&type=deviation'>Super-cute</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='http://lesbianspacepirates.com/rss.php'>Lesbian Space Pirates</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='http://www.riotnrrdcomics.com/feed/'>Riot Nrrd</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='http://beatonna.tumblr.com/rss'>Hark! A Vagrant</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
 
@@ -56,11 +104,17 @@ function removeStream() {
 
     </ul>
 
-    <strong>Add a new feed</strong>
+    <br>
+
+    Add a feed to this stream:
+
+    <br>
 
     Name: <input type='text' />
-    Web addres: <input type='text' value='http://'
-    <button onclick='newFeed()'>Add another feed</a>
+    Web addres: <input type='text' value='http://' />
+    <button onclick='newFeed()'>Submit</button>
+
+    <br><br>
 
 </div> <!--.stream-->
 
@@ -86,17 +140,27 @@ function removeStream() {
 
         
 
+        <li><a href='http://freethoughtblogs.com/blackskeptics/feed/'>Black skeptics</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
         <li><a href='http://www.space-invaders.eu/?feed=rss2'>Space Invaders</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
 
     </ul>
 
-    <strong>Add a new feed</strong>
+    <br>
+
+    Add a feed to this stream:
+
+    <br>
 
     Name: <input type='text' />
-    Web addres: <input type='text' value='http://'
-    <button onclick='newFeed()'>Add another feed</a>
+    Web addres: <input type='text' value='http://' />
+    <button onclick='newFeed()'>Submit</button>
+
+    <br><br>
 
 </div> <!--.stream-->
 
@@ -118,10 +182,6 @@ function removeStream() {
 
         
 
-        <li><a href='http://www.badscience.net/feed/'>Bad Science</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
-
-        
-
         <li><a href='http://blog.buddycloud.com/rss'>Buddycloud blog</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
@@ -134,7 +194,7 @@ function removeStream() {
 
         
 
-        <li><a href='http://bengoldacre.posterous.com/rss.xml'>bengoldacre secondary blog</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a href='http://identi.ca/api/statuses/user_timeline/85379.atom'>Softmetz</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
 
@@ -144,11 +204,17 @@ function removeStream() {
 
     </ul>
 
-    <strong>Add a new feed</strong>
+    <br>
+
+    Add a feed to this stream:
+
+    <br>
 
     Name: <input type='text' />
-    Web addres: <input type='text' value='http://'
-    <button onclick='newFeed()'>Add another feed</a>
+    Web addres: <input type='text' value='http://' />
+    <button onclick='newFeed()'>Submit</button>
+
+    <br><br>
 
 </div> <!--.stream-->
 
@@ -166,10 +232,6 @@ function removeStream() {
 
         
 
-        <li><a href='http://identi.ca/api/statuses/user_timeline/85379.atom'>Softmetz</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
-
-        
-
         <li><a href='http://podcast.wdr.de/maus.xml'>Sendung mit der Maus</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
@@ -178,19 +240,29 @@ function removeStream() {
 
         
 
-        <li><a href='http://rss.dw.de/xml/podcast_journal-reporter'>DW.DW Journal Reporer</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a href='http://rss.dw.de/xml/podcast_journal-reporter'>DW Journal Reporer</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+
+        
+
+        <li><a href='http://rss.dw.de/xml/podcast_projekt-zukunft'>DW Projekt Zukunft</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
 
         
 
     </ul>
 
-    <strong>Add a new feed</strong>
+    <br>
+
+    Add a feed to this stream:
+
+    <br>
 
     Name: <input type='text' />
-    Web addres: <input type='text' value='http://'
-    <button onclick='newFeed()'>Add another feed</a>
+    Web addres: <input type='text' value='http://' />
+    <button onclick='newFeed()'>Submit</button>
 
-</div> <!--.stream-->
+    <br><br>
+
+</div> <!--.stream-->CLICK HERE TO ADD A NEW STREAM
 </div> <!--#main-->
 
 <div id="footer">

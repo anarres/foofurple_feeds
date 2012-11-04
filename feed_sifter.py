@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# coding: utf-8
 
 import sys
 import time
@@ -47,14 +47,14 @@ FUNCTIONS FOR CONVERTING PARSED FEED INTO THE INFO I WANT TO DISPLAY
 def get_feed_title(feed):
     """ Takes a feedparser feed object """
     try:
-        return feed.title.encode('ascii', 'replace')
+        return feed.title
     except:
         return "FEED TITLE UNKNOWN"
 
 def get_feed_link(feed):
     """ Takes a feedparser feed object """
     try:
-        return feed.link.encode('ascii', 'replace')
+        return feed.link
     except:
         return "FEED LINK UNKNOWN"
 
@@ -74,7 +74,7 @@ def get_feed_logo(feed):
 def get_entry_link(e):
     """ Takes a feedparser entry object """
     try:
-        return e.link.encode('ascii', 'replace')
+        return e.link
     except:
         return "ENTRY LINK UNKNOWN"
 
@@ -85,13 +85,13 @@ def get_entry_link(e):
 def get_entry_title(e):
     """ Takes a feedparser entry object """
     try:
-        return e.title.encode('ascii', 'replace')
+        return e.title
     except:
         return "ENTRY TITLE UNKNOWN"
 
 def get_entry_author(e):
     try:
-        return e.author.encode('ascii', 'replace')
+        return e.author
     except:
         return "?"
 
@@ -99,7 +99,7 @@ def get_entry_description(e):
     return e.description
     """
     try:
-        return e.description.encode('ascii', 'replace')
+        return e.description
     except:
         return "UNKNOWN"
     """

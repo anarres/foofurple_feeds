@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# coding: utf-8
 
 from jinja2 import Template
 import json
@@ -41,7 +41,6 @@ nav = nav_template % html
 
 item = Template(item_template)
 page = Template(page_template)
-#t3 = Template(list_template)
 stream = Template(stream_template)
 
 for s in sets_of_feeds:
@@ -54,19 +53,20 @@ for s in sets_of_feeds:
     output_html = page.render({'main_content':items_html, 'title':s.title, 'nav':nav})
 
     f = open(s.get_filename(), 'w')
-    f.write(output_html.encode('ascii', 'replace'))
+    f.write(output_html.encode('utf-8'))
     f.close()
 
     print "%s written." % s.get_filename()
 
+foo = ""
 
 # Create index page
-foo = "<p>Feeds can be grouped together in streams</p>"
 for s in sets_of_feeds:
-
     foo += stream.render({'stream_title':s.title, 'stream_url':s.get_filename(), 'stream_feeds':s.feeds_list})
 
-index_html = page.render({'main_content':foo, 'title':'Setup: streams and feeds', 'nav':nav})
+foo += "CLICK HERE TO ADD A NEW STREAM"
+
+index_html = page.render({'main_content':foo, 'title':'Streams and feeds', 'nav':nav})
 f = open('/home/katie/prog/foofurple_feeds/output/index.html', 'w')
 f.write(index_html)
 f.close()

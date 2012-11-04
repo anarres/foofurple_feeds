@@ -5,20 +5,52 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <title>Fotostream</title>
 <link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
-
 <script type="text/javascript">
 
-function removeFeed() {
-    alert('foo');
+/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
+http://stackoverflow.com/questions/1933602/
+how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
 }
-function removeStream() {
-    alert('bar');
+
+function init() {
+    var objs = getElementsByClassName(document, 'remove_stream');
+    for (var i=0; i<objs.length; i++) {
+        objs[i].addEventListener('click', function (e) {
+            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
+        }, false);
+    }
+    var fobjs = getElementsByClassName(document, 'remove_feed');
+    for (var j=0; j<fobjs.length; j++) {
+        fobjs[j].addEventListener('click', function (e) {
+            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
+        }, false);
+    }
 }
 
 </script>
-
 </head>
-<body>
+<body onload="init()">
 
 <div id="nav">
     <ul><li><a href='/home/katie/prog/foofurple_feeds/output/index.html'>Home</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li><li><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li></ul>
@@ -36,10 +68,10 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
-        <a href='http://xkcd.com/'>
+        <a href='http://www.nataliedee.com'>
 
             
-            xkcd.com
+            Natalie Dee
             
 
         </a>
@@ -48,15 +80,15 @@ function removeStream() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://xkcd.com/1123/'>The Universal Label</a> 
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>ahhhh now i get to be dead inside for 6 months</a> 
 
             
-            Fri, 19 Oct 2012
+            Sun, 04 Nov 2012
 
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <img alt="Works for any grocery or non-grocery. Even thyme is just H and time." src="http://imgs.xkcd.com/comics/the_universal_label.png" title="Works for any grocery or non-grocery. Even thyme is just H and time." />
+            <div><img alt="ahhhh now i get to be dead inside for 6 months" border="1" src="http://www.nataliedee.com/110412/ahhhh-now-i-get-to-be-dead-inside-for-6-months.jpg" /></div><hr /><div><a href="http://www.sharingmachine.com/index.php?item=48&amp;prod=shirt&amp;ref=rss" style="border: 0;"><img src="http://www.nataliedee.com/rss/ads/nd-anxiety-oct12.gif" /></a><br /><br />Follow <a href="http://twitter.com/nataliedee">@nataliedee</a> on Twitter or join the <a href="http://www.facebook.com/pages/Natalie-Dee/35552561864">Natalie Dee Facebook Page.</a></div>
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -70,7 +102,1372 @@ function removeStream() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://xkcd.com/1123/'>Read more</a>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34954696406'>Well look here:
+The Royal Shakespeare Company’s production...</a> 
+
+            
+            Sun, 04 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mcy3mayExL1rnw5qjo1_500.png" /><br /><br /><p>Well look here:</p>
+<p><em>The Royal Shakespeare Company’s production of <a href="http://www.youtube.com/playlist?list=PL71808247F47E2A6E" target="_blank">the Wars of the Roses</a> consisting of Shakespeare’s Henry VI (3 parts) and Richard III, edited, rearranged and rewritten by John Barton and Peter Hall.</em><br /><em>First broadcast on BBC TV in 1965 in 3 parts. Subsequently rebroadcast in the 1980s in 11 Parts.</em></p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34954696406'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.nataliedee.com'>
+
+            
+            Natalie Dee
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>you stay about 25 feet away and i wont whoop you</a> 
+
+            
+            Sat, 03 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <div><img alt="you stay about 25 feet away and i wont whoop you" border="1" src="http://www.nataliedee.com/110312/you-stay-about-25-feet-away-and-i-wont-whoop-you.jpg" /></div><hr /><div><a href="http://www.sharingmachine.com/index.php?item=48&amp;prod=shirt&amp;ref=rss" style="border: 0;"><img src="http://www.nataliedee.com/rss/ads/nd-anxiety-oct12.gif" /></a><br /><br />Follow <a href="http://twitter.com/nataliedee">@nataliedee</a> on Twitter or join the <a href="http://www.facebook.com/pages/Natalie-Dee/35552561864">Natalie Dee Facebook Page.</a></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34843962306'>I was in New York for the Hurricane Sandy, with Scott.  I drew...</a> 
+
+            
+            Fri, 02 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mcvk6nBRm61rnw5qjo1_500.png" /><br /><br /><p>I was in New York for the Hurricane Sandy, with <a href="http://www.pyramidcar.com/" target="_blank">Scott</a>.  I drew sketches of it as we went through.  If you click on the picture you’ll see them all in a long image.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34843962306'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
+
+            
+            deviantART: gallery:super-cute/5987508
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://super-cute.deviantart.com/art/Just-a-Dump-335658991'>Just a Dump</a> 
+
+            
+            Fri, 02 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Various things, a few from a long time ago. <br />Most from tumblr.<br /><br />Ask if you have any questions about anything xD<br /><div><img alt="thumbnail" src="http://th06.deviantart.net/fs71/300W/i/2012/307/e/8/just_a_dump_by_super_cute-d5juc4v.png" /></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://super-cute.deviantart.com/art/Just-a-Dump-335658991'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.nataliedee.com'>
+
+            
+            Natalie Dee
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>YOURE LOOKING PRETTY GUILTY OVER THERE MISTER</a> 
+
+            
+            Fri, 02 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <div><img alt="YOURE LOOKING PRETTY GUILTY OVER THERE MISTER" border="1" src="http://www.nataliedee.com/110212/YOURE-LOOKING-PRETTY-GUILTY-OVER-THERE-MISTER.jpg" /></div><hr /><div><a href="http://www.sharingmachine.com/index.php?item=48&amp;prod=shirt&amp;ref=rss" style="border: 0;"><img src="http://www.nataliedee.com/rss/ads/nd-anxiety-oct12.gif" /></a><br /><br />Follow <a href="http://twitter.com/nataliedee">@nataliedee</a> on Twitter or join the <a href="http://www.facebook.com/pages/Natalie-Dee/35552561864">Natalie Dee Facebook Page.</a></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://xkcd.com/'>
+
+            
+            xkcd.com
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://xkcd.com/1129/'>Cell Number</a> 
+
+            
+            Fri, 02 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img alt="There's also a +1 sometimes, which is there to keep everyone on their toes. In the future, people who got to pick cool numbers by signing up for Google Voice early will be revered as wizards." src="http://imgs.xkcd.com/comics/cell_number.png" title="There's also a +1 sometimes, which is there to keep everyone on their toes. In the future, people who got to pick cool numbers by signing up for Google Voice early will be revered as wizards." />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://xkcd.com/1129/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.nataliedee.com'>
+
+            
+            Natalie Dee
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>yeah i heard you can get like 23 cents an egg or somethin</a> 
+
+            
+            Thu, 01 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <div><img alt="yeah i heard you can get like 23 cents an egg or somethin" border="1" src="http://www.nataliedee.com/110112/yeah-i-heard-you-can-get-like-23-cents-an-egg-or-something.jpg" /></div><hr /><div><a href="http://www.sharingmachine.com/index.php?item=48&amp;prod=shirt&amp;ref=rss" style="border: 0;"><img src="http://www.nataliedee.com/rss/ads/nd-anxiety-oct12.gif" /></a><br /><br />Follow <a href="http://twitter.com/nataliedee">@nataliedee</a> on Twitter or join the <a href="http://www.facebook.com/pages/Natalie-Dee/35552561864">Natalie Dee Facebook Page.</a></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.nataliedee.com/archives/2012/Nov'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
+
+            
+            deviantART: gallery:super-cute/5987508
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://super-cute.deviantart.com/art/Happy-Halloween-335410862'>Happy Halloween!</a> 
+
+            
+            Thu, 01 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Happy Halloween! <br />Mabel made a pig themed Jack-o-melon <br /><br />what cuties<br /><div><img alt="thumbnail" src="http://th01.deviantart.net/fs70/300W/i/2012/305/d/5/happy_halloween__by_super_cute-d5jp0oe.png" /></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://super-cute.deviantart.com/art/Happy-Halloween-335410862'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34716372812'>scottlava:
+
+It is HERE!!
+The Great Showdowns book!
+With a...</a> 
+
+            
+            Wed, 31 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mcro1jicwX1qay9wgo1_500.jpg" /><br /><br /><p><a class="tumblr_blog" href="http://greatshowdowns.com/post/34707365481/it-is-here-the-great-showdowns-book-with-a" target="_blank">scottlava</a>:</p>
+<blockquote>
+<p>It is HERE!!</p>
+<p><strong><a href="http://www.amazon.com/gp/product/1781162778/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1781162778&amp;linkCode=as2&amp;tag=httpwwwpyrami-20" target="_blank">The Great Showdowns</a><img alt="" border="0" height="1" src="http://www.assoc-amazon.com/e/ir?t=httpwwwpyrami-20&amp;l=as2&amp;o=1&amp;a=1781162778" width="1" /> book!</strong></p>
+<p><strong>With a foreword by Neil Patrick Harris</strong></p>
+<p><strong>and introduction by Scott C. (who is me)</strong></p>
+<p>Over 150 Showdowns from the Great Showdowns series.  You can get it at your local bookstore or anywhere online!! Go get it right now!  <em><strong>SPREAD THE WORD!!</strong></em></p>
+<p>More amazing details can be found on my blog right <a href="http://www.pyramidcar.com/great-showdowns-is-out-now/" target="_blank">HERE</a>!!!</p>
+</blockquote>
+<p>hurrah!!!!</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34716372812'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34705872837'>oldrags:
+
+Witch fancy dress, 1887 England, Fancy Dresses...</a> 
+
+            
+            Wed, 31 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mcmzyaONtp1qidnqfo1_500.jpg" /><br /><br /><p><a class="tumblr_blog" href="http://oldrags.tumblr.com/post/34698802544/witch-fancy-dress-1887-england-fancy-dresses" target="_blank">oldrags</a>:</p>
+<blockquote>
+<p>Witch fancy dress, 1887 England, Fancy Dresses Described by Ardern Holt</p>
+<blockquote>
+<p>(<em>See</em> Hubbard, Mother; Macbeth, and Coloured Illustration, Plate XV.) Short quilted skirt of red satin, with cats and lizards in black velvet; gold satin panier tunic; black velvet bodice laced over an old-gold crêpe bodice; small cat on right shoulder, a broom in the hand, with owl; tall pointed velvet cap; shoes with buckles.</p>
+</blockquote>
+</blockquote>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34705872837'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34704818533'>Happy (actual) Halloween! If you missed the quiz update!</a> 
+
+            
+            Wed, 31 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mcrlcfkPo91rnw5qjo1_500.png" /><br /><br /><p>Happy (actual) Halloween! If you missed the <a href="http://www.harkavagrant.com/index.php?id=344" target="_blank">quiz update!</a></p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34704818533'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.nataliedee.com'>
+
+            
+            Natalie Dee
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.nataliedee.com/archives/2012/Oct'>nah throw it back you dont need that</a> 
+
+            
+            Wed, 31 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <div><img alt="nah throw it back you dont need that" border="1" src="http://www.nataliedee.com/103112/nah-throw-it-back-you-dont-need-that.jpg" /></div><hr /><div><a href="http://www.sharingmachine.com/index.php?item=48&amp;prod=shirt&amp;ref=rss" style="border: 0;"><img src="http://www.nataliedee.com/rss/ads/nd-anxiety-oct12.gif" /></a><br /><br />Follow <a href="http://twitter.com/nataliedee">@nataliedee</a> on Twitter or join the <a href="http://www.facebook.com/pages/Natalie-Dee/35552561864">Natalie Dee Facebook Page.</a></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.nataliedee.com/archives/2012/Oct'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://xkcd.com/'>
+
+            
+            xkcd.com
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://xkcd.com/1128/'>Fifty Shades</a> 
+
+            
+            Wed, 31 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img alt="Wishbone and the Illustrated Classics series have gotten me through every conversation I've ever had about Dickens, Treasure Island, The Anarchist's Cookbook, and Our Bodies, Ourselves." src="http://imgs.xkcd.com/comics/fifty_shades.png" title="Wishbone and the Illustrated Classics series have gotten me through every conversation I've ever had about Dickens, Treasure Island, The Anarchist's Cookbook, and Our Bodies, Ourselves." />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://xkcd.com/1128/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34578346618'>From Topatoco:
+A limited specialty item — we have only 500...</a> 
+
+            
+            Mon, 29 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mco416WzVE1rnw5qjo1_500.png" /><br /><br /><p>From Topatoco:</p>
+<p><em>A limited specialty item — we have only 500 copies to be sold. This is a collection of scans from Kate’s sketchbooks, some are doodles, some are research, you know how it goes with sketchbooks. We’re keeping the run small to make this a special thing, for fans who want something a little different and personal.</em></p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34578346618'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=400'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 6 Page 4</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Mon, 29 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=400">New comic!</a><br />Today's News:<br /><p>&nbsp;Genocide and psychological reprogramming should at least include a dental plan.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=400'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://xkcd.com/'>
+
+            
+            xkcd.com
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://xkcd.com/1127/'>Congress</a> 
+
+            
+            Mon, 29 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img alt="It'd be great if some news network started featuring partisan hack talking heads who were all Federalists and Jacksonians, just to see how long it took us to catch on." src="http://imgs.xkcd.com/comics/congress.png" title="It'd be great if some news network started featuring partisan hack talking heads who were all Federalists and Jacksonians, just to see how long it took us to catch on." />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://xkcd.com/1127/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
+
+            
+            deviantART: gallery:super-cute/5987508
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://super-cute.deviantart.com/art/Old-Portal-Animation-334649975'>Old Portal Animation</a> 
+
+            
+            Sat, 27 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            WOW I found this animation I started a longgg time ago!<br />I never finished sadly, but I thought you'd like to see it nonetheless!<br /><br /><a class="external" href="http://www.deviantart.com/users/outgoing?http://muffinpines.tumblr.com/post/11675754937/m4ng0rly-this-is-the-thing-i-did-instead-of">[link]</a> <br />Here's the full song if you'd like to hear it! <br />My friend wrote it, it's perfect.<br /><br />Sorry for lack of art :C Ill get some more up soon<br /><div><img alt="thumbnail" src="http://fc08.deviantart.net/fs71/i/2012/301/e/f/old_portal_animation_by_super_cute-d5j8pkn.png" /></div>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://super-cute.deviantart.com/art/Old-Portal-Animation-334649975'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34424763526'>HALLOWEEN QUIZ
+1.  How can you tell if the unknown party guest...</a> 
+
+            
+            Sat, 27 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mckasgn2uH1rnw5qjo1_500.png" /><br /><br /><p><strong>HALLOWEEN QUIZ</strong></p>
+<p><br /><strong>1.  How can you tell if the unknown party guest is the Devil?</strong><br />- He has cloven feet <br />- He turned the television on to MTV (grandma was right!)<br />- He’s all like “hey baby, I’m burnin’ up here cause you’re so hot and I’m Satan”<br />- He’s checking out your copy of the Malleus Maleficarum all casual like it’s not weird<br /><br /><strong>2.  Who was Jack the Ripper, really?</strong><br />- The Earl of Toffee, heir to Her Majesty’s cabbages<br />- Colonel Mustard in the Conservatory with the lead pipe<br />- Moriarty, damn his eyes! He’s the <em>Napoleon of crime</em>!<br />- El Chupacabra <br /><br /><strong>3.  How can I tell thou art a witch?</strong><br />- For thou hast cavorted with Satan in a sexy way<br />- Because I could really use thy farmland if thou happened to be a witch<br />- For the milk has gone sour and I understand science not<br />- For thou won’t consent to a simple drowning test, the premise “offends thy good sense”<br /><br /><strong>4.  Before Jack o’ Lanterns, Celtic cultures used:</strong> <br />- The carved heads of your enemies<br />- Bog sacrifice of your enemies<br />- Oatmeal in the shape of a face (of your enemies)<br />- Jack o’ turnips<br /><br /><strong>5.  Which Malevolent Old Woman Spirit from Japan is the scariest?</strong><br />- Cackling old woman<br />- Old woman bleeding from the eyes<br />- Floating head of weeping old woman<br />- Old woman inquiring about your marital status <br /><br /><strong>6.  What is the only thing that can kill a werewolf?</strong><br />- Silver bulletin<br />- Strychnine <br />- Rock n’ roll<br />- Pile driver<br /><br /><strong>7.  Should we pick up this spectral hitchhiker?</strong><br />- Only if he will share his weed<br />- No way, they’re jerks! You give them a ride and then they vanish without saying thanks<br />- Only if they’re doing that thing where you stick your leg out<br />- I don’t trust those spectral hitchhikers, they’re all the same, but I’m not racist or anything<br /><br /><strong>8.  Trick or:</strong><br />- Treacle<br />- Train<br />- Tits<br />- El Chupacabra<br /><br /><strong>9.  If you say “Bloody Mary” three times, what will you see in the mirror?</strong><br />- The Virgin Mary (this answer is blasphemous, circle only if you are willing to go to confession immediately)<br />- “Bawdy Mary?” this spell is broken<br />- A bartender who heard you the first time<br />- A scorching hot hag (if you’re into hags)<br /><br /><strong>10. What do the zombies want?</strong><br />- Brains<br />- Brians</p>
+
+<p>Please circle your answers in blood (obviously) and <a href="http://www.harkavagrant.com/index.php?id=344" target="_blank">submit your papers via <span class="st">séance</span></a><br /><br /></p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34424763526'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=399'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 6 Page 3</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Fri, 26 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=399">New comic!</a><br />Today's News:<br /><p>&nbsp;History!</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=399'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://xkcd.com/'>
+
+            
+            xkcd.com
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://xkcd.com/1126/'>Epsilon and Zeta</a> 
+
+            
+            Fri, 26 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img alt="The average error in the NHC forecasted position of a hurricane three days in the future has shrunk to a third of what it was in 1990--a staggering accomplishment. However, as you may have gathered, forecasts of future storm *strength* have proved more difficult to improve." src="http://imgs.xkcd.com/comics/epsilon_and_zeta.png" title="The average error in the NHC forecasted position of a hurricane three days in the future has shrunk to a third of what it was in 1990--a staggering accomplishment. However, as you may have gathered, forecasts of future storm *strength* have proved more difficult to improve." />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://xkcd.com/1126/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34231658263'>Spooky, old time Japanese ghosts and monsters, in time for...</a> 
+
+            
+            Wed, 24 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mcejlfYxvB1rnw5qjo1_500.jpg" /><br /><br /><p>Spooky, old time <a href="http://www.retronaut.com/2012/03/monsters-from-the-kaibutsu-ehon-1881/" target="_blank">Japanese ghosts and monsters</a>, in time for Halloween</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34231658263'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34116656317'>Julia Wertz is a comics wizard and you wish you could lay it...</a> 
+
+            
+            Mon, 22 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mcbbb3AXjR1rnw5qjo1_500.jpg" /><br /><br /><p>Julia Wertz is a comics wizard and you wish you could lay it down like she does so <a href="http://www.comicsreporter.com/index.php/cr_sunday_interview_julia_wertz/" target="_blank">read this interview</a> and read her new book <em>The Infinite Wait</em>.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34116656317'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=398'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 6 Page 2</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Mon, 22 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=398">New comic!</a><br />Today's News:<br /><p>&nbsp;I wasn't kidding when I said Sappho was a drama queen.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=398'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/34081169306'>P.G. Wodehouse</a> 
+
+            
+            Mon, 22 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <br /><br /><p>P.G. Wodehouse </p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/34081169306'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/10/178-dominating-my-brain/'>178: Dominating my brain</a> 
+
+            
+            by admin
+            
+            Mon, 22 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/10/178-dominating-my-brain/"><img alt="178: Dominating my brain" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-10-22-riotnrrd178.png" title="the breakup btvs marathon, one of several life rituals that involve invoking the blessings of the buffster" /></a></p>WOW a new comic! Dang! While you&#8217;re waiting for the next one, did you know you can buy an awesome book in which I have a story? And you can buy a zine that I made about reproductive freedom?
+Thanks for reading! And thanks to Bill Roundy for drawing me into this journal comic!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/10/178-dominating-my-brain/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33965731577'>"Canadian history is more interesting than you think"</a> 
+
+            
+            Sat, 20 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://news.nationalpost.com/2012/10/19/blood-sex-greed-canadian-history-is-more-interesting-than-you-think/">"Canadian history is more interesting than you think"</a>: <p>I was interviewed for this article, I think, because I make comics and jokes so I was supposed to bring The Good Times and laffs and stuff.  I don’t think I delivered.  We didn’t talk about Diefenbaker.</p>
+<p>This seems like an argument, not for more accuracy, but for more ‘awesomeness’ in how our history is taught, and while I think Canadian history is endlessly fascinating, I rankle at the idea that what we really need to do is <em>celebrate</em> more <em>awesome</em> violent and terrible stuff and gaze out the window wishing we were cool enough to have had a civil war, too.  Yeesh.</p>
+<p>A quote: “<em>Canadian history is full of oppression and genocide and forced labour and all the exciting things that other national histories have</em>”  </p>
+<p>It’s not the notion that we should teach the unsavory aspects of our history that I disagree with, of course we should, everyone thinks we should.  It’s not that I don’t think we’ve been presented with whitewashed narratives - too many Canadians think of something like slavery in Canada and puff up about how swell the Underground Railroad was without any clue about the life of someone like Marie-Joseph Angélique.  And it’s not that I don’t think the underbelly of history is interesting, we all think that.  It’s that those things are <em>totally radical </em>that strikes the wrong chord, and usually leads to some pretty terrible retelling of events.</p>
+<p>I’m not a teacher or a scholar, but this article, it just didn’t sit well with me.  I made it my job to poke fun at history in comics, sure, but schools and museums are a different ballgame.  </p>
+<p>And if you want museums to be interesting, for gods sake, stop cutting their funding for once and give them some money. They work with what they have, which is not much.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33965731577'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33898489091'>Lovely, beautiful portraits and paintings by Kris Knight. ...</a> 
+
+            
+            Fri, 19 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mc5fe1Ku8y1rnw5qjo1_500.jpg" /><br /><br /><p>Lovely, beautiful portraits and paintings by Kris Knight.  Amazing work.  <a href="http://krisknight.com/home.html" target="_blank">Click for more.</a></p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33898489091'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=397'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 6 Page 1</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Fri, 19 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=397">New comic!</a><br />Today's News:<br /><p>&nbsp;We get to find out some back story in this chapter. This Sappho isn't the same as Earth Sappho, but she is still totally gay for a lady named Anactoria. Today's page features one of the real Sappho's poems, <a href="http://www.sacred-texts.com/cla/pos/pos06.htm">Ode to Anactoria</a>.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=397'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33872642210'>Don’t even deny</a> 
+
+            
+            Fri, 19 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mc4czjCrOy1rnw5qjo1_500.jpg" /><br /><br /><p>Don’t even deny</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33872642210'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33803375378'>A pretty good little primer of medieval weapons here.  You...</a> 
+
+            
+            Wed, 17 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mc2aj6Tkfa1rnw5qjo1_500.png" /><br /><br /><p>A pretty good little primer of medieval weapons <a href="http://www.medievalwarfare.info/weapons.htm" target="_blank">here</a>.  You don’t want to mix up your close helms and your burgonets do you?</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33803375378'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -124,10 +1521,10 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
-        <a href='http://xkcd.com/'>
+        <a href='http://beatonna.tumblr.com/'>
 
             
-            xkcd.com
+            Hark! A Vagrant:
             
 
         </a>
@@ -136,7 +1533,7 @@ function removeStream() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://xkcd.com/1122/'>Electoral Precedent</a> 
+            <a href='http://beatonna.tumblr.com/post/33791728101'>Phill Smith of Sushi Design made the best thing for me!  Though...</a> 
 
             
             Wed, 17 Oct 2012
@@ -144,7 +1541,7 @@ function removeStream() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <img alt="No white guy who's been mentioned on Twitter has gone on to win." src="http://imgs.xkcd.com/comics/electoral_precedent.png" title="No white guy who's been mentioned on Twitter has gone on to win." />
+            <img src="http://24.media.tumblr.com/tumblr_mc22imLdl11rnw5qjo1_500.jpg" /><br /><br /><p>Phill Smith of <a href="http://www.sushidesign.net/" target="_blank">Sushi Design</a> made the best thing for me!  Though I can’t take credit for the quote, that’s 100% Queen Bess.</p>
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -158,7 +1555,187 @@ function removeStream() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://xkcd.com/1122/'>Read more</a>
+            <a href='http://beatonna.tumblr.com/post/33791728101'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33782882972'>hurrah! The site has updated with quizzes and store items!</a> 
+
+            
+            Wed, 17 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://24.media.tumblr.com/tumblr_mc1vkiTn5s1rnw5qjo1_500.png" /><br /><br /><p>hurrah! The <a href="http://www.harkavagrant.com/index.php?id=343" target="_blank">site has updated</a> with quizzes and store items! </p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33782882972'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33753281274'>To Everyone Who Gave Me Travel Advice:</a> 
+
+            
+            Wed, 17 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p>Thank you, thank you so much.  You wouldn&#8217;t believe the amount of letters I got - it&#8217;s at 182 right now, I think that&#8217;s about all I need and more than anyone could ask for! While everyone deserves a proper response, I&#8217;m afraid that&#8217;s more than I may be able to handle.  So I&#8217;ll say right here what you deserve to hear, that you&#8217;re wonderful and thoughtful and I will keep your ideas in mind and read every single suggestion since you took the time to write them.  And I will be sketching as we go, so you can see.  </p>
+<p>&lt;3 Kate</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33753281274'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33727954517'>The Elizabeth I Quiz</a> 
+
+            
+            Tue, 16 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p>About Elizabeth, For Elizabeth.  Proceed:<br /><br /><strong>1. Name some of Henry VIII&#8217;s wives:</strong><br />- Catherine Sub-Par<br />- Plain Seymour<br />- Katherine Blowhard<br />- <em>Her Royal Highness Anne Boleyn</em><br /><br /><strong>2. What news has come under the oak tree?</strong><br />- &#8220;For Gods sake, quit lying about under trees, you&#8217;re the Queen now&#8221;<br />- &#8220;I have to give you urgent news! But not here, somewhere else.&#8221;<br />- &#8220;Come! The animals have already begun a reprisal of <em>The Circle of Life</em>&#8217;&#8221;<br />- &#8220;Aha- an apple has fallen on my head and so I have discovered I am Queen. Science!&#8221;<br /><br /><strong>3. What do we think of Sir Francis Drake?</strong><br />- Jolly good<br />- Jolly rotten<br />- Jolly roger<br />- Walter Raleigh<br /><br /><strong>4. Which suitors shall we reject today?</strong><br />- Price Eric the Desperate <br />- Prince Philip of Good Heavens No<br />- Archduke Charles the Bore<br />- A busload of Catholics <br /><br /><strong>5. Whither the Armada?</strong><br />- &#8216;neath my boot-heel, sirrah<br />- To be schooled anon<br />- Hand unto to them forthwith th&#8217; ass o&#8217; Spain<br />- I breakfast upon Armadas such as thine<br /><br /><strong>6. Let us have black teeth because:</strong><br />- It makes the smallpox scars much less the first thing that people notice <br />- #YOLO<br />- It&#8217;s fashionable, unlike scurvy, which is disgusting<br />- More sweeties please<br /><br /><strong>7. What shall we wear to Tilbury?</strong><br />- Fripperies <br />- Chainmail<br />- A frock that says &#8220;heart and stomach of a king&#8221; but, you know, cute<br />- Leather jacket with <em>Let Tyrants Fear</em> emblazoned on back with flames<br /><br /><strong>8. How shall we sign this letter to our Dudley?</strong><br />- Most serene prince<br />- My eyes<br />- Your wife will rue the day she took you from me<br />- xoxoxo<br /><br /><strong>9. What is the Babington Plot?</strong><br />- Some old bosh Walsingham keeps whispering about?  Why does that man need money for arsing around instead of doing something useful?<br />- Someone rolled Mary Queen of Scots out of prison in a beer barrel?<br />- Mary Queen of Scots is handing out word puzzles?<br />- Walsingham&#8217;s men are lurking around Mary Queen of Scots&#8217; privy wearing prosthetic noses?  I don&#8217;t have time for this.<br /><br /><strong>10. Why do they call it the Golden Age?</strong><br />- For we have mad cash (though we do not spend any of it)<br />- For white is for Virgin Queens and gold is for &#8220;Virgin&#8221; Queens<br />- For we are like a tasty frosting in the middle of an otherwise rotten oreo<br />- I don&#8217;t know but I&#8217;ll roll with it<br /><br /><br /><strong>Please circle all your answers and only hand in your test if you are actually Queen Elizabeth</strong>.</p>
+<p>Bonus: Apples do not fall out of oak trees.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33727954517'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://beatonna.tumblr.com/'>
+
+            
+            Hark! A Vagrant:
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://beatonna.tumblr.com/post/33669818754'>OH BOY!
+The first round of merchandise updates has hit the...</a> 
+
+            
+            Mon, 15 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <img src="http://25.media.tumblr.com/tumblr_mbyivl6HYU1rnw5qjo1_500.png" /><br /><br /><p>OH BOY!</p>
+<p><br />The first round of merchandise updates has <a href="http://www.topatoco.com/merchant.mvc?Screen=CTGY&amp;Store_Code=TO&amp;Category_Code=BEAT" target="_blank">hit the shelves!</a> Click it up, head on down!</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://beatonna.tumblr.com/post/33669818754'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -212,10 +1789,10 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
-        <a href='http://xkcd.com/'>
+        <a href='http://beatonna.tumblr.com/'>
 
             
-            xkcd.com
+            Hark! A Vagrant:
             
 
         </a>
@@ -224,7 +1801,7 @@ function removeStream() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://xkcd.com/1121/'>Identity</a> 
+            <a href='http://beatonna.tumblr.com/post/33641009946'>I like to draw faces</a> 
 
             
             Mon, 15 Oct 2012
@@ -232,7 +1809,7 @@ function removeStream() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <img alt="Not sure why I just taught everyone to flawlessly impersonate me to pretty much anyone I know. Just remember to constantly bring up how cool it is that birds are dinosaurs and you'll be set." src="http://imgs.xkcd.com/comics/identity.png" title="Not sure why I just taught everyone to flawlessly impersonate me to pretty much anyone I know. Just remember to constantly bring up how cool it is that birds are dinosaurs and you'll be set." />
+            <img src="http://25.media.tumblr.com/tumblr_mbxvli8KWn1rnw5qjo1_500.jpg" /><br /><br /><p>I like to draw faces</p>
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -246,7 +1823,54 @@ function removeStream() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://xkcd.com/1121/'>Read more</a>
+            <a href='http://beatonna.tumblr.com/post/33641009946'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=396'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 6 Cover: Falling Gods</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Mon, 15 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=396">New comic!</a><br />Today's News:<br /><p>&nbsp;Aaaaand we're back with another chapter of LPFOS. This is pretty much the most complicated cover I've painted for this comic. But so worth it, I think.</p>
+<p>You can get this cover as a <strong><a href="http://society6.com/rosalarian/Lesbian-Pirates-From-Outer-Space-in-Fallen-Gods-Cover_Print">print</a></strong>!</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=396'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -344,10 +1968,10 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
-        <a href='http://xkcd.com/'>
+        <a href='http://www.riotnrrdcomics.com'>
 
             
-            xkcd.com
+            Riot Nrrd
             
 
         </a>
@@ -356,15 +1980,17 @@ function removeStream() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://xkcd.com/1120/'>Blurring the Line</a> 
+            <a href='http://www.riotnrrdcomics.com/2012/10/my-body-is-all-that-i-own-now-available/'>My Body Is All That I Own now available!</a> 
 
             
-            Fri, 12 Oct 2012
+            by admin
+            
+            Wed, 10 Oct 2012
 
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <img alt="People into masturbatory navel-gazing have a lot to learn about masturbation." src="http://imgs.xkcd.com/comics/blurring_the_line.png" title="People into masturbatory navel-gazing have a lot to learn about masturbation." />
+            <p><a href="http://www.riotnrrdcomics.com/2012/10/my-body-is-all-that-i-own-now-available/"><img alt="My Body Is All That I Own now available!" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-10-10-mybodupdate copy.png" title="My Body Is All That I Own now available!" /></a></p>Yes! A shiny new zine from my brain and hands is here for you. You can get it in print or as an ezine! It is about abortion. It is also about birth. It is a brief introduction to what and who must be included in the  struggle for reproductive justice (spoiler alert: it&#8217;s [...]
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -378,7 +2004,7 @@ function removeStream() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://xkcd.com/1120/'>Read more</a>
+            <a href='http://www.riotnrrdcomics.com/2012/10/my-body-is-all-that-i-own-now-available/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -740,6 +2366,52 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=395'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 5 Page 22</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Mon, 24 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=395">New comic!</a><br />Today's News:<br /><p>&nbsp;To be continued in issue 18, which will begin on October 15th, 2012. I am taking my usual break as I perfect the script for thenext chapter. In the meantime, I'm accepting any guest pages you might want to make. You can send those to megan@rosalarian.com.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=395'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
         <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
 
             
@@ -775,6 +2447,650 @@ function removeStream() {
 
         <div class='read_more'>
             <a href='http://super-cute.deviantart.com/art/Dump-of-stuff-328791636'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=394'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 5 Page 21</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Fri, 21 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=394">New comic!</a><br />Today's News:<br /><p>&nbsp;Aw, Susie got herself some autonomy. We'll see how her bossy girlfriend takes to that.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=394'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=393'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - V3 Issue 5 Page 20</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Mon, 17 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=393">New comic!</a><br />Today's News:<br /><p>&nbsp;This isn't the last we'll see of Ursula. This copper top keeps turning up like a bad penny.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=393'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=392'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 19</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=392">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=392'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=391'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 18</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=391">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=391'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=390'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 17</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=390">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=390'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=389'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 16</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=389">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=389'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=388'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 15</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=388">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=388'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=387'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 14</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=387">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=387'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=386'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 13</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=386">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=386'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=385'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 12</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=385">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=385'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=384'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 11</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=384">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=384'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=383'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 10</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=383">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=383'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=382'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 09</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=382">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=382'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.lesbianspacepirates.com/'>
+
+            
+            I Was Kidnapped By Lesbian Pirates From Outer Space!!!
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=381'>I  Was Kidnapped By Lesbian Pirates From Outer Space!!! - Volume 03, Chapter 5, Page 08</a> 
+
+            
+            by contact@lesbianspacepirates.com (I Was Kidnapped By Lesbian Pirates From Outer Space!!!)
+            
+            Sun, 16 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="http://www.lesbianspacepirates.com/index.php?id=381">New comic!</a><br />Today's News:<br />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.lesbianspacepirates.com/index.php?id=381'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -863,6 +3179,56 @@ function removeStream() {
 
         <div class='read_more'>
             <a href='http://super-cute.deviantart.com/art/Marina-326371704'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/09/178-be-more-and-love-better/'>177: Be more and love better</a> 
+
+            
+            by admin
+            
+            Sun, 09 Sep 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/09/178-be-more-and-love-better/"><img alt="177: Be more and love better" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-09-09-riotnrrd178.png" title="177: Be more and love better" /></a></p>Aw
+Hey all! I&#8217;m going to be at MICE in Cambridge, MA in a few weeks!
+Now I am off to work on a zine so I can have it done by then
+weeee projects projects
+Thank you for reading!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/09/178-be-more-and-love-better/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1268,6 +3634,53 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/08/176-goodbye-for-now/'>176: Goodbye for now</a> 
+
+            
+            by admin
+            
+            Thu, 16 Aug 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/08/176-goodbye-for-now/"><img alt="176: Goodbye for now" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-08-16-riotnrrd176.png" title="176: Goodbye for now" /></a></p>Hey! I am working on something that I will share soon!
+Thanks for reading!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/08/176-goodbye-for-now/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
         <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
 
             
@@ -1532,6 +3945,100 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/08/175-secret-make-out-club/'>175: Secret Make-Out Club</a> 
+
+            
+            by admin
+            
+            Sat, 04 Aug 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/08/175-secret-make-out-club/"><img alt="175: Secret Make-Out Club" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-08-04-riotnrrd175.png" title="I meant to draw His Excellency into this one but I think the Cute was already hitting dangerous levels in panel 2" /></a></p>I basically call every blanket fort a Secret Make-Out Club
+I basically call every blanket a Secret Make-Out Club
+Thanks for reading!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/08/175-secret-make-out-club/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/07/174-big-messes/'>174: Big messes</a> 
+
+            
+            by admin
+            
+            Sun, 22 Jul 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/07/174-big-messes/"><img alt="174: Big messes" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-07-22-riotnrrd174.png" title="to be fair, not much makes Wren feel great about people" /></a></p>Trying to get things back on track around here (and everywhere else). In other news hey did you know something I wrote is going to be in a book? One of the editors, Tom Leger, did an interview this week that perhaps you should read! You should also read Red Durkin&#8217;s interview by the same [...]
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/07/174-big-messes/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
         <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
 
             
@@ -1552,7 +4059,7 @@ function removeStream() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            I usually don't post stuff of such low quality to dA but I wanted you guys to see him.<br /><br />He?s a fish<br />Name: Froob<br />Catchphrase: Glub<br />Personality: Cranky<br />Bday: April 10th<br /><div><img alt="thumbnail" src="http://th02.deviantart.net/fs71/300W/f/2012/190/7/3/animal_crossing_oc_by_super_cute-d56n8n5.png" /></div>
+            I usually don't post stuff of such low quality to dA but I wanted you guys to see him.<br /><br />He’s a fish<br />Name: Froob<br />Catchphrase: Glub<br />Personality: Cranky<br />Bday: April 10th<br /><div><img alt="thumbnail" src="http://th02.deviantart.net/fs71/300W/f/2012/190/7/3/animal_crossing_oc_by_super_cute-d56n8n5.png" /></div>
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -1567,6 +4074,52 @@ function removeStream() {
 
         <div class='read_more'>
             <a href='http://super-cute.deviantart.com/art/Animal-Crossing-oc-313492865'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/07/173-suspicions/'>173: Suspicions</a> 
+
+            
+            by admin
+            
+            Sat, 07 Jul 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/07/173-suspicions/"><img alt="173: Suspicions" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-07-07-riotnrrd173.png" title="but let's be real, that song is fucking sad" /></a></p>Thanks for reading!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/07/173-suspicions/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1787,6 +4340,54 @@ function removeStream() {
 
         <div class='read_more'>
             <a href='http://super-cute.deviantart.com/art/Meet-the-Pyro-310223817'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/06/172-skills/'>172: Skills</a> 
+
+            
+            by admin
+            
+            Fri, 22 Jun 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/06/172-skills/"><img alt="172: Skills" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-06-22-riotnrrd172.png" title="hey remember this coffee shop with the weird chairs. what were you thinking past-RJ." /></a></p>But really from what I can tell about the world, it is a good dang skill set.
+Hmm hey, have you heard something I wrote is going to be in a book with a bunch of awesome people?
+Thanks for reading!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/06/172-skills/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2060,6 +4661,52 @@ function removeStream() {
     <div class="feed_icon default_icon">
     
 
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/06/171-late-night/'>171: Late Night</a> 
+
+            
+            by admin
+            
+            Fri, 08 Jun 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/06/171-late-night/"><img alt="171: Late Night" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-06-08-riotnrrd171.png" title="Sam has been careful ever since the Stumbleupon incident" /></a></p>Thanks for reading!
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/06/171-late-night/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
         <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
 
             
@@ -2095,6 +4742,53 @@ function removeStream() {
 
         <div class='read_more'>
             <a href='http://super-cute.deviantart.com/art/Characters-based-on-Florence-Songs-306385110'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://www.riotnrrdcomics.com'>
+
+            
+            Riot Nrrd
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.riotnrrdcomics.com/2012/05/170-whats-next/'>170: What’s Next</a> 
+
+            
+            by admin
+            
+            Mon, 28 May 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p><a href="http://www.riotnrrdcomics.com/2012/05/170-whats-next/"><img alt="170: What&#8217;s Next" border="0" src="http://www.riotnrrdcomics.com/comics-rss/2012-05-28-riotnrrd170.png" title="so you know that she knew that I knew she knew and now we're all in the know, sooooo" /></a></p>This is prooobably as naked as I&#8217;ll ever draw these characters. Thanks for reading!
+In case you missed the announcement:  Teukie, the artist behind Rowdy Baubles, is giving away one of their beautiful custom sparkly pronoun necklaces to one lucky Riot Nrrd fan! If you have never seen their work, skip over to the etsy, [...]
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.riotnrrdcomics.com/2012/05/170-whats-next/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2711,138 +5405,6 @@ function removeStream() {
 
         <div class='read_more'>
             <a href='http://super-cute.deviantart.com/art/The-World-Ends-with-YOU-298594599'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
-
-            
-            deviantART: gallery:super-cute/5987508
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://super-cute.deviantart.com/art/Adventure-and-Dreams-297897287'>Adventure and Dreams</a> 
-
-            
-            Sun, 22 Apr 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            working on backgrouds because I suck at themmmm lol<br /><br /><br />Characters (c) Me ;&gt;<br /><br />building texture here <a class="external" href="http://www.deviantart.com/users/outgoing?http://www.zeroterminal.com/uploads/posts/2010-08/1282211157_build123.png">[link]</a><br /><div><img alt="thumbnail" src="http://th02.deviantart.net/fs70/300W/i/2012/113/c/0/adventure_and_dreams_by_super_cute-d4xcz0n.png" /></div>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://super-cute.deviantart.com/art/Adventure-and-Dreams-297897287'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
-
-            
-            deviantART: gallery:super-cute/5987508
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://super-cute.deviantart.com/art/Portal-2-is-one-year-old-297351014'>Portal 2 is one year old?</a> 
-
-            
-            Fri, 20 Apr 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            I hear portal 2 is a year old now...<br />holy jeezus thats crazy talk. <br />Portal 2 has been such a wonder thing in my life so here's some art. thank you portal 2 for existing.<br />drew the turrets and GLaDOS again for you all &lt;3 <br /><br />enjoy!<br /><div><img alt="thumbnail" src="http://th03.deviantart.net/fs71/300W/i/2012/110/3/7/portal_is_one_year_old__by_super_cute-d4x19ie.png" /></div>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://super-cute.deviantart.com/art/Portal-2-is-one-year-old-297351014'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://search.deviantart.com/?q=gallery:super-cute/5987508&section='>
-
-            
-            deviantART: gallery:super-cute/5987508
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://super-cute.deviantart.com/art/Denying-a-Crisis-297138632'>Denying a Crisis</a> 
-
-            
-            Wed, 18 Apr 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            An old character of mine based on the song "Saviour - Lights" <br /><br />He is a robot that picks weeds and stuff.<br /><br />:&gt;<br /><div><img alt="thumbnail" src="http://th05.deviantart.net/fs70/300W/i/2012/109/e/f/denying_a_crisis_by_super_cute-d4wwpmw.png" /></div>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://super-cute.deviantart.com/art/Denying-a-Crisis-297138632'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
