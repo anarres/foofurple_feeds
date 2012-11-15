@@ -2,53 +2,12 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
 <title>Streams and feeds</title>
-<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
-<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
 
-/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
-http://stackoverflow.com/questions/1933602/
-how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
-function getElementsByClassName(node,classname) {
-  if (node.getElementsByClassName) { // use native implementation if available
-    return node.getElementsByClassName(classname);
-  } else {
-    return (function getElementsByClass(searchClass,node) {
-        if ( node == null )
-          node = document;
-        var classElements = [],
-            els = node.getElementsByTagName("*"),
-            elsLen = els.length,
-            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/media/js/spaceOcto.js'></script>
 
-        for (i = 0, j = 0; i < elsLen; i++) {
-          if ( pattern.test(els[i].className) ) {
-              classElements[j] = els[i];
-              j++;
-          }
-        }
-        return classElements;
-    })(classname, node);
-  }
-}
-
-function init() {
-    var objs = getElementsByClassName(document, 'remove_stream');
-    for (var i=0; i<objs.length; i++) {
-        objs[i].addEventListener('click', function (e) {
-            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-    var fobjs = getElementsByClassName(document, 'remove_feed');
-    for (var j=0; j<fobjs.length; j++) {
-        fobjs[j].addEventListener('click', function (e) {
-            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-}
-
-</script>
 </head>
 <body onload="init()">
 
@@ -57,212 +16,207 @@ function init() {
 </div> <!--#nav-->
 
 <div id="header">
-    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png" />
+    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png">
     <h1>Streams and feeds</h1>
 </div> <!--#header-->
 
 <div id="main">
     
+    <div id="newFeedFoo" style="position:fixed;top:10px;left:-1000px;z-index:2;background-color: white;padding:10px;padding-top:5px;border:3px solid grey;border-radius: 5px;">
+        <h3>Add a new feed:</h3>
+        <p>
+            Feed name:
+            <input type='text' id="elephant" />
+            Feed url:
+            <input type='text' id="walrus" />
+            <button onclick="reallyAddFeed()">Submit</button>
+        </p>
+    </div>
+
+
+    <div id="saveAllChanges" style="width:200px;position:fixed;top:10px;left:-1000px;z-index:2;background-color: white;padding:10px;padding-top:5px;border:3px solid grey;border-radius: 5px;">
+    <h3>Save all changes</h3>
+    <p>To save your changes, please right-click the file below and save it as /home/katie/prog/foofurple_feeds/streams.json. 
+
+    <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
+
+    <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
+
+    </div>
 
 <div class='stream'>
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+    <h2><a class="streamTitleList" id="FotostreamList" href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a> <span class='remove_stream'>(remove stream)</span></h2>
 
     <ul>
 
         
 
-        <li><a href='http://api.flickr.com/services/feeds/photos_public.gne?id=30475375@N04&lang=en-us&format=rss_200'>Govangocrafts</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='Govangocrafts' href='http://api.flickr.com/services/feeds/photos_public.gne?id=30475375@N04&lang=en-us&format=rss_200'>Govangocrafts</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://www.nataliedee.com/rss/rss.php'>Natalie Dee</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='Natalie Dee' href='http://www.nataliedee.com/rss/rss.php'>Natalie Dee</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://backend.deviantart.com/rss.xml?q=gallery%3Asuper-cute%2F5987508&type=deviation'>Super-cute</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='Super-cute' href='http://backend.deviantart.com/rss.xml?q=gallery:super-cute/5987508&type=deviation'>Super-cute</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://lesbianspacepirates.com/rss.php'>Lesbian Space Pirates</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='Lesbian Space Pirates' href='http://lesbianspacepirates.com/rss.php'>Lesbian Space Pirates</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://www.riotnrrdcomics.com/feed/'>Riot Nrrd</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='Riot Nrrd' href='http://www.riotnrrdcomics.com/feed/'>Riot Nrrd</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://beatonna.tumblr.com/rss'>Hark! A Vagrant</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='Hark! A Vagrant' href='http://beatonna.tumblr.com/rss'>Hark! A Vagrant</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://xkcd.com/atom.xml'>XKCD</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Fotostream' id='XKCD' href='http://xkcd.com/atom.xml'>XKCD</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
     </ul>
 
-    <br>
+    <button class='addFeedToStream' id='Fotostream'>
+        Add a feed to this stream
+    </button>
 
-    Add a feed to this stream:
-
-    <br>
-
-    Name: <input type='text' />
-    Web addres: <input type='text' value='http://' />
-    <button onclick='newFeed()'>Submit</button>
 
     <br><br>
 
-</div> <!--.stream-->
-
-<div class='stream'>
+</div> <!--.stream--><div class='stream'>
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+    <h2><a class="streamTitleList" id="BlogsList" href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a> <span class='remove_stream'>(remove stream)</span></h2>
 
     <ul>
 
         
 
-        <li><a href='http://www.captainawkward.com/feed'>Captain awkward</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Blogs' id='Captain awkward' href='http://www.captainawkward.com/feed'>Captain awkward</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://hoydenabouttown.com/feed/'>Hoyden About Town</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Blogs' id='Hoyden About Town' href='http://hoydenabouttown.com/feed/'>Hoyden About Town</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://www.feministactioncambridge.wordpress.com/feed'>Feminist Action Cambridge</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Blogs' id='Feminist Action Cambridge' href='http://www.feministactioncambridge.wordpress.com/feed'>Feminist Action Cambridge</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://freethoughtblogs.com/blackskeptics/feed/'>Black skeptics</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Blogs' id='Black skeptics' href='http://freethoughtblogs.com/blackskeptics/feed/'>Black skeptics</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://www.space-invaders.eu/?feed=rss2'>Space Invaders</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Blogs' id='Space Invaders' href='http://www.space-invaders.eu/?feed=rss2'>Space Invaders</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
     </ul>
 
-    <br>
+    <button class='addFeedToStream' id='Blogs'>
+        Add a feed to this stream
+    </button>
 
-    Add a feed to this stream:
-
-    <br>
-
-    Name: <input type='text' />
-    Web addres: <input type='text' value='http://' />
-    <button onclick='newFeed()'>Submit</button>
 
     <br><br>
 
-</div> <!--.stream-->
-
-<div class='stream'>
+</div> <!--.stream--><div class='stream'>
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+    <h2><a class="streamTitleList" id="Data, programmingList" href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a> <span class='remove_stream'>(remove stream)</span></h2>
 
     <ul>
 
         
 
-        <li><a href='http://whimsley.typepad.com/whimsley/atom.xml'>Whimsley</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Whimsley' href='http://whimsley.typepad.com/whimsley/atom.xml'>Whimsley</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://socialmediacollective.org/feed/'>Social Media Collective</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Social Media Collective' href='http://socialmediacollective.org/feed/'>Social Media Collective</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://blog.buddycloud.com/rss'>Buddycloud blog</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Buddycloud blog' href='http://blog.buddycloud.com/rss'>Buddycloud blog</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://dw-news.dreamwidth.org/data/atom'>Dreamwidth news</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Dreamwidth news' href='http://dw-news.dreamwidth.org/data/atom'>Dreamwidth news</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://dw-dev.dreamwidth.org/data/atom'>Dreamwidth dev</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Dreamwidth dev' href='http://dw-dev.dreamwidth.org/data/atom'>Dreamwidth dev</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://identi.ca/api/statuses/user_timeline/85379.atom'>Softmetz</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Softmetz' href='http://identi.ca/api/statuses/user_timeline/85379.atom'>Softmetz</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='https://foofurple.wordpress.com/feed/'>Foofurple blog</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Data, programming' id='Foofurple blog' href='https://foofurple.wordpress.com/feed/'>Foofurple blog</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
     </ul>
 
-    <br>
+    <button class='addFeedToStream' id='Data, programming'>
+        Add a feed to this stream
+    </button>
 
-    Add a feed to this stream:
-
-    <br>
-
-    Name: <input type='text' />
-    Web addres: <input type='text' value='http://' />
-    <button onclick='newFeed()'>Submit</button>
 
     <br><br>
 
-</div> <!--.stream-->
-
-<div class='stream'>
+</div> <!--.stream--><div class='stream'>
 
     <br>
 
-    <h2><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+    <h2><a class="streamTitleList" id="Auf DeutschList" href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a> <span class='remove_stream'>(remove stream)</span></h2>
 
     <ul>
 
         
 
-        <li><a href='http://www1.swr.de/podcast/xml/swr2/wissen.xml'>SWR Wissen</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Auf Deutsch' id='SWR Wissen' href='http://www1.swr.de/podcast/xml/swr2/wissen.xml'>SWR Wissen</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://podcast.wdr.de/maus.xml'>Sendung mit der Maus</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Auf Deutsch' id='Sendung mit der Maus' href='http://podcast.wdr.de/maus.xml'>Sendung mit der Maus</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://podcast.wdr.de/quarks.xml'>Quanks und co</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Auf Deutsch' id='Quanks und co' href='http://podcast.wdr.de/quarks.xml'>Quanks und co</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://rss.dw.de/xml/podcast_journal-reporter'>DW Journal Reporer</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Auf Deutsch' id='DW Journal Reporer' href='http://rss.dw.de/xml/podcast_journal-reporter'>DW Journal Reporer</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
-        <li><a href='http://rss.dw.de/xml/podcast_projekt-zukunft'>DW Projekt Zukunft</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='Auf Deutsch' id='DW Projekt Zukunft' href='http://rss.dw.de/xml/podcast_projekt-zukunft'>DW Projekt Zukunft</a> <span class='remove_feed'>(remove feed)</span></li>
 
         
 
     </ul>
 
-    <br>
+    <button class='addFeedToStream' id='Auf Deutsch'>
+        Add a feed to this stream
+    </button>
 
-    Add a feed to this stream:
-
-    <br>
-
-    Name: <input type='text' />
-    Web addres: <input type='text' value='http://' />
-    <button onclick='newFeed()'>Submit</button>
 
     <br><br>
 
-</div> <!--.stream-->CLICK HERE TO ADD A NEW STREAM
+</div> <!--.stream--><button onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 </div> <!--#main-->
 
 <div id="footer">

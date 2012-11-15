@@ -50,7 +50,7 @@ for s in sets_of_feeds:
     items_html = ""
     for e in entry_info_objects:
         items_html += item.render( e.get_dict() )
-    output_html = page.render({'main_content':items_html, 'title':s.title, 'nav':nav})
+    output_html = page.render({'main_content':items_html, 'title':s.title, 'nav':nav, 'javascript':''})
 
     f = open(s.get_filename(), 'w')
     f.write(output_html.encode('utf-8'))
@@ -58,15 +58,40 @@ for s in sets_of_feeds:
 
     print "%s written." % s.get_filename()
 
-foo = ""
 
-# Create index page
+j = "<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/media/js/spaceOcto.js'></script>"
+
+foo = """
+    <div id="newFeedFoo" style="position:fixed;top:10px;left:-1000px;z-index:2;background-color: white;padding:10px;padding-top:5px;border:3px solid grey;border-radius: 5px;">
+        <h3>Add a new feed:</h3>
+        <p>
+            Feed name:
+            <input type='text' id="elephant" />
+            Feed url:
+            <input type='text' id="walrus" />
+            <button onclick="reallyAddFeed()">Submit</button>
+        </p>
+    </div>
+
+
+    <div id="saveAllChanges" style="width:200px;position:fixed;top:10px;left:-1000px;z-index:2;background-color: white;padding:10px;padding-top:5px;border:3px solid grey;border-radius: 5px;">
+    <h3>Save all changes</h3>
+    <p>To save your changes, please right-click the file below and save it as /home/katie/prog/foofurple_feeds/streams.json. 
+
+    <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
+
+    <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
+
+    </div>
+
+"""
+
 for s in sets_of_feeds:
     foo += stream.render({'stream_title':s.title, 'stream_url':s.get_filename(), 'stream_feeds':s.feeds_list})
 
-foo += "CLICK HERE TO ADD A NEW STREAM"
+foo += "<button onclick='saveAllChanges()'>SAVE ALL CHANGES</button>"
 
-index_html = page.render({'main_content':foo, 'title':'Streams and feeds', 'nav':nav})
+index_html = page.render({'main_content':foo, 'title':'Streams and feeds', 'nav':nav, 'javascript':j})
 f = open('/home/katie/prog/foofurple_feeds/output/index.html', 'w')
 f.write(index_html)
 f.close()

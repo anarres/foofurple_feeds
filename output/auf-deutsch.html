@@ -2,53 +2,12 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
 <title>Auf Deutsch</title>
-<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
-<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
 
-/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
-http://stackoverflow.com/questions/1933602/
-how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
-function getElementsByClassName(node,classname) {
-  if (node.getElementsByClassName) { // use native implementation if available
-    return node.getElementsByClassName(classname);
-  } else {
-    return (function getElementsByClass(searchClass,node) {
-        if ( node == null )
-          node = document;
-        var classElements = [],
-            els = node.getElementsByTagName("*"),
-            elsLen = els.length,
-            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
 
-        for (i = 0, j = 0; i < elsLen; i++) {
-          if ( pattern.test(els[i].className) ) {
-              classElements[j] = els[i];
-              j++;
-          }
-        }
-        return classElements;
-    })(classname, node);
-  }
-}
 
-function init() {
-    var objs = getElementsByClassName(document, 'remove_stream');
-    for (var i=0; i<objs.length; i++) {
-        objs[i].addEventListener('click', function (e) {
-            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-    var fobjs = getElementsByClassName(document, 'remove_feed');
-    for (var j=0; j<fobjs.length; j++) {
-        fobjs[j].addEventListener('click', function (e) {
-            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-}
-
-</script>
 </head>
 <body onload="init()">
 
@@ -57,12 +16,866 @@ function init() {
 </div> <!--#nav-->
 
 <div id="header">
-    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png" />
+    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png">
     <h1>Auf Deutsch</h1>
 </div> <!--#header-->
 
 <div id="main">
     <div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/rhetorik-fuer-frauen.12844s.mp3'>Rhetorik für Frauen</a> 
+
+            
+            by wissen@swr2.de (Almut Schnerring/Sascha Verlan)
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Was bringen Kommunikationstrainings? Von Almut Schnerring und Sascha Verlan. | "Starke Frauen reden Klartext." "Sagen Sie, was Sie meinen - erreichen Sie, was Sie wollen!" So oder ähnlich lauten die Titel von Ratgebern, die Frauen bei der erfolgreichen Kommunikation im Job unterstützen sollen. Zugleich bieten immer mehr Rhetoriktrainer Kurse speziell für weibliche Berufstätige an. Denn frauentypische Sprechweisen und Körperhaltungen gelten als Karrierebremse: lächelnd geneigter Kopf, hohe Stimme, Konjunktive statt klarer Ansage. In den Workshops sollen Frauen lernen, die eigenen Kommunikationsmuster zu durchbrechen und bei Bedarf eine "Sprache der Macht" einzusetzen.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/rhetorik-fuer-frauen.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/rhetorik-fuer-frauen.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2-wissen-20121114-sexueller-kindesmissbrauch-durch-jugendliche.12844s.mp3'>Sexueller Kindesmissbrauch durch Jugendliche</a> 
+
+            
+            by wissen@swr2.de (Marcus Schwandner)
+            
+            Wed, 14 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Ursachen und Therapie. Von Marcus Schwandner. | Im März 2012 missbrauchte und tötete ein 18-Jähriger die 11-jährige Lena. Wieder diskutierte Deutschland über Prävention, Therapie und Bestrafung jugendlicher Sexualstraftäter. Wissenschaftler suchen Lösungsansätze durch neue Methoden.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2-wissen-20121114-sexueller-kindesmissbrauch-durch-jugendliche.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2-wissen-20121114-sexueller-kindesmissbrauch-durch-jugendliche.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.quarks.de'>
+
+               
+            <img src='http://www.wdr.de/podcast_php/img/itunes_quarks.jpg' alt='Quarks & Co - zum Mitnehmen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://medien.wdr.de/m/1352837688/quarks/wdr_fernsehen_quarks_und_co_20121113.mp4'>Quarks & Co: 13.11.2012, Wie geht Wein?</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Wein ist ein Phänomen, ein Mythos, ein Geheimnis - behauptet jedenfalls das Marketing des Weinhandels. Aber was ist guter Wein, und wie macht man ihn? Quarks & Co begleitet einen Winzer durch das Jahr, erzählt die Geschichte des Weinbaus und geht der Frage nach, welchen Einfluss das Klima hat.; © WDR VideoPodcast
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://medien.wdr.de/m/1352837688/quarks/wdr_fernsehen_quarks_und_co_20121113.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://medien.wdr.de/m/1352837688/quarks/wdr_fernsehen_quarks_und_co_20121113.mp4'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121113_die_geschichte_chinesischer_esskultur.12844s.mp3'>Schlemmer, Zecher, Hungerleider - Die Geschichte chinesischer Esskultur</a> 
+
+            
+            by wissen@swr2.de (Dagmar Lorenz)
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Von Dagmar Lorenz | Haben Sie schon gegessen? So begrüßten sich Nachbarn, Freunde und Arbeitskollegen in der Volksrepublik China. In der von Hungerkatastrophen gezeichneten chinesischen Geschichte kommt gutem Essen große Bedeutung zu. Doch auch das Speisen selbst ist Teil einer Kultur der Geselligkeit.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121113_die_geschichte_chinesischer_esskultur.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121113_die_geschichte_chinesischer_esskultur.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121112_mp3.12844s.mp3'>Bewegte Bilder im Ohr - Bemerkenswertes zu MP3</a> 
+
+            
+            by wissen@swr2.de (Marko Pauli)
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Von Marko Pauli. | Ob auf der Mini-Stereoanlage zu Hause oder auf dem Player unterwegs ¿ MP3 hat sich binnen weniger Jahre weltweit als Standard durchgesetzt. Das datenreduzierte Format hat nebenbei die gesamte Audiowelt grundlegend verändert.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121112_mp3.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121112_mp3.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-11-11/e-16316036-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16344922'>Im Gespräch: Neue Therapien zur Blutdrucksenkung</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 11 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Unser Studiogast Prof. Dr. med. Philipp Stawowy ist Kardiologe am Deutschen Herzzentrum Berlin. Mit Projekt Zukunft spricht er über die Volkskrankheit Bluthochdruck. Welche neuen Behandlungsmethoden sind erfolgversprechend?
+	DW: Ein Schrittmacher zur Blutdrucksenkung, angesetzt an der Halsschlagader, wie vielversprechend ist dieser Eingriff?
+
+	 
+
+	Philipp Stawowy: Sehr vielversprechend. Es ist eine sehr effektive Therapie, wie die ersten Daten zeigen. Aber sie sollte nur bestimmten Patientengruppen vorbehalten sein.
+
+	 
+
+	Welchen Patientengruppen?
+
+	 
+
+	Das sind Patienten, die nicht auf andere Therapien ansprechen, die schon viele Mittel gegen den Bluthochdruck einnehmen und trotzdem den Blutdruck nicht senken können.
+
+	 
+
+	Also erst dann sollte man zu einer Operation raten. Wie Risiko reich ist denn diese Operation?
+
+	 
+
+	Es ist ein sehr invasiver Eingriff. Dass heißt, es erfordert eine Operation in der Nähe des Halsgefäßes, dort wo das Nervengeflecht ist. Und diese Gefäße versorgen das Gehirn.
+
+	 
+
+	Sie verwenden eine andere Operationsmethode, bei der Nervenfasern, die um die Niere herum liegen, abgetötet werden. Diese Nerven sind auch an der Entstehung von Bluthochdruck beteiligt. Warum benutzen Sie diese Methode?
+
+	 
+
+	Der Eingriff ist schonender. Er geschieht nur in einer Schlafnarkose und ist ein kleiner Eingriff mit einer Punktion der Arterie. Der Katheter wird in die Nierenarterie vorgeführt und dort wird die Energie abgegeben, um die Nerven abzutöten.
+
+	 
+
+	Jetzt klingt dieser Eingriff, bei dem Nerven abgetötet werden, nicht unbedingt schonender.
+
+	 
+
+	Ja, aber der Eingriff ist gut verträglich. Und die Daten zeigen auch, dass dadurch sehr gut der Blutdruck gesenkt werden kann.
+
+	 
+
+	Um wie viel kann der Blutdruck gesengt werden?
+
+	 
+
+	In den Studien bis zu 30 mmHg systolisch und 15 mmHG diastolisch.
+
+	 
+
+	Und für welche Patienten wäre eine solche Operation notwendig? 
+
+	 
+
+	Auch hier ist es so, dass eigentlich nur Patienten in Frage kommen sollten, die auf andere Therapien, also herkömmliche Therapien mit Medikamenten nicht ansprechen.
+
+	 
+
+	Ist das denn für Sie solch ein Eingriff schon Routine?
+
+	 
+
+	Bei uns ist das ein Routineeingriff und das Verfahren ist auch zugelassen.
+
+	 
+
+	Seit wie vielen Jahren machen Sie das schon?
+
+	 
+
+	Seit zwei Jahren.
+
+	 
+
+	Bluthochdruck ist ja ein Thema, das sehr viele Menschen betrifft. Was ist Ihr Tipp, was können wir alle tun, damit wir gar nicht erst Probleme mit dem Blutdruck bekommen?
+
+	 
+
+	Letztendlich ist es die gesunde Lebensweise, wie wir sagen. Also, salzarme, mediterrane Kost, Gewichtsabnahme, nicht Rauchen, wenig Alkohol und Sport treiben.
+
+	 
+
+	Also das was man eigentlich auch sonst tun sollte, um gesund zu bleiben. 
+
+	 
+
+	(Interview. Maria Grunwald)
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde4512-projektzuk01ep_studio_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-11-11/e-16316036-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16344922'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/german/?maca=de-podcast_journal-reporter-2043-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,2576985_10,00.jpg' alt='Journal Reporter | Video Podcast | Deutsche Welle' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/stärker-allein-separatisten-in-europa/a-16369618?maca=de-podcast_journal-reporter-2043-xml-mrss'>Stärker allein? Separatisten in Europa</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sat, 10 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            In der Eurokrise fühlen sich einige reiche Regionen Europas nicht mehr zuständig für die steigenden Schulden ihrer Nationalstaaten. Die Südtiroler wollen unabhängig sein, und die Schotten sowieso schon lange: Seit Europa in der Krise steckt, haben Unabhängigkeitsbewegungen Rückenwind. Bröckelt Europas Einheit?
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/jd/jd20121110_reporter09f_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/stärker-allein-separatisten-in-europa/a-16369618?maca=de-podcast_journal-reporter-2043-xml-mrss'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/kleine-helden-grosses-kino.12844s.mp3'>Kleine Helden, großes Kino</a> 
+
+            
+            by wissen@swr2.de (Hildebrand Maike)
+            
+            Sat, 10 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Der deutsche Kinder-und Jugendfilm. Von Maike Hildebrand | In den vergangenen Jahren waren im Kino viel aufwändige Produktionen zu sehen wie "Hanni und Nanni" oder "Der Froschkönig". Immer wieder werden alte Stoffe aufgegriffen, populäre Bücher oder Märchen verfilmt. Nur selten gibt es in Deutschland Filme, die sich der Gegenwart und Lebensrealität der jungen Zuschauer widmen. Der Dokumentarfilm "Vierzehn" begleitet vier junge Mädchen bei ihrer Schwangerschaft. Manche DEFA-Kinderfilme aus der ehemaligen DDR sind bis heute unvergänglich. Die Kinder- und Jugendjury auf der Berlinale macht Erfahrungen mit ausländischen Filmproduktionen.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/kleine-helden-grosses-kino.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/kleine-helden-grosses-kino.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121109_les_noirs_de_france.12844s.mp3'>Les noirs de France</a> 
+
+            
+            by wissen@swr2.de (Bettina Kaps)
+            
+            Fri, 09 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Schwarzes Selbstbewusstsein in Frankreich. Von Bettina Kaps. | Schätzungen zufolge leben in Frankreich vier bis sechs Millionen Schwarze. Viele Franzosen halten die schwarzen Mitbewohner für Einwanderer oder halten sie für Landsleute aus den französischen Überseegebieten. Die wenigsten wissen, dass schon seit über 300 Jahren Schwarze in Frankreich leben und wirken. Auch die schwarzen Franzosen kennen diesen Teil ihrer Geschichte kaum. Aber das ändert sich.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121109_les_noirs_de_france.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121109_les_noirs_de_france.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.wdrmaus.de/'>
+
+               
+            <img src='http://www.wdr.de/podcast_php/img/itunes_maus.jpg' alt='Sendung mit der Maus - zum Mitnehmen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://medien.wdr.de/m/1352381742/maus/wdr_fernsehen_die_maus_20121111.mp4'>Die Sendung mit der Maus: 11.11.2012, Shadowland</a> 
+
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Mit einer Lampe und den eigenen Schatten lassen sich richtige Bilder an die Wand werfen - wenn man es kann. Christoph besucht Akrobaten, die mit ihren Schatten sogar einen ganzen Maus-Trickfilm nachspielen
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://medien.wdr.de/m/1352381742/maus/wdr_fernsehen_die_maus_20121111.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://medien.wdr.de/m/1352381742/maus/wdr_fernsehen_die_maus_20121111.mp4'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/peter-pan-und-sein-erfinder.12844s.mp3'>Peter Pan und sein Erfinder</a> 
+
+            
+            by wissen@swr2.de (Stahl Sabine)
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Der Autor James Matthew Barrie. Von Sabine Stahl. | Auf der Insel Neverland tummeln sich freche Feen, Indianer, Piraten - und ein Junge, der fliegen kann: Peter Pan. Um 1900 erschien in Großbritannien die fantastische und skurrile Geschichte von dem "einzigen Kind, das nie erwachsen wird". Bis heute hat dieser Klassiker der Jugendliteratur nichts an Strahlkraft eingebüßt. Peter Pan inspirierte Musikstars wie Michael Jackson und Kate Bush, Filmemacher wie Walt Disney und Steven Spielberg, sogar die Psychologie wurde um die Diagnose des "Peter-Pan-Syndroms" reicher. Erfinder der Geschichte war der Schotte James Matthew Barrie - ein nur 1,52 Meter großer, vom englischen Königshaus geadelter Journalist, Theaterautor und Schriftsteller. Wie das Leben seiner Fantasiefigur Peter Pan war auch seines durchdrungen von Tragik, ungestillter Sehnsucht und Einsamkeit.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/peter-pan-und-sein-erfinder.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/peter-pan-und-sein-erfinder.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.quarks.de'>
+
+               
+            <img src='http://www.wdr.de/podcast_php/img/itunes_quarks.jpg' alt='Quarks & Co - zum Mitnehmen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://medien.wdr.de/m/1352287664/quarks/wdr_fernsehen_quarks_und_co_20121106.mp4'>Quarks & Co: 06.11.2012, Quarks & Co: Heute gekauft, morgen kaputt</a> 
+
+            
+            Wed, 07 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Kaum ist die Garantie abgelaufen, bleibt der Fernseher schwarz. Und das neue T-Shirt leiert schon nach der ersten Wäsche aus. Es scheint, als würden viele Produkte heute nur noch hergestellt, um möglichst schnell wieder kaputt zu gehen - auf dass wir sie ersetzen müssen; bleibt die Frage, ob die Unternehmen bewusst auf Qualität und Langlebigkeit verzichten oder ob unser Wunsch, immer das Neueste vom Neuen zu haben, diese Verschwendung erst hervorgebracht hat.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://medien.wdr.de/m/1352287664/quarks/wdr_fernsehen_quarks_und_co_20121106.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://medien.wdr.de/m/1352287664/quarks/wdr_fernsehen_quarks_und_co_20121106.mp4'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121106_handlungsspielraum_des_us_praesidenten.12844s.mp3'>Mächtigster Mann oder Marionette?</a> 
+
+            
+            by wissen@swr2.de (Fritz Sabrina)
+            
+            Tue, 06 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Der Handlungsspielraum des US-Präsidenten. Von Sabrina Fritz | Am 6. November wird der 45. US-Präsident gewählt, der angeblich mächtigste Mann der Welt. Doch welchen Handlungsspielraum hat er tatsächlich? Mächtige Lobbys verhindern höhere Steuern, strengere Waffengesetze oder umweltbewussteren Umgang mit Energie.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121106_handlungsspielraum_des_us_praesidenten.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121106_handlungsspielraum_des_us_praesidenten.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.swr.de/swr2/wissen/index.html'>
+
+               
+            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121105_barentsregion.12844s.mp3'>Öl, Eisenerz und schnelle Server - Aufbruch in der Barentsregion</a> 
+
+            
+            by wissen@swr2.de (Agnes Bührig)
+            
+            Mon, 05 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Von Agnes Bührig. | Die Barentsregion, der nördliche Teil Norwegens, Schwedens, Finnlands und Russlands, ist durch seine Naturschätze im Aufbruch. Es wird nach Edelmetallen gesucht, in der Barentssee auf norwegischer Seite wurden neue Ölfelder entdeckt, in Kaunisvaara wird im Herbst eine neue Eisenerzgrube eröffnet.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121105_barentsregion.12844s.mp3'>Audio link</a>
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/11/swr2wissen_20121105_barentsregion.12844s.mp3'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-11-04/e-16299407-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16327545'>Was kann unser Gehirn alles im Schlaf leisten?</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 04 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Dazu ein Gespräch mit dem Schlafforscher Dr. Dieter Kunz. Er leitet die Klinik für Schlafmedizin im Sankt Hedwig Krankenhaus in Berlin.
+	DW:  Herr Kunz, können Sie klarträumen?
+
+	 
+
+	Dieter Kunz: Ja, zumindest habe ich das früher gekonnt, als ich klein war und lange ausschlafen durfte. Am Ende der Nacht fanden dann Träume statt. Und dann habe ich mir überlegt, dieses oder jenes zu machen. Wenn mir etwas nicht gefallen hat, dann bin ich woanders hingegangen. Das hat funktioniert.
+
+	 
+
+	Haben Sie das geübt?
+
+	 
+
+	Nein, es war einfach da. Ich habe es erst mal als Phänomen wahrgenommen.
+
+	 
+
+	Das Klarträumen kann man gegen Alpträume einsetzen. Wogegen kann Klarträumen noch helfen?
+
+	 
+
+	Eine wichtige Wirkung hat es bei posttraumatischen Belastungsstörungen. Das haben Menschen, die durch eine lebensbedrohliche Situation psychisch schwer traumatisiert sind - zum Beispiel wenn ein LKW ein Kind überfährt und man dieses schlimme Erlebnis direkt gesehen hat. Solche Bilder bekommt man schwer aus dem Kopf. Man hat sie als Nachhall-Erinnerung teilweise tagsüber, aber eben auch nachts in den Träumen. Und da hat sich das Klarträumen als hilfreich erwiesen.
+
+	 
+
+	Wie kann man das genau trainieren?
+
+	 
+
+	Voraussetzung ist zunächst der REM-Schlaf. Das ist, vereinfacht gesagt, die Traumschlafphase. Weiterhin müssen Sie an das Ende des Schlafes kommen, wenn das Gehirn in Teilen schon wach wird. Und erst dann, wenn Sie gleichzeitig wach sind und den Traumschlaf haben, dann werden Sie sich dieser Träume bewusst. Denn Träume hat jeder von uns, jede Nacht über zwei Stunden.
+
+	 
+
+	Wir träumen also jede Nacht über zwei Stunden. Warum bekommt das Gehirn davon gar nichts mit? Warum können wir uns nicht daran erinnern?
+
+	 
+
+	Die Frage ist, warum sollten wir uns überhaupt daran erinnern. Menschen, die im Rahmen von Untersuchungen im REM-Schlaf geweckt wurden, waren zutiefst erschüttert darüber, was da nachts alles in ihrem Gehirn los ist. Man hat keinen Zusammenhang zu tatsächlich Erlebtem herstellen können - nicht einmal zu ihren Affekten oder zu ihren Stimmungen. Die Träume scheinen nur bei der posttraumatischen Belastungsstörung etwas mit der Realität zu tun zu haben.
+
+	 
+
+	Es ist also gut, wenn wir wenig von unserem Schlaf und unseren Träumen mitbekommen. Mittlerweile ist es auch wissenschaftlich belegt, dass unser Gehirn im Schlaf zu Höchstleistungen fähig ist und wir sprichwörtlich im Schlaf lernen können. Was genau können wir denn lernen?
+
+	 
+
+	Das betrifft zunächst alle motorischen Programme. Dinge, die wir einmal gelernt haben, werden als Programme abgerufen. Wenn ich jetzt hier spreche, denke ich nicht darüber nach, wie ich meine Zunge bewege. Wenn ich ein Klavierstück lerne, oder wenn ich Fahrrad fahre, oder wenn ich Anlauf nehme, um einen Hochsprung zu nehmen - das läuft einfach automatisch ab. Dies sind Dinge, die sehr klar im Schlaf stattfinden. Wenn Sie nach dem Lernen in der ersten Nacht keine ausreichende Traumschlafphase haben, dann findet der Lernerfolg nicht statt.
+
+	 
+
+	Wie kann die moderne Medizin die Erkenntnisse aus der Schlafforschung nutzen?
+
+	 
+
+	Wir müssen zur Kenntnis nehmen, dass der Schlaf nichts mit Ausruhen oder reiner Regeneration zu tun hat. Es sind aktive Phänomene, die etwas mit der Gesundheit und zwar nicht nur des Gehirns, sondern auch des Körpers zu tun haben. Wir dürfen ihn nicht stören. Es geht damit los, dass jeder, der zum Beispiel acht oder neun Stunden schlafen muss, ausreichend lange im Bett liegt. Oder aber, dass wir keine Medikamente nehmen, die den Schlaf beeinträchtigen.
+
+	(Interview: Maria Grunwald)
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde4412-projektzuk01ep_studiogast_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-11-04/e-16299407-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16327545'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
 
        
     <div class="feed_icon">
@@ -1548,55 +2361,6 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262938'>Medizinerausbildung - die Praxis vor der Praxis</a> 
-
-            
-            by DW.DE | Deutsche Welle
-            
-            Sun, 14 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            An der Berliner Charité bekommen Studenten eine besonders praxisnahe Ausbildung im neu eröffneten Lernzentrum, mit rund 1000 anatomischen Modellen und Simulatoren. Sie können dort auch mit 150 Simulationspatienten für 250 Krankheitsbilder in mehreren Sprachen trainieren. Hier lernen auch medizinische Fachkräfte aus Regionen wie Subsahara-Afrika, wo besonders viele Gesundheitsfachkräfte fehlen.
-	Allein diese Region trägt 25 Prozent der globalen Krankheitslast, verfügt aber nur über rund 3 Prozent des weltweit vorhandenen medizinischen Personals. Weltweit fehlen etwa 4,3 Millionen Gesundheitsfachkräfte.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://tv-download.dw.de/Events/mp4/pz/pz20121014_ausbild_sd.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262938'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
-
-               
-            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262937'>Notfallhelfer - Porträt eines Katastrophenmediziners</a> 
 
             
@@ -1625,104 +2389,6 @@ function init() {
 
         <div class='read_more'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262937'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
-
-               
-            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262934'>Streptokokken -  Schnelltest für eine vernachlässigte Epidemie</a> 
-
-            
-            by DW.DE | Deutsche Welle
-            
-            Sun, 14 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Ein Drittel aller Todesfälle weltweit ist auf Infektionskrankheiten zurückzuführen. Streptokokken sind besonders gefährlich vor allem für Kinder in Indien, Australien und Afrika. Denn: Wird die Streptokokkeninfektion nicht schnell erkannt und behandelt, können sich die Bakterien im Körper einnisten und chronische Krankheiten auslösen.
-	Rund 6 Millionen Neuinfektionen gibt es jedes Jahr. Ein indischer Wissenschaftler erforscht am Helmholtz-Zentrum für Infektionsforschung in Braunschweig die Grundlagen der Erkrankung und arbeitet an der Entwicklung eines bezahlbaren Schnelltests.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://tv-download.dw.de/Events/mp4/pz/pz20121014_streptokokken_sd.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262934'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
-
-               
-            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262933'>Fettleibigkeit - Medikamente gegen eine unterschätzte globale Gefahr</a> 
-
-            
-            by DW.DE | Deutsche Welle
-            
-            Sun, 14 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Forscher aus München wollen wissen, wie die molekularen Übertragungswege zum Beispiel zwischen Fettzelle, Bauchspeicheldrüse und Gehirn funktionieren. Das ist wichtig, um zu verstehen, was im Falle von Adipositas und Diabetes in dieser Kommunikation schief läuft.
-	Außerdem interessieren sich die Wissenschaftler dafür, was sich bei Fettsüchtigen im Gehirn verändert. Bei Mäusen hoffen sie herauszufinden, welche Gene zur Fettleibigkeit führen. Ein wichtiges Ziel ist es, Medikamente zu entwickeln, mit denen sich der Stoffwechsel beeinflussen lässt.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://tv-download.dw.de/Events/mp4/pz/pz20121014_adiposita_sd.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262933'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1798,6 +2464,153 @@ function init() {
 
         <div class='read_more'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262935'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262938'>Medizinerausbildung - die Praxis vor der Praxis</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 14 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            An der Berliner Charité bekommen Studenten eine besonders praxisnahe Ausbildung im neu eröffneten Lernzentrum, mit rund 1000 anatomischen Modellen und Simulatoren. Sie können dort auch mit 150 Simulationspatienten für 250 Krankheitsbilder in mehreren Sprachen trainieren. Hier lernen auch medizinische Fachkräfte aus Regionen wie Subsahara-Afrika, wo besonders viele Gesundheitsfachkräfte fehlen.
+	Allein diese Region trägt 25 Prozent der globalen Krankheitslast, verfügt aber nur über rund 3 Prozent des weltweit vorhandenen medizinischen Personals. Weltweit fehlen etwa 4,3 Millionen Gesundheitsfachkräfte.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pz20121014_ausbild_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262938'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262933'>Fettleibigkeit - Medikamente gegen eine unterschätzte globale Gefahr</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 14 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Forscher aus München wollen wissen, wie die molekularen Übertragungswege zum Beispiel zwischen Fettzelle, Bauchspeicheldrüse und Gehirn funktionieren. Das ist wichtig, um zu verstehen, was im Falle von Adipositas und Diabetes in dieser Kommunikation schief läuft.
+	Außerdem interessieren sich die Wissenschaftler dafür, was sich bei Fettsüchtigen im Gehirn verändert. Bei Mäusen hoffen sie herauszufinden, welche Gene zur Fettleibigkeit führen. Ein wichtiges Ziel ist es, Medikamente zu entwickeln, mit denen sich der Stoffwechsel beeinflussen lässt.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pz20121014_adiposita_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262933'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262934'>Streptokokken -  Schnelltest für eine vernachlässigte Epidemie</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 14 Oct 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Ein Drittel aller Todesfälle weltweit ist auf Infektionskrankheiten zurückzuführen. Streptokokken sind besonders gefährlich vor allem für Kinder in Indien, Australien und Afrika. Denn: Wird die Streptokokkeninfektion nicht schnell erkannt und behandelt, können sich die Bakterien im Körper einnisten und chronische Krankheiten auslösen.
+	Rund 6 Millionen Neuinfektionen gibt es jedes Jahr. Ein indischer Wissenschaftler erforscht am Helmholtz-Zentrum für Infektionsforschung in Braunschweig die Grundlagen der Erkrankung und arbeitet an der Entwicklung eines bezahlbaren Schnelltests.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pz20121014_streptokokken_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-10-14/e-16261336-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16262934'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2048,102 +2861,6 @@ function init() {
     <div class="feed_icon">
     
 
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121009_europas_wilde_buchenwaelder.12844s.mp3'>Europas wilde Buchenwälder</a> 
-
-            
-            by wissen@swr2.de (Seiler Christiane)
-            
-            Tue, 09 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Von Christiane Seiler | Seit Ende der letzten Eiszeit vor ca. 10.000 Jahren breiten Buchen sich stetig aus. Buchenmischwälder würden den größten Teil Mitteleuropas bedecken, hätten Menschen die Wälder nicht nach ihren Bedürfnissen gestaltet. Doch an wenigen Stellen blieben Buchenwälder im Naturzustand erhalten.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121009_europas_wilde_buchenwaelder.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121009_europas_wilde_buchenwaelder.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121008_smart_grids.12844s.mp3'>Intelligenz fürs Stromnetz</a> 
-
-            
-            by wissen@swr2.de (Dirk Asendorpf)
-            
-            Mon, 08 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Smart Grids sollen den Umstieg auf erneuerbare Energie erleichtern. Von Dirk Asendorpf. | Bisher findet Stromerzeugung vor allem in Großkraftwerken statt, die direkt ans Höchstspannungsnetz angeschlossen sind. Künftig speisen Hunderttausende Windräder und Solarmodule ihre Energie dezentral ins Mittel- oder Niedrigspannungsnetz ein. Doch das ist bisher gar nicht darauf ausgelegt, Überschüsse an die höheren Spannungsebenen abzugeben. Smart Grids könnten zur Lösung beitragen.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121008_smart_grids.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121008_smart_grids.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
         <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
 
                
@@ -2286,150 +3003,6 @@ function init() {
     <div class="feed_icon">
     
 
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20120906_das_personal_zukunft_der_arbeit.12844s.mp3'>Das Personal - Zukunft der Arbeit (10/12)</a> 
-
-            
-            by wissen@swr2.de (Beate Krol)
-            
-            Sat, 06 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Von Beate Krol | Aufgrund des Bevölkerungsrückgangs ist die Wirtschaft auf jeden, der arbeiten kann, angewiesen - also auch auf diejenigen, die keine guten Zeugnisse vorweisen können. Erste Unternehmen versuchen, sich auf die veränderte Situation einzustellen. Sie rüsten Arbeitsplätze um und schneiden Aufgabengebiete altersgemäß zu.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20120906_das_personal_zukunft_der_arbeit.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20120906_das_personal_zukunft_der_arbeit.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121005_nietzsche_und_die_naturwissenschaften.12844s.mp3'>Nietzsche und die Naturwissenschaften</a> 
-
-            
-            by wissen@swr2.de (Konrad Lindner)
-            
-            Fri, 05 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Eine Spurensuche in Leipzig. Von Konrad Lindner. | Friedrich Nietzsche kritisierte nicht nur die Religion, sondern er wandte sich auch gegen die Verkehrung der Wissenschaft in einen Götzen. Gerade in heutiger Zeit ist wieder zu beobachten, wie Wissenschaft in das Gegenteil von Aufklärung verwandelt wird, weil ihr Wissen überschätzt und für absolut gehalten wird.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121005_nietzsche_und_die_naturwissenschaften.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121005_nietzsche_und_die_naturwissenschaften.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/die-dramen-des-jean-anouilh.12844s.mp3'>Die Dramen des Jean Anouilh</a> 
-
-            
-            by wissen@swr2.de (Anat Kalman)
-            
-            Thu, 04 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Facetten eines vergessenen Autors. Von Anat Kalman. | Jean Anouilh gehörte Mitte des 20. Jahrhunderts zu den erfolgreichsten Dramatikern Frankreichs. In seiner berühmten "Antigone" zeichnete er eine Figur, die für Gradlinigkeit und Stolz gegenüber einer totalitären Macht steht. Das Stück kam 1944 im besetzten Paris auf die Bühne und wurde auch im Nachkriegsdeutschland oft gespielt. Als Mensch und Patriot haftete an Anouilh freilich immer der Verdacht des Verrats; viele vermuteten eine Nähe des Autors zum Vichy-Regime. Dieses Bild wird heute, 25 Jahre nach Anouilhs Tod, von vielen französischen Intellektuellen in Frage gestellt. In seinen Theaterstücken, Fabeln, Filmen und Gemälden ging es Anouilh immer um die Relativität sogenannter Wahrheiten, denen er einfühlendes Verstehen und stilles, konsequentes Handeln gegenüber stellte. Warum sind seine Stücke heute in Vergessenheit geraten?
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/die-dramen-des-jean-anouilh.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/die-dramen-des-jean-anouilh.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
         <a href='http://www.quarks.de'>
 
                
@@ -2476,54 +3049,6 @@ function init() {
     <div class="feed_icon">
     
 
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121002_wundererde_der_indios.12844s.mp3'>Wundererde der Indios - Terra Preta</a> 
-
-            
-            by wissen@swr2.de (Jantje Hannover)
-            
-            Tue, 02 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Von Jantje Hannover | Die "Terra Preta do Indio" ist das Überbleibsel einer prähistorischen Landnutzung, bei der Indianer pflanzliche Abfälle und menschliche Exkremente mit Holzkohle versetzt und fermentiert haben. Dieses jahrhundertealte Prinzip erforschen Wissenschaftler heute u. a. in einer Pilotanlage in Rheinland-Pfalz.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121002_wundererde_der_indios.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121002_wundererde_der_indios.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
         <a href='http://www.wdrmaus.de/'>
 
                
@@ -2561,54 +3086,6 @@ function init() {
 
         <div class='read_more'>
             <a href='http://medien.wdr.de/m/1349083613/maus/wdr_fernsehen_die_maus_20121003.mp4'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121001_deutsche_nationalbibliothek.12844s.mp3'>100 Jahre Deutsche Nationalbibliothek</a> 
-
-            
-            by wissen@swr2.de (Maximilian Schönherr)
-            
-            Mon, 01 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Von Maximilian Schönherr. | Am 3. Oktober 2012 wird die Deutsche Nationalbibliothek 100 Jahre alt. Sie begann als "Deutsche Bücherei" in Leipzig. Mit der Veröffentlichung ihrer Bestände über das Internet tut sich die DNB schwer. Eine Öffnung verspricht die Deutsche Digitale Bibliothek, die sich in der Gründungsphase befindet.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121001_deutsche_nationalbibliothek.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/10/swr2wissen_20121001_deutsche_nationalbibliothek.12844s.mp3'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2740,54 +3217,6 @@ function init() {
     <div class="feed_icon">
     
 
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/09/swr2wissen_20120929_die_gewerkschaften.12844s.mp3'>Die Gewerkschaften - Zukunft der Arbeit (9/12)</a> 
-
-            
-            by wissen@swr2.de (Ruth Jung)
-            
-            Sat, 29 Sep 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Von Ruth Jung | Die Gewerkschaften sind gewachsen. Sie haben sich zu mächtigen Organisationen - auch international - zusammengeschlossen. Im Rahmen der Globalisierung tauchen Fragen zur Solidarität auf. Eine Gewerkschaft, die einen deutschen Produktionsstandort verteidigt, verhindert möglicherweise neue Jobs in Schwellenländern.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/09/swr2wissen_20120929_die_gewerkschaften.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/09/swr2wissen_20120929_die_gewerkschaften.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
         <a href='http://www.wdrmaus.de/'>
 
                
@@ -2825,100 +3254,6 @@ function init() {
 
         <div class='read_more'>
             <a href='http://medien.wdr.de/m/1348830915/maus/wdr_fernsehen_die_maus_20120930.mp4'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.swr.de/swr2/wissen/index.html'>
-
-               
-            <img src='http://www1.swr.de/podcast/gfx/swr2/swr2-wissen.jpg' alt='SWR2 Wissen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/09/swr2wissen_20120928_traum_und_abgrund.12844s.mp3'>Traum und Abgrund</a> 
-
-            
-            by wissen@swr2.de (Marianne Thoms)
-            
-            Fri, 28 Sep 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Das Leben der Schauspielerin Carola Neher. Von Marianne Thoms. | Auf Bühnen zwischen Baden-Baden und Berlin spielt Carola Neher erfolgreich in Komödien und Dramen. Ihr moderner Stil wird von Publikum und Kritikern geschätzt. Als sie den Kommunisten Anatol Becker heiratet, muss das Paar bald vor den Nazis nach Moskau flüchten. Dort gerät sie in den stalinistischen Terror und wird fälschlich konterrevolutionärer Aktivitäten beschuldigt. Das Urteil: Zehn Jahre Lagerhaft.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-                <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/09/swr2wissen_20120928_traum_und_abgrund.12844s.mp3'>Audio link</a>
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://mp3-download.swr.de/swr2/wissen/sendungen/2012/09/swr2wissen_20120928_traum_und_abgrund.12844s.mp3'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.quarks.de'>
-
-               
-            <img src='http://www.wdr.de/podcast_php/img/itunes_quarks.jpg' alt='Quarks & Co - zum Mitnehmen' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://medien.wdr.de/m/1348591509/quarks/wdr_fernsehen_quarks_und_co_20120925.mp4'>Quarks & Co: 25.09.2012, Erziehung - ein Kinderspiel?</a> 
-
-            
-            Tue, 25 Sep 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Kindern die richtigen Grenzen zu setzen, ist eine große Herausforderung für viele Eltern. Sie scheinen heute wesentlich unsicherer zu sein als früher; woher kommt diese Unsicherheit? Gibt es allgemeingültige Regeln, nach denen man Kinder erziehen kann? Quarks & Co sucht Antworten auf diese Fragen und präsentiert typische Konfliktsituationen zwischen Eltern und Kindern.; © WDR Videopodcast
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://medien.wdr.de/m/1348591509/quarks/wdr_fernsehen_quarks_und_co_20120925.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://medien.wdr.de/m/1348591509/quarks/wdr_fernsehen_quarks_und_co_20120925.mp4'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -5481,55 +5816,6 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052730'>Wie die Natur - das Geheimnis der Grätzel-Zelle</a> 
-
-            
-            by DW.DE | Deutsche Welle
-            
-            Sun, 08 Jul 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Michael Grätzel hat sich die Natur zum Vorbild genommen und eine Solarzelle gebaut, die nach dem Prinzip der Photosynthese funktioniert. Wie das Chlorophyll in der Pflanze wandelt die Grätzel-Zelle Sonnenlicht mit Hilfe eines natürlichen Farbstoffs in Energie um.
-	Das macht sie billiger als Silizium-Zellen, außerdem lässt sie sich dünn und biegsam konstruieren. Bei vielen seiner Kollegen gilt Michael Grätzel als Kandidat für den Nobelpreis.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde2712-projektzuk01ep_graetzel_sd.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052730'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
-
-               
-            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052731'>Astronomie - was steckt hinter der Dunklen Energie?</a> 
 
             
@@ -5579,7 +5865,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052728'>Noble Gäste - auf der Suche nach dem Spirit von Lindau</a> 
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052730'>Wie die Natur - das Geheimnis der Grätzel-Zelle</a> 
 
             
             by DW.DE | Deutsche Welle
@@ -5589,8 +5875,8 @@ function init() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            Auch in diesem Jahr würden gerne Tausende junger Wissenschaftler zu den Auserwählten gehören, die am Treffen der Nobelpreisträger teilnehmen dürfen. Dabei zu sein, wenn 25 Laureaten in der Stadt am Bodensee zusammen kommen, ist für sie das Größte.
-	Und die Nobelpreisträger selbst - was lockt sie dort hin? Projekt Zukunft sucht den Spirit von Lindau und begleitet einen Nobelpreisträger durch die Tagung. Großes Themen in diesem Jahr ist die Energie - von der Energie des Atomkerns bis hin zur geheimnisvollen dunklen Energie im Weltall.
+            Michael Grätzel hat sich die Natur zum Vorbild genommen und eine Solarzelle gebaut, die nach dem Prinzip der Photosynthese funktioniert. Wie das Chlorophyll in der Pflanze wandelt die Grätzel-Zelle Sonnenlicht mit Hilfe eines natürlichen Farbstoffs in Energie um.
+	Das macht sie billiger als Silizium-Zellen, außerdem lässt sie sich dünn und biegsam konstruieren. Bei vielen seiner Kollegen gilt Michael Grätzel als Kandidat für den Nobelpreis.
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -5600,13 +5886,13 @@ function init() {
             
 
             
-                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde2712-projektzuk01ep_lindau_sd.mp4'>Video link</a>
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde2712-projektzuk01ep_graetzel_sd.mp4'>Video link</a>
             
 
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052728'>Read more</a>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052730'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -5732,6 +6018,55 @@ function init() {
 
         <div class='read_more'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052729'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052728'>Noble Gäste - auf der Suche nach dem Spirit von Lindau</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 08 Jul 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Auch in diesem Jahr würden gerne Tausende junger Wissenschaftler zu den Auserwählten gehören, die am Treffen der Nobelpreisträger teilnehmen dürfen. Dabei zu sein, wenn 25 Laureaten in der Stadt am Bodensee zusammen kommen, ist für sie das Größte.
+	Und die Nobelpreisträger selbst - was lockt sie dort hin? Projekt Zukunft sucht den Spirit von Lindau und begleitet einen Nobelpreisträger durch die Tagung. Großes Themen in diesem Jahr ist die Energie - von der Energie des Atomkerns bis hin zur geheimnisvollen dunklen Energie im Weltall.
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde2712-projektzuk01ep_lindau_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-07-08/e-16025734-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16052728'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -6541,55 +6876,6 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-06-17/e-15972908-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16001707'>Nachhaltigkeit: Leinen los für die MS Wissenschaft</a> 
-
-            
-            by DW.DE | Deutsche Welle
-            
-            Sun, 17 Jun 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Nachhaltigkeit ist das zentrale Thema einer Ausstellung an Bord der MS Wissenschaft. Im Auftrag der Bundesregierung fährt das Schiff durch Deutschland und hofft auf möglichst viele Besucher.
-	Das Ziel: Die Bürger sollen sich überlegen, was Nachhaltigkeit in ihrem Alltagsleben bedeuten kann. Doch was steckt hinter dem Modebegriff? Und was kann die Wissenschaft dazu beitragen?
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde2412-projektzuk01ep_nachhaltigkeit_sd.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-06-17/e-15972908-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16001707'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
-
-               
-            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-06-17/e-15972908-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16001705'>Rohstoffe: Nachhaltig wirtschaften mit Recycling</a> 
 
             
@@ -6618,6 +6904,55 @@ function init() {
 
         <div class='read_more'>
             <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-06-17/e-15972908-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16001705'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://www.dw.de/dw/0,,3210,00.html?maca=de-podcast_projekt-zukunft-3482-xml-mrss'>
+
+               
+            <img src='http://www.dw.de/image/0,,5355455_10,00.jpg' alt='Projekt Zukunft: Das Wissenschaftsmagazin' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-06-17/e-15972908-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16001707'>Nachhaltigkeit: Leinen los für die MS Wissenschaft</a> 
+
+            
+            by DW.DE | Deutsche Welle
+            
+            Sun, 17 Jun 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Nachhaltigkeit ist das zentrale Thema einer Ausstellung an Bord der MS Wissenschaft. Im Auftrag der Bundesregierung fährt das Schiff durch Deutschland und hofft auf möglichst viele Besucher.
+	Das Ziel: Die Bürger sollen sich überlegen, was Nachhaltigkeit in ihrem Alltagsleben bedeuten kann. Doch was steckt hinter dem Modebegriff? Und was kann die Wissenschaft dazu beitragen?
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+                <a href='http://tv-download.dw.de/Events/mp4/pz/pzwtde2412-projektzuk01ep_nachhaltigkeit_sd.mp4'>Video link</a>
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://www.dw.de/projekt-zukunft-das-wissenschaftsmagazin-2012-06-17/e-15972908-9800?maca=de-podcast_projekt-zukunft-3482-xml-mrss#16001707'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -11028,55 +11363,6 @@ Doch ein Blogger nimmt sie mit durch Mahala. Hier wird Anfang Januar 2012 gewäh
 
         <div class='read_more'>
             <a href='http://medien.wdr.de/m/1320782400/quarks/wdr_fernsehen_quarks_und_co_20111108.mp4'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://www.dw.de/german/?maca=de-podcast_journal-reporter-2043-xml-mrss'>
-
-               
-            <img src='http://www.dw.de/image/0,,2576985_10,00.jpg' alt='Journal Reporter | Video Podcast | Deutsche Welle' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://www.dw.de/völkerschlacht-in-leipzig-1813/a-6654410?maca=de-podcast_journal-reporter-2043-xml-mrss'>Völkerschlacht in Leipzig 1813</a> 
-
-            
-            by DW.DE | Deutsche Welle
-            
-            Sun, 06 Nov 2011
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Eva Simon kämpft sich durch die Erinnerung an die historische Völkerschlacht in LeipzigSeit Jahren ist es ein großes Fest in Leipzig: Menschen aus ganz Europa treffen sich in der ostdeutschen Stadt und spielen die Völkerschlacht aus dem Jahre 1813 nach - eine Entscheidungsschlacht für Europa, bei der etwa 100.000 Menschen ums Leben kamen. DW-Reporterin Eva Simon will herausfinden, was Menschen bewegt, dieses kriegerische Ereignis nachzuspielen.
-Im Herbst 1813 ging Leipzig auf äußerst blutige Art und Weise in die Geschichtsbücher ein. Noch nie zuvor hatte es eine kriegerische Auseinandersetzung mit so vielen Beteiligten gegeben. Die Völkerschlacht setzte dem Reich des französischen Kaisers Napoleon ein Ende, der bis dahin weite Teile Europas unterworfen hatte. Jetzt, knapp 200 Jahre später, sammeln sich rund 700 Europäer, um diese Schlacht zu wiederholen - spielerisch. In historischen Kostümen stehen sie sich gegenüber, schießen mit Schwarzpulver aufeinander und feiern ihre Erfolge gemeinsam am Lagerfeuer. DW-Reporterin Eva Simon erkundet diese besondere historische Aufarbeitung und erlebt Europäer, die im Kriegs-Spiel ihr Bewusstsein für das friedliche Europa des 21. Jahrhunderts stärken.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-                <a href='http://tv-download.dw.de/Events/mp4/jd/jd20111106_reporter10g_sd.mp4'>Video link</a>
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://www.dw.de/völkerschlacht-in-leipzig-1813/a-6654410?maca=de-podcast_journal-reporter-2043-xml-mrss'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->

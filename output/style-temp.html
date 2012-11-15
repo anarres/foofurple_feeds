@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>{{ title }}</title>
+<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
+<script type="text/javascript">
+
+/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
+http://stackoverflow.com/questions/1933602/
+how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
+function getElementsByClassName(node,classname) {
+  if (node.getElementsByClassName) { // use native implementation if available
+    return node.getElementsByClassName(classname);
+  } else {
+    return (function getElementsByClass(searchClass,node) {
+        if ( node == null )
+          node = document;
+        var classElements = [],
+            els = node.getElementsByTagName("*"),
+            elsLen = els.length,
+            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
+
+        for (i = 0, j = 0; i < elsLen; i++) {
+          if ( pattern.test(els[i].className) ) {
+              classElements[j] = els[i];
+              j++;
+          }
+        }
+        return classElements;
+    })(classname, node);
+  }
+}
+
+function init() {
+    var objs = getElementsByClassName(document, 'remove_stream');
+    for (var i=0; i<objs.length; i++) {
+        objs[i].addEventListener('click', function (e) {
+            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
+        }, false);
+    }
+    var fobjs = getElementsByClassName(document, 'remove_feed');
+    for (var j=0; j<fobjs.length; j++) {
+        fobjs[j].addEventListener('click', function (e) {
+            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
+        }, false);
+    }
+}
+
+</script>
+</head>
+<body onload="init()">
+
+<div id="nav">
+    {{ nav }}
+</div> <!--#nav-->
+
+<div id="header">
+    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png" />
+    <h1>{{ title }}</h1>
+</div> <!--#header-->
+
+<div id="main">
+    {{ main_content }}
+</div> <!--#main-->
+
+<div id="footer">
+<p>This is the bottom of the page. Hope you've enjoyed reading.</p>
+</div> <!--#footer-->
+
+</body>
+</html>

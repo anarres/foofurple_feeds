@@ -2,53 +2,12 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
 <title>Data, programming</title>
-<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
-<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
 
-/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
-http://stackoverflow.com/questions/1933602/
-how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
-function getElementsByClassName(node,classname) {
-  if (node.getElementsByClassName) { // use native implementation if available
-    return node.getElementsByClassName(classname);
-  } else {
-    return (function getElementsByClass(searchClass,node) {
-        if ( node == null )
-          node = document;
-        var classElements = [],
-            els = node.getElementsByTagName("*"),
-            elsLen = els.length,
-            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
 
-        for (i = 0, j = 0; i < elsLen; i++) {
-          if ( pattern.test(els[i].className) ) {
-              classElements[j] = els[i];
-              j++;
-          }
-        }
-        return classElements;
-    })(classname, node);
-  }
-}
 
-function init() {
-    var objs = getElementsByClassName(document, 'remove_stream');
-    for (var i=0; i<objs.length; i++) {
-        objs[i].addEventListener('click', function (e) {
-            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-    var fobjs = getElementsByClassName(document, 'remove_feed');
-    for (var j=0; j<fobjs.length; j++) {
-        fobjs[j].addEventListener('click', function (e) {
-            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-}
-
-</script>
 </head>
 <body onload="init()">
 
@@ -57,12 +16,1098 @@ function init() {
 </div> <!--#nav-->
 
 <div id="header">
-    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png" />
+    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png">
     <h1>Data, programming</h1>
 </div> <!--#header-->
 
 <div id="main">
     <div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97905593'>Grad meinen ersten #Wikipedia-Edit gemacht #stolz</a> 
+
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Grad meinen ersten #<span class="tag"><a href="http://identi.ca/tag/wikipediaedit" rel="tag">Wikipedia-Edit</a></span> gemacht #<span class="tag"><a href="http://identi.ca/tag/stolz" rel="tag">stolz</a></span>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97905593'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97904516'>Bundesgerichtshof: Eltern müssen Filesharing der Kinder nicht kontrollieren http://j.mp/W9FckJ</a> 
+
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Bundesgerichtshof: Eltern müssen Filesharing der Kinder nicht kontrollieren <a href="http://j.mp/W9FckJ" rel="nofollow external" title="http://j.mp/W9FckJ">http://j.mp/W9FckJ</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97904516'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97897471'>From netzpolitik.org: Schulbuch-O-Mat: Plattform für freie Schulbücher sucht Crowdfunding http://bit.ly/T4lx8t</a> 
+
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From <a href="http://netzpolitik.org/" rel="nofollow external" title="http://netzpolitik.org/">netzpolitik.org</a>: Schulbuch-O-Mat: Plattform für freie Schulbücher sucht Crowdfunding <a href="http://bit.ly/T4lx8t" rel="nofollow external" title="http://bit.ly/T4lx8t">http://bit.ly/T4lx8t</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97897471'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97897355'>From heise online News: Intel und Red Hat steigen bei MongoDB ein http://bit.ly/RVE8me</a> 
+
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From heise online News: Intel und Red Hat steigen bei MongoDB ein <a href="http://bit.ly/RVE8me" rel="nofollow external" title="http://bit.ly/RVE8me">http://bit.ly/RVE8me</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97897355'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97897350'>From Golem.de: Open Source: Buchscanner blättert mit Staubsaugerhilfe um http://bit.ly/SrwJYA</a> 
+
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From <a href="http://Golem.de/" rel="nofollow external" title="http://www.golem.de/">Golem.de</a>: Open Source: Buchscanner blättert mit Staubsaugerhilfe um <a href="http://bit.ly/SrwJYA" rel="nofollow external" title="http://bit.ly/SrwJYA">http://bit.ly/SrwJYA</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97897350'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97895591'>Neuer Papst? Stromausfall München heute aktuell - Donnerstagmorgen - Panorama - Nachrichten - HNA Online http://j.mp/RVrkMN</a> 
+
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Neuer Papst? Stromausfall München heute aktuell - Donnerstagmorgen - Panorama - Nachrichten - HNA Online <a href="http://j.mp/RVrkMN" rel="nofollow external" title="http://j.mp/RVrkMN">http://j.mp/RVrkMN</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97895591'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97889024'>From netzpolitik.org: Europa-Abgeordneter Josef Weidenholzer über Clean IT: “Terror-Abwehr nur ein Vorwand” http://bit.ly/XGs2B7</a> 
+
+            
+            Wed, 14 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From <a href="http://netzpolitik.org/" rel="nofollow external" title="http://netzpolitik.org/">netzpolitik.org</a>: Europa-Abgeordneter Josef Weidenholzer über Clean IT: “Terror-Abwehr nur ein Vorwand” <a href="http://bit.ly/XGs2B7" rel="nofollow external" title="http://bit.ly/XGs2B7">http://bit.ly/XGs2B7</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97889024'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97877523'>From xkcd.com: Logic Boat http://bit.ly/T2H1Tl</a> 
+
+            
+            Wed, 14 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From <a href="http://xkcd.com/" rel="nofollow external" title="http://xkcd.com/">xkcd.com</a>: Logic Boat <a href="http://bit.ly/T2H1Tl" rel="nofollow external" title="http://bit.ly/T2H1Tl">http://bit.ly/T2H1Tl</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97877523'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97866112'>Ohne pr0n wird das ein Flop! National Information Network: Iran startet die ersten Phase des “sauberen” Internets http://j.mp/TGVUYT</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Ohne pr0n wird das ein Flop! National Information Network: Iran startet die ersten Phase des “sauberen” Internets <a href="http://j.mp/TGVUYT" rel="nofollow external" title="http://j.mp/TGVUYT">http://j.mp/TGVUYT</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97866112'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97865301'>From Golem.de: Linux-Kernel: Verletzt Kernel-Maintainer die GPL? http://bit.ly/SJRYoZ</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From <a href="http://Golem.de/" rel="nofollow external" title="http://www.golem.de/">Golem.de</a>: Linux-Kernel: Verletzt Kernel-Maintainer die GPL? <a href="http://bit.ly/SJRYoZ" rel="nofollow external" title="http://bit.ly/SJRYoZ">http://bit.ly/SJRYoZ</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97865301'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97862641'>“Die Polizei nutzt führende Systeme effektiv” – Datenschutz bei staatlichen Datenbanken in Irland ist eher so mäßig http://bit.ly/UnQJS4</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            “Die Polizei nutzt führende Systeme effektiv” – Datenschutz bei staatlichen Datenbanken in Irland ist eher so mäßig <a href="http://bit.ly/UnQJS4" rel="nofollow external" title="http://bit.ly/UnQJS4">http://bit.ly/UnQJS4</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97862641'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97862499'>From netzpolitik.org: Porträts von anonymen Kampfpostern: ‘Täter hinter der Tastatur’ http://bit.ly/TXxUmB</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From <a href="http://netzpolitik.org/" rel="nofollow external" title="http://netzpolitik.org/">netzpolitik.org</a>: Porträts von anonymen Kampfpostern: ‘Täter hinter der Tastatur’ <a href="http://bit.ly/TXxUmB" rel="nofollow external" title="http://bit.ly/TXxUmB">http://bit.ly/TXxUmB</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97862499'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97862454'>From Diesel Sweeties webcomic by rstevens: A Broad Net in Deep Waters http://bit.ly/W0JEqF</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From Diesel Sweeties webcomic by rstevens: A Broad Net in Deep Waters <a href="http://bit.ly/W0JEqF" rel="nofollow external" title="http://bit.ly/W0JEqF">http://bit.ly/W0JEqF</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97862454'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97862366'>From Boing Boing: How to turn Barbie into a Weeping Angel http://bit.ly/X0VGlj</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From Boing Boing: How to turn Barbie into a Weeping Angel <a href="http://bit.ly/X0VGlj" rel="nofollow external" title="http://bit.ly/X0VGlj">http://bit.ly/X0VGlj</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97862366'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97861975'>From The H Open Source: Fourth Haiku alpha includes QR-enabled debugging http://bit.ly/RzSWFK</a> 
+
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From The H Open Source: Fourth Haiku alpha includes QR-enabled debugging <a href="http://bit.ly/RzSWFK" rel="nofollow external" title="http://bit.ly/RzSWFK">http://bit.ly/RzSWFK</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97861975'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97852522'>Sarah Spiekermann über die Debatte um die EU-Datenschutzreform http://bit.ly/PPPA39</a> 
+
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Sarah Spiekermann über die Debatte um die EU-Datenschutzreform <a href="http://bit.ly/PPPA39" rel="nofollow external" title="http://bit.ly/PPPA39">http://bit.ly/PPPA39</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97852522'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97851841'>The GPL self-destruct mechanism that is killing Linux http://bit.ly/XywYYv</a> 
+
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            The GPL self-destruct mechanism that is killing Linux <a href="http://bit.ly/XywYYv" rel="nofollow external" title="http://bit.ly/XywYYv">http://bit.ly/XywYYv</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97851841'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97851664'>Personenkult im Umfeld freier Software http://bit.ly/XyuzNC</a> 
+
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Personenkult im Umfeld freier Software <a href="http://bit.ly/XyuzNC" rel="nofollow external" title="http://bit.ly/XyuzNC">http://bit.ly/XyuzNC</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97851664'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97849023'>From heise online News: Datenschützer verweigern sich vorerst der Stiftung Datenschutz http://bit.ly/SQeUmS</a> 
+
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From heise online News: Datenschützer verweigern sich vorerst der Stiftung Datenschutz <a href="http://bit.ly/SQeUmS" rel="nofollow external" title="http://bit.ly/SQeUmS">http://bit.ly/SQeUmS</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97849023'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://identi.ca/softmetz'>
+
+               
+            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://identi.ca/notice/97847762'>From The H Open Source: Oracle releases Git repository with RHEL changes http://bit.ly/ZeV0ap</a> 
+
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            From The H Open Source: Oracle releases Git repository with RHEL changes <a href="http://bit.ly/ZeV0ap" rel="nofollow external" title="http://bit.ly/ZeV0ap">http://bit.ly/ZeV0ap</a>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://identi.ca/notice/97847762'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://blog.buddycloud.com/'>
+
+            
+            buddycloud
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/tmGEmC3J77M/35398625412'>buddycloud hackathon hangout:</a> 
+
+            
+            Sat, 10 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <a href="https://plus.google.com/hangouts/_/stream/2b5c311ec798c3ae819ca7301c32ab7c202b2582?authuser=0&amp;hl=en">buddycloud hackathon hangout:</a><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/tmGEmC3J77M" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/tmGEmC3J77M/35398625412'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://dw-dev.dreamwidth.org/'>
+
+            
+            Dreamwidth Development
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://dw-dev.dreamwidth.org/127865.html'>Best way to review pull requests</a> 
+
+            
+            by foxfirefey (foxfirefey@dreamwidth.org)
+            
+            Fri, 09 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Posted by: <span class="ljuser" style="white-space: nowrap;"><a href="http://foxfirefey.dreamwidth.org/profile"><img alt="[personal profile] " height="17" src="http://www.dreamwidth.org/img/silk/identity/user.png" style="vertical-align: text-bottom; border: 0; padding-right: 1px;" width="17" /></a><a href="http://foxfirefey.dreamwidth.org/"><b>foxfirefey</b></a></span><br /><br />So, as far as I can tell from my researching over the past few days, the only real way to get a pull request to review it is to:<br /><br />* Manually add the submitter's dw-* repo as a remote in the repo on your hack (or Github I suppose, but there is no GUI advantage here).<br />* Manually pull the branch in question<br /><br />Is there a better way to do this?  Am I missing something?  This seems really, well, annoying, with manually crafting URLs and whatnot, and not very user friendly.  (I'm trying to make some documents on reviewing pull requests for people who are not <span style="white-space: nowrap;"><a href="http://fu.dreamwidth.org/profile"><img alt="[staff profile] " height="17" src="http://www.dreamwidth.org/img/silk/identity/user_staff.png" style="vertical-align: text-bottom; border: 0; padding-right: 1px;" width="17" /></a><a href="http://fu.dreamwidth.org/"><b>fu</b></a></span>, since we need to try and spread out that work a little.)<br /><br /><img alt="comment count unavailable" height="12" src="http://www.dreamwidth.org/tools/commentcount?user=dw_dev&amp;ditemid=127865" style="vertical-align: middle;" width="30" /> comments
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://dw-dev.dreamwidth.org/127865.html'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://foofurple.wordpress.com'>
+
+               
+            <img src='http://0.gravatar.com/blavatar/056fa00f3f4c8200f7684417131a496a?s=96&d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png' alt='Foofurple blog' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://foofurple.wordpress.com/2012/11/08/adorable-cartoon-animals-discuss-sharing-cultural-works/'>Adorable cartoon animals discuss sharing cultural works</a> 
+
+            
+            by karimeter
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Tagged: comic, creative commons, mash-up<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=foofurple.wordpress.com&#038;blog=38376763&#038;post=197&#038;subd=foofurple&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://foofurple.wordpress.com/2012/11/08/adorable-cartoon-animals-discuss-sharing-cultural-works/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://blog.buddycloud.com/'>
+
+            
+            buddycloud
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/xRdzhY4Q42E/35199618112'>buddycloud Hackathon: 10-11 November 11am</a> 
+
+            
+            Wed, 07 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <p>We&#8217;re so, so, so, so, very close to releasing the first version of buddycloud.</p>
+<p>Get a sneek peek at this hackathon.</p>
+<p><img src="http://media.tumblr.com/tumblr_md4bxr1cpR1qbhida.jpg" /></p>
+<h2>Schedule</h2>
+<ul><li><strong>Saturday 11am:</strong> Welcome and intro: What is buddycloud, how it works.</li>
+<li><strong>12pm - hacking ideas:</strong> Get to know everyone&#8217;s skills and break into groups to work on different teams</li>
+<li><strong>Lunchtime:</strong> Pizza and drinks.</li>
+<li><strong>moar hacking: </strong>hackety hack</li>
+<li><strong>Dinner time:</strong>moar hacking</li>
+<li><strong>evening: </strong>show-n-tell of what you have made</li>
+<li><strong>Sunday:</strong> Rinse, repeat</li>
+</ul><h2><strong>Hackathon Location</strong></h2>
+<p>The Hillert &amp; Co office space is at Tengstraße 37 in Munich.</p>
+<ul><li><span>take the U2 subway line to Hohenzollernplatz</span></li>
+<li>take the tram line 12 or 27 to Hohenzollernplatz</li>
+<li>take the bus line 53 to Hohenzollernplatz</li>
+</ul><p>The station is about a minute from the office space. If you get lost or need directions: call +49&#160;178&#160;545&#160;0880</p>
+<p><br /><small><a href="https://maps.google.de/maps?f=q&amp;source=embed&amp;hl=de&amp;geocode=&amp;q=Tengstr.+37,+M%C3%BCnchen&amp;aq=&amp;sll=51.151786,10.415039&amp;sspn=0.168406,0.445976&amp;ie=UTF8&amp;hq=&amp;hnear=Tengstra%C3%9Fe+37,+M%C3%BCnchen+80796+M%C3%BCnchen,+Bayern&amp;t=m&amp;z=14&amp;iwloc=A">Larger map</a></small></p>
+<h2><strong>until then&#8230;</strong></h2>
+<p>To get ready, check out the <a href="https://buddycloud.org/">buddycloud wiki</a></p>
+<ul><li><span>we track our dev work on </span><span><a href="https://trello.com/buddycloud">Trello</a></span></li>
+<li>we try to keep great<a href="https://buddycloud.org/wiki/Main_Page"> buddycloud documentation</a></li>
+<li>you can follow buddycloud on the <a href="http://groups.google.com/group/buddycloud-dev">mailing list</a> and in the <a href="https://www.jappix.com/?r=seehaus@channels.buddycloud.com">buddycloud chat room</a></li>
+<li><a href="https://github.com/buddycloud">all buddycloud code</a> is open source and hosted <a href="https://github.com/">GitHub</a></li>
+</ul><p><br />Additionally we&#8217;ll run a Google hangout for the duration of the summit and hackathon for those that want drop in remotely<strong>. </strong>I&#8217;ll post the URL on here when we start.</p>
+<p><strong><br /></strong>We’re looking forward to seeing you - let <a href="mailto:donna.smith@buddycloud.com">donna.smith@buddycloud.com</a> know and she will keep a spot for you.</p>
+<p><strong id="internal-source-marker_0.27694976702332497"><br /><br /></strong></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/xRdzhY4Q42E" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/xRdzhY4Q42E/35199618112'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
 
     
     <div class="feed_icon default_icon">
@@ -105,886 +1150,6 @@ function init() {
 
         <div class='read_more'>
             <a href='http://dw-dev.dreamwidth.org/127726.html'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97663019'>Apache Server Status: Falsch konfigurierte Websites verraten Passwörter http://j.mp/Skha5y</a> 
-
-            
-            Fri, 02 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Apache Server Status: Falsch konfigurierte Websites verraten Passwörter <a href="http://j.mp/Skha5y" rel="nofollow external" title="http://j.mp/Skha5y">http://j.mp/Skha5y</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97663019'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97662967'>Artikel: Creative Commons - Was ist das und kann man das essen? http://j.mp/SkgNbb</a> 
-
-            
-            Fri, 02 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Artikel: Creative Commons - Was ist das und kann man das essen? <a href="http://j.mp/SkgNbb" rel="nofollow external" title="http://j.mp/SkgNbb">http://j.mp/SkgNbb</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97662967'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97654564'>From Boing Boing: BB Readers' DIY Costumes: Zombie Baby breaking out of womb http://bit.ly/SfNsi0</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Boing Boing: BB Readers' DIY Costumes: Zombie Baby breaking out of womb <a href="http://bit.ly/SfNsi0" rel="nofollow external" title="http://bit.ly/SfNsi0">http://bit.ly/SfNsi0</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97654564'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97654521'>From Dilbert Daily Strip: Comic for November 1, 2012 http://bit.ly/TVkQKx</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Dilbert Daily Strip: Comic for November 1, 2012 <a href="http://bit.ly/TVkQKx" rel="nofollow external" title="http://bit.ly/TVkQKx">http://bit.ly/TVkQKx</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97654521'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97653931'>From Planet CentOS: Jim Perrin: Best Networking Cheat Sheets. http://bit.ly/Q9zimQ</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Planet CentOS: Jim Perrin: Best Networking Cheat Sheets. <a href="http://bit.ly/Q9zimQ" rel="nofollow external" title="http://bit.ly/Q9zimQ">http://bit.ly/Q9zimQ</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97653931'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97653885'>From Red Hat Security: Red Hat is now CWE Compatible http://bit.ly/RxLpHc</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Red Hat Security: Red Hat is now CWE Compatible <a href="http://bit.ly/RxLpHc" rel="nofollow external" title="http://bit.ly/RxLpHc">http://bit.ly/RxLpHc</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97653885'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97653642'>From netzpolitik.org: Wie Jugendliche mit dem Internet umgehen – aus Sicht der Lehrer http://bit.ly/SBc6wY</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From <a href="http://netzpolitik.org/" rel="nofollow external" title="http://netzpolitik.org/">netzpolitik.org</a>: Wie Jugendliche mit dem Internet umgehen – aus Sicht der Lehrer <a href="http://bit.ly/SBc6wY" rel="nofollow external" title="http://bit.ly/SBc6wY">http://bit.ly/SBc6wY</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97653642'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97653616'>From Fellowship of FSFE Planet: Karsten on Free Software: UK takes huge step forward on Open Standards http://bit.ly/UlUguv</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Fellowship of FSFE Planet: Karsten on Free Software: UK takes huge step forward on Open Standards <a href="http://bit.ly/UlUguv" rel="nofollow external" title="http://bit.ly/UlUguv">http://bit.ly/UlUguv</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97653616'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97653562'>From MAKE Magazine: Bored Beagle/BeagleBoard http://bit.ly/SBaOCf</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From MAKE Magazine: Bored Beagle/BeagleBoard <a href="http://bit.ly/SBaOCf" rel="nofollow external" title="http://bit.ly/SBaOCf">http://bit.ly/SBaOCf</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97653562'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97650309'>LibreOffice bittet um Spenden http://j.mp/ToOTJT</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            LibreOffice bittet um Spenden <a href="http://j.mp/ToOTJT" rel="nofollow external" title="http://j.mp/ToOTJT">http://j.mp/ToOTJT</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97650309'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97647294'>From tagesschau.de - Die Nachrichten der ARD: Magdeburg verliert bis 2014 letzte ICE-Verbindungen http://bit.ly/Tot5OC</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From <a href="http://tagesschau.de/" rel="nofollow external" title="http://tagesschau.de/">tagesschau.de</a> - Die Nachrichten der ARD: Magdeburg verliert bis 2014 letzte ICE-Verbindungen <a href="http://bit.ly/Tot5OC" rel="nofollow external" title="http://bit.ly/Tot5OC">http://bit.ly/Tot5OC</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97647294'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97647283'>From Slashdot: Mozilla: Browser Ballot Glitch Cost Us 9m Firefox Downloads http://bit.ly/Sz9jDw</a> 
-
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Slashdot: Mozilla: Browser Ballot Glitch Cost Us 9m Firefox Downloads <a href="http://bit.ly/Sz9jDw" rel="nofollow external" title="http://bit.ly/Sz9jDw">http://bit.ly/Sz9jDw</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97647283'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97637031'>From SPIEGEL ONLINE - Schlagzeilen: Meditation: Wege zur effektiven Entspannung http://bit.ly/UioyhQ</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From SPIEGEL ONLINE - Schlagzeilen: Meditation: Wege zur effektiven Entspannung <a href="http://bit.ly/UioyhQ" rel="nofollow external" title="http://bit.ly/UioyhQ">http://bit.ly/UioyhQ</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97637031'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97637001'>Hab Steuern erklärt.</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Hab Steuern erklärt.
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97637001'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97636989'>From Pro-Linux News: UEFI Secure Boot: Technische Beschreibung von Shim http://bit.ly/SmIwJ0</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Pro-Linux News: UEFI Secure Boot: Technische Beschreibung von Shim <a href="http://bit.ly/SmIwJ0" rel="nofollow external" title="http://bit.ly/SmIwJ0">http://bit.ly/SmIwJ0</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97636989'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97636953'>Clean IT: Auch der Verfassungsschutz sitzt am Tisch, deutsche Behörden wollen aber nicht verantwortlich gemacht werden http://bit.ly/VEhAVn</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Clean IT: Auch der Verfassungsschutz sitzt am Tisch, deutsche Behörden wollen aber nicht verantwortlich gemacht werden <a href="http://bit.ly/VEhAVn" rel="nofollow external" title="http://bit.ly/VEhAVn">http://bit.ly/VEhAVn</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97636953'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97636916'>Weiss endllich was ich werden will, wenn ich groß bin!</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Weiss endllich was ich werden will, wenn ich groß bin!
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97636916'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97636908'>From netzpolitik.org: Sicherheitslücke in Europas größter Industrieautomaten-Steuerungssoftware http://bit.ly/RtccGf</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From <a href="http://netzpolitik.org/" rel="nofollow external" title="http://netzpolitik.org/">netzpolitik.org</a>: Sicherheitslücke in Europas größter Industrieautomaten-Steuerungssoftware <a href="http://bit.ly/RtccGf" rel="nofollow external" title="http://bit.ly/RtccGf">http://bit.ly/RtccGf</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97636908'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97636342'>From Golem.de: 70 statt 50 Jahre: Bundesregierung beschließt Schutzfristverlängerung http://bit.ly/T8b0WW</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From <a href="http://Golem.de/" rel="nofollow external" title="http://www.golem.de/">Golem.de</a>: 70 statt 50 Jahre: Bundesregierung beschließt Schutzfristverlängerung <a href="http://bit.ly/T8b0WW" rel="nofollow external" title="http://bit.ly/T8b0WW">http://bit.ly/T8b0WW</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97636342'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://identi.ca/softmetz'>
-
-               
-            <img src='http://avatar3.status.net/i/identica/85379-96-20091215221212.png' alt='softmetz timeline' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://identi.ca/notice/97636136'>From Slashdot: Dutch DigiNotar Servers Were Fully Hacked http://bit.ly/SfmZS1</a> 
-
-            
-            Wed, 31 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            From Slashdot: Dutch DigiNotar Servers Were Fully Hacked <a href="http://bit.ly/SfmZS1" rel="nofollow external" title="http://bit.ly/SfmZS1">http://bit.ly/SfmZS1</a>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://identi.ca/notice/97636136'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1098,7 +1263,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/34089211669'>buddycloud hackathon weekend: 10+11 November</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/5Nijfzr-lWE/34089211669'>buddycloud hackathon weekend: 10+11 November</a> 
 
             
             Mon, 22 Oct 2012
@@ -1108,7 +1273,7 @@ function init() {
         <div class='item_main_main'>
             <p>A quick update: the next buddycloud hackathon will be on the 10+11 November in Munich.</p>
 <p>We&#8217;ll post more details as details firm up.</p>
-<p><img src="http://media.tumblr.com/tumblr_mcaavuXwo71qbhida.jpg" /></p>
+<p><img src="http://media.tumblr.com/tumblr_mcaavuXwo71qbhida.jpg" /></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/5Nijfzr-lWE" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -1122,7 +1287,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/34089211669'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/5Nijfzr-lWE/34089211669'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1420,7 +1585,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/32747777719'>Planning the Next buddycloud Hackathon: When?</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/W-YtYM5UuLk/32747777719'>Planning the Next buddycloud Hackathon: When?</a> 
 
             
             Tue, 02 Oct 2012
@@ -1439,7 +1604,7 @@ function init() {
 <li>pizza eating</li>
 <li>variations in Munich beers</li>
 <li>your totally random idea</li>
-</ul><p><img src="http://media.tumblr.com/tumblr_mba4p61RMB1qbhida.jpg" /></p>
+</ul><p><img src="http://media.tumblr.com/tumblr_mba4p61RMB1qbhida.jpg" /></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/W-YtYM5UuLk" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -1453,7 +1618,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/32747777719'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/W-YtYM5UuLk/32747777719'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1613,7 +1778,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/32428008056'>Github updates via buddycloud</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/1o7-XUmAOss/32428008056'>Github updates via buddycloud</a> 
 
             
             Fri, 28 Sep 2012
@@ -1623,7 +1788,7 @@ function init() {
         <div class='item_main_main'>
             <a href="http://www.evilprofessor.co.uk/498-update-a-buddycloud-channel-when-events-take-place-on-your-github-repository/">Github updates via buddycloud</a>: <blockquote>
 <p><span>If you’re not aware of them github has a set of service hooks that as a repository owner/admin you can utilise in order to push event information (be it commits, pushes, pull requests, branching, etc) to a 3rd party service. There’s a whole set of these services that you can already push to from </span><a class="kblinker" href="http://jenkinsci.org/" target="_blank" title="More about jenkins CI »">Jenkins CI</a><span> right through to Yammer, and now </span><strong>buddycloud!</strong></p>
-</blockquote>
+</blockquote><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/1o7-XUmAOss" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -1637,7 +1802,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/32428008056'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/1o7-XUmAOss/32428008056'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2218,7 +2383,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/31777308201'>San Francisco update</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/PXfp3ekxoqM/31777308201'>San Francisco update</a> 
 
             
             Tue, 18 Sep 2012
@@ -2241,7 +2406,7 @@ function init() {
 <p><img src="http://media.tumblr.com/tumblr_maiyotg0xm1qbhida.png" /></p>
 <p>At the moment we are tying together the bits from the <a href="https://buddycloud.org/wiki/Buddycloud_media_server">media server</a> and the <a href="https://github.com/buddycloud/buddycloud-http-api">HTTP API server</a> to build the new <a href="https://github.com/buddycloud/webclient">webclient</a>.</p>
 <p>And if you are in San Francisco, please do come and support us on our <a href="http://webfwdgraduation.eventbrite.com/">demo day</a> at Mozilla or via <a href="https://air.mozilla.org/">Air Mozilla</a>.</p>
-<p>Thanks again to everyone pitching in. I feel very fortunate to work with such a great team.</p>
+<p>Thanks again to everyone pitching in. I feel very fortunate to work with such a great team.</p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/PXfp3ekxoqM" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -2255,7 +2420,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/31777308201'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/PXfp3ekxoqM/31777308201'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2482,7 +2647,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/31362947014'>Learning By Doing</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/pyYn1nw6jHs/31362947014'>Learning By Doing</a> 
 
             
             Tue, 11 Sep 2012
@@ -2499,7 +2664,7 @@ function init() {
 <p>One of the problems with existing social networks has been the desire of the parent corporation to control the user experience for its own benefit. When you use facebook, it&#8217;s impossible to forget that you&#8217;re embedded in that user experience. And the goals of that parent corporation may involve things that are unrelated to what&#8217;s best for the user; such as taking maximum advantage of each user&#8217;s retinal &#8216;real-estate&#8217;. By giving the user total control of their own data and their experience, buddycloud doesn&#8217;t risk this temptation.</p>
 <p><img src="http://media.tumblr.com/tumblr_ma7ke2iDIl1rwi894.jpg" /></p>
 <p>Developing the buddycloud protocols and software architecture has had its own set of challenges to overcome. Any federated system needs developers and users in order to achieve the federation; so we&#8217;ve had to engage in a lot of advocacy, while simultaneously making decisions that affect the protocols and development framework. We recently made the hard decision to do a major architectural change to our web client, which involved abandoning work that had taken a lot of time and energy to produce; we did it because it was the right technical decision, though it required a big adjustment from our whole team. And we want to recognize and make those kinds of decisions early rather than late, so the fewest number of users are affected.</p>
-<p>In light of that, and as another part of our advocacy, we want to make our own development processes and decisions more transparent to anyone who&#8217;s interested in learning more about us. There are a lot of debates - most of them friendly, but sometimes there are strong differences between developers. And we&#8217;re going to be publishing the logs of all our developer discussions as they happen - even our video hangouts! But more than that, we&#8217;re starting a blog that will summarize a lot of the key discussions and decisions that we engage in from week to week. And from time to time you&#8217;ll hear from the buddycloud CEO, Simon Tennant, who&#8217;ll talk about various events, hacking sessions, and the strategies behind the company.</p>
+<p>In light of that, and as another part of our advocacy, we want to make our own development processes and decisions more transparent to anyone who&#8217;s interested in learning more about us. There are a lot of debates - most of them friendly, but sometimes there are strong differences between developers. And we&#8217;re going to be publishing the logs of all our developer discussions as they happen - even our video hangouts! But more than that, we&#8217;re starting a blog that will summarize a lot of the key discussions and decisions that we engage in from week to week. And from time to time you&#8217;ll hear from the buddycloud CEO, Simon Tennant, who&#8217;ll talk about various events, hacking sessions, and the strategies behind the company.</p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/pyYn1nw6jHs" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -2513,7 +2678,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/31362947014'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/pyYn1nw6jHs/31362947014'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2581,7 +2746,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/31274999765'>Here we are hitting the stage at TechCrunch Disrupt</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/QhYJHJAoPk8/31274999765'>Here we are hitting the stage at TechCrunch Disrupt</a> 
 
             
             Mon, 10 Sep 2012
@@ -2589,7 +2754,7 @@ function init() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <br /><br /><p>Here we are hitting the stage at TechCrunch Disrupt</p>
+            <br /><br /><p>Here we are hitting the stage at TechCrunch Disrupt</p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/QhYJHJAoPk8" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -2603,7 +2768,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/31274999765'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/QhYJHJAoPk8/31274999765'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2763,7 +2928,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/30578202585'>buddycloud is seeing huge developer growth. Thanks to everyone...</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/FezCjstbo4k/30578202585'>buddycloud is seeing huge developer growth. Thanks to everyone...</a> 
 
             
             Fri, 31 Aug 2012
@@ -2772,7 +2937,7 @@ function init() {
 
         <div class='item_main_main'>
             <img src="http://25.media.tumblr.com/tumblr_m9m4rtNrvb1rqbo8jo1_500.png" /><br /> <br /><img src="http://25.media.tumblr.com/tumblr_m9m4rtNrvb1rqbo8jo2_500.png" /><br /> <br /><p>buddycloud is seeing huge developer growth. Thanks to everyone for your help!</p>
-<p>To contribute: <a href="https://buddycloud.org/wiki/Contribute">https://buddycloud.org/wiki/Contribute</a></p>
+<p>To contribute: <a href="https://buddycloud.org/wiki/Contribute">https://buddycloud.org/wiki/Contribute</a></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/FezCjstbo4k" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -2786,7 +2951,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/30578202585'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/FezCjstbo4k/30578202585'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3192,7 +3357,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/29055341338'>Remember AOL Keywords?</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/F2fDo81nt9w/29055341338'>Remember AOL Keywords?</a> 
 
             
             Thu, 09 Aug 2012
@@ -3212,7 +3377,7 @@ function init() {
 <p>The buddycloud team and everyone who attends our hackathons is working to build the post-Twitter future just like Netscape helped launch the open web.</p>
 <p>The future will not be built around one company, but a couple of companies like buddycloud that help nudge an open future forward. The future will be protocol based (everyone agrees on a common way to communicate) rather than homesteading on another company&#8217;s API for fear of <a href="http://gigaom.com/2012/07/26/twitter-blocks-instagram-from-find-friends-feature-through-api/">API key revocation</a>.</p>
 <p>To move away from Twitter, we must think bigger: a giant network like email where everyone can run their own servers and they all interconnect.</p>
-<p>We&#8217;re trying to solve some of these problems on the <a href="http://buddycloud.org">buddycloud wiki</a>. And props to the buddycloud team, I think they are doing a great job. I&#8217;ll go back to biting my tongue on each new future-of-twitter post.</p>
+<p>We&#8217;re trying to solve some of these problems on the <a href="http://buddycloud.org">buddycloud wiki</a>. And props to the buddycloud team, I think they are doing a great job. I&#8217;ll go back to biting my tongue on each new future-of-twitter post.</p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/F2fDo81nt9w" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3226,7 +3391,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/29055341338'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/F2fDo81nt9w/29055341338'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3248,7 +3413,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/29043846305'>buddycloud summit: a list of everything we made</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/zhILVoja21s/29043846305'>buddycloud summit: a list of everything we made</a> 
 
             
             Thu, 09 Aug 2012
@@ -3271,7 +3436,7 @@ function init() {
 <li><a href="https://github.com/lloydwatkin/buddycloud-webclient-plugins/tree/master/scrobble"><span><a href="https://github.com/lloydwatkin/buddycloud-webclient-plugins/tree/master/scrobble">https://github.com/lloydwatkin/buddycloud-webclient-plugins/tree/master/scrobble</a></span></a><span> (scrobble to buddycloud) </span></li>
 <li><span>debugging some federation glitches (yes, even the super-ultra-mega-awesome bc dev team makes mistakes)</span></li>
 </ul><p><strong id="internal-source-marker_0.3531249836087227"><span></span><br /><span></span></strong><strong id="internal-source-marker_0.3531249836087227"><span>We hope to see you at our next summit and hackathon. Stay tuned: Follow development on <a href="https://github.com/buddycloud">buddycloud&#8217;s github page</a> and the <a href="https://buddycloud.org">buddycloud dev wiki</a>.</span></strong></p>
-<p><strong><img align="middle" height="2048" src="http://dl.dropbox.com/u/63819683/IMG_20120805_114303.jpg" width="1536" /><img align="middle" height="2048" src="http://dl.dropbox.com/u/63819683/IMG_20120805_181424.jpg" width="1536" /><img height="1536" src="http://dl.dropbox.com/u/63819683/IMG_20120805_183531.jpg" width="2048" /></strong><span><img align="middle" height="1536" src="http://dl.dropbox.com/u/63819683/IMG_20120805_181139.jpg" width="2048" /></span></p>
+<p><strong><img align="middle" height="2048" src="http://dl.dropbox.com/u/63819683/IMG_20120805_114303.jpg" width="1536" /><img align="middle" height="2048" src="http://dl.dropbox.com/u/63819683/IMG_20120805_181424.jpg" width="1536" /><img height="1536" src="http://dl.dropbox.com/u/63819683/IMG_20120805_183531.jpg" width="2048" /></strong><span><img align="middle" height="1536" src="http://dl.dropbox.com/u/63819683/IMG_20120805_181139.jpg" width="2048" /></span></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/zhILVoja21s" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3285,7 +3450,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/29043846305'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/zhILVoja21s/29043846305'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3353,7 +3518,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/28620346324'>The countdown is on!</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/Ca4HB0eT6YY/28620346324'>The countdown is on!</a> 
 
             
             Fri, 03 Aug 2012
@@ -3363,7 +3528,7 @@ function init() {
         <div class='item_main_main'>
             <p>The first buddycloud summit and hackathon starts in less then 24 hours: A lot of people are going to join us this time - awesome.</p>
 <p>If you can&#8217;t make it, you can still drop in remotely. For getting an invitation to our Google hangout, just send an email to <a href="mailto:donna.smith@buddycloud.com" target="_blank">donna.smith@buddycloud.com</a>.</p>
-<p>See you tomorrow!</p>
+<p>See you tomorrow!</p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/Ca4HB0eT6YY" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3377,7 +3542,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/28620346324'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/Ca4HB0eT6YY/28620346324'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3399,7 +3564,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/28414970404'>Great think piece by Dave Cridland on Twitter's accountability.</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/t_pEplIgSxg/28414970404'>Great think piece by Dave Cridland on Twitter's accountability.</a> 
 
             
             Tue, 31 Jul 2012
@@ -3407,7 +3572,7 @@ function init() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <a href="https://plus.google.com/112072901242275143292/posts/UrLsTN2poqH">Great think piece by Dave Cridland on Twitter's accountability.</a>
+            <a href="https://plus.google.com/112072901242275143292/posts/UrLsTN2poqH">Great think piece by Dave Cridland on Twitter's accountability.</a><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/t_pEplIgSxg" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3421,7 +3586,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/28414970404'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/t_pEplIgSxg/28414970404'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3535,7 +3700,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/28045414582'>buddycloud Summit v1.0 and hackathon</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/yjx3XmryO8Y/28045414582'>buddycloud Summit v1.0 and hackathon</a> 
 
             
             Thu, 26 Jul 2012
@@ -3573,7 +3738,7 @@ function init() {
 <li><a href="https://github.com/buddycloud">all buddycloud code</a> is open source and hosted <a href="https://github.com/">GitHub</a></li>
 </ul><p><strong><br /></strong>We’re looking forward to seeing you!</p>
 <p>Please let <a href="mailto:donna.smith@buddycloud.com">donna.smith@buddycloud.com</a> know if you can make it so that she can plan numbers.</p>
-<p><strong id="internal-source-marker_0.27694976702332497"><br /><br /></strong></p>
+<p><strong id="internal-source-marker_0.27694976702332497"><br /><br /></strong></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/yjx3XmryO8Y" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3587,53 +3752,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/28045414582'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://foofurple.wordpress.com'>
-
-               
-            <img src='http://0.gravatar.com/blavatar/056fa00f3f4c8200f7684417131a496a?s=96&d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png' alt='Foofurple blog' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://foofurple.wordpress.com/2012/07/25/hippo-and-goat/'>Hippo and goat</a> 
-
-            
-            by karimeter
-            
-            Wed, 25 Jul 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            An example of my comic-making app in action. Tagged: comic, public domain<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=foofurple.wordpress.com&#038;blog=38376763&#038;post=58&#038;subd=foofurple&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://foofurple.wordpress.com/2012/07/25/hippo-and-goat/'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/yjx3XmryO8Y/28045414582'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3781,52 +3900,6 @@ function init() {
     <div class="feed_icon default_icon">
     
 
-        <a href='http://dw-dev.dreamwidth.org/'>
-
-            
-            Dreamwidth Development
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://dw-dev.dreamwidth.org/121273.html'>rahaeli's first foray into github: a step-by-step travelogue</a> 
-
-            
-            by Denise (denise@dreamwidth.org)
-            
-            Fri, 20 Jul 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Posted by: <span class="ljuser" style="white-space: nowrap;"><a href="http://denise.dreamwidth.org/profile"><img alt="[staff profile] " height="17" src="http://www.dreamwidth.org/img/silk/identity/user_staff.png" style="vertical-align: text-bottom; border: 0; padding-right: 1px;" width="17" /></a><a href="http://denise.dreamwidth.org/"><b>denise</b></a></span><br /><br />Tonight I decided I was going to figure out Git and Github enough to make a patch using it! Behind the cut is my adventures in Git-itude, detailing all the steps I took (and all the false starts, too.) I'm pretty sure this is all correct, but I haven't fact-checked the post with somebody who knows more than I do, so caveat lector (and if you spot an error, please do tell me so I can correct it!)<br /><br />This post is also a bit vague on some process bits that we haven't decided yet, so when we flip the switch and move to using Github for development wholesale, some of these bits will look a little different. I just wanted to demystify the process a little, since I know that I was feeling a little trepidatious about this (AUUUGH, CHANGE IS SCARY) until I got into the guts of it and started playing around and realized how much <em>nicer</em> this process is going to be!<br /><br />So, this is a log of the playing around I did tonight. :)<br /><br /><span class="cuttag_container"><span class="cuttag" id="span-cuttag___1" style="display: none;"></span><b>(&nbsp;<a href="http://dw-dev.dreamwidth.org/121273.html#cutid1">Watch me flail! Watch me figure it out!</a>&nbsp;)</b><div id="div-cuttag___1" style="display: none;"></div></span><br /><br />And thus ends my first forays into git! There's a bunch of other stuff we'll need to go over, such as what to do if somebody else has made changes to the master DW branch while you were working on your patch, but that's a little bit hard to explain with words (usually it requires diagrams, although one of the talks I attended today had <span style="white-space: nowrap;"><a href="http://twitter.com/schwern"><img alt="[twitter.com profile] " height="16" src="http://twitter.com/favicon.ico" style="vertical-align: bottom; border: 0; padding-right: 1px;" width="16" /></a><a href="http://twitter.com/schwern"><b>schwern</b></a></span> demonstrating it with Tinkertoys) so I'll hold off on that until another day. :)<br /><br /><img alt="comment count unavailable" height="12" src="http://www.dreamwidth.org/tools/commentcount?user=dw_dev&amp;ditemid=121273" style="vertical-align: middle;" width="30" /> comments
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://dw-dev.dreamwidth.org/121273.html'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
         <a href='http://blog.buddycloud.com/'>
 
             
@@ -3839,7 +3912,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/26852350790'>Very quick intro to buddycloud screencast</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/5op7RfXE3k8/26852350790'>Very quick intro to buddycloud screencast</a> 
 
             
             Mon, 09 Jul 2012
@@ -3847,7 +3920,7 @@ function init() {
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            <br /><br /><p>Very quick intro to buddycloud screencast</p>
+            <br /><br /><p>Very quick intro to buddycloud screencast</p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/5op7RfXE3k8" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3861,7 +3934,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/26852350790'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/5op7RfXE3k8/26852350790'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3883,7 +3956,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/26764203495'>10 mins to run your own buddycloud screencast</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/KHs6l2Vez58/26764203495'>10 mins to run your own buddycloud screencast</a> 
 
             
             Sun, 08 Jul 2012
@@ -3896,7 +3969,7 @@ function init() {
 <ul><li>as a virtual machine on your existing server</li>
 <li>as an EC2 instance on Amazon.</li>
 </ul><p>The video shows you the steps to get things setup on Amazon. Additionally you can check out the instructions on the <a href="https://buddycloud.org/wiki/Buddycloud_on_Amazon_Web_Service">buddycloud EC2 install wiki</a>.</p>
-<p></p>
+<p></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/KHs6l2Vez58" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3910,7 +3983,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/26764203495'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/KHs6l2Vez58/26764203495'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -3932,7 +4005,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/26695482598'>next buddycloud hackathon date announced:  4-5 Aug 2012</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/clQisfETzR0/26695482598'>next buddycloud hackathon date announced:  4-5 Aug 2012</a> 
 
             
             Sat, 07 Jul 2012
@@ -3945,7 +4018,7 @@ function init() {
 <p>In the name of science, we&#8217;ll devote one evening&#8217;s hacking to researching the Ballmer Peak. The idea being to scientifically find the exact quantities of beer or whiskey and timespan to hit the peak for javascript and java developers.</p>
 <p>And when we aren&#8217;t researching&#8230; writing great code.</p>
 <p>More details to follow.</p>
-<p><img height="592" src="http://imgs.xkcd.com/comics/ballmer_peak.png" width="652" /></p>
+<p><img height="592" src="http://imgs.xkcd.com/comics/ballmer_peak.png" width="652" /></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/clQisfETzR0" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -3959,7 +4032,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/26695482598'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/clQisfETzR0/26695482598'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -4027,7 +4100,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/26064911415'>The super-ultra-mega-with-chrome-exhaust-pipe buddycloud hackathon in Munich</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/PjoL1VYGtzQ/26064911415'>The super-ultra-mega-with-chrome-exhaust-pipe buddycloud hackathon in Munich</a> 
 
             
             Thu, 28 Jun 2012
@@ -4047,14 +4120,14 @@ function init() {
 </ul><p>Details:</p>
 <ul><li>Saturday: we&#8217;ll be there from 10:30 and kick off at 12pm. Sunday too.</li>
 <li><a href="http://maps.google.com/maps/ms?hl=de&amp;ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=105805533682706607968.00043b19704a0d0b3df29&amp;ll=48.162965,11.573067&amp;spn=0.008015,0.021458&amp;z=15&amp;iwloc=000449b783963c1e5ebe0&amp;source=embed">Teng Strasse 37, Munich</a></li>
-<li>call <a href="http://blog.buddycloud.com/tel:+491785450880">+49&#160;178&#160;545&#160;0880</a> if you get lost</li>
+<li>call <a href="http://feeds.feedburner.com/tel:+491785450880">+49&#160;178&#160;545&#160;0880</a> if you get lost</li>
 </ul><p>Before then:</p>
 <ul><li>we track our dev work on <a href="https://trello.com/buddycloud">Trello</a></li>
 <li>we try to keep great <a href="https://buddycloud.org/wiki/Main_Page">buddycloud documentation</a></li>
 <li>you can follow buddycloud on the <a href="http://groups.google.com/group/buddycloud-dev">mailing list</a> and in the <a href="https://www.jappix.com/?r=seehaus@channels.buddycloud.com">buddycloud chat room</a></li>
 <li><a href="https://github.com/buddycloud">all buddycloud code</a> is open source and hosted <a href="https://github.com">GitHub</a></li>
 </ul><p>Be awesome!</p>
-<p><img src="http://media.tumblr.com/tumblr_m6bqp7qxFa1qbhida.jpg" /></p>
+<p><img src="http://media.tumblr.com/tumblr_m6bqp7qxFa1qbhida.jpg" /></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/PjoL1VYGtzQ" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -4068,7 +4141,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/26064911415'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/PjoL1VYGtzQ/26064911415'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -4136,7 +4209,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/25013830643'>Hackathon planning channel open</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/Lp819Bb_kyE/25013830643'>Hackathon planning channel open</a> 
 
             
             Wed, 13 Jun 2012
@@ -4146,7 +4219,7 @@ function init() {
         <div class='item_main_main'>
             <p>We&#8217;re planning the hackathon in a buddycloud channel: <a href="https://beta.buddycloud.org/hackathon@topics.buddycloud.org">hackathon@topics.buddycloud.org</a></p>
 <p>Post your ideas on what we can hack on to make buddycloud better into the channel.</p>
-<p><img src="http://media.tumblr.com/tumblr_m5jtq7zTOM1qbhida.jpg" /></p>
+<p><img src="http://media.tumblr.com/tumblr_m5jtq7zTOM1qbhida.jpg" /></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/Lp819Bb_kyE" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -4160,7 +4233,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/25013830643'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/Lp819Bb_kyE/25013830643'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -4182,7 +4255,7 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/24949954588'>50¢ user testing</a> 
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/pnlCM0EaVWI/24949954588'>50¢ user testing</a> 
 
             
             Tue, 12 Jun 2012
@@ -4216,7 +4289,7 @@ function init() {
 <li>Mechanical Turk will email you when a new file is uploaded. Download and share with your team. And don&#8217;t forget to approve the HIT so that your worker gets paid.</li>
 </ol><p>I hope this helps you with your user testing. It&#8217;s helping us find out where we can improve at buddycloud.</p>
 <p>Happy testing</p>
-<p><img src="http://media.tumblr.com/tumblr_m5i7i4KM5o1qbhida.jpg" /></p>
+<p><img src="http://media.tumblr.com/tumblr_m5i7i4KM5o1qbhida.jpg" /></p><img height="1" src="http://feeds.feedburner.com/~r/buddycloudblog/~4/pnlCM0EaVWI" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -4230,104 +4303,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/24949954588'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://blog.buddycloud.com/'>
-
-            
-            buddycloud
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/24671986637'>buddycloud mid-year hackathon date set</a> 
-
-            
-            Fri, 08 Jun 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            <p>Warm up your cpu cores, make clean, update your libraries, and get ready for the next buddycloud hackerthon:</p>
-<p><strong>June 30 &amp; July 1st 2012<br /></strong><strong>Munich<br /></strong><strong>(and in a Google Hangout near you)</strong></p>
-<p>We&#8217;ll announce more details as they come in. But until then get your tickets booked and start thinking about what you want to build.</p>
-<p>I&#8217;m really excited to see everyone soon!</p>
-<p>And, if you need somewhere to stay, let me know and I&#8217;m sure we can arrange something comfy for you.</p>
-<p>Add the <a href="http://dl.dropbox.com/u/54968646/buddycloud%20hackathon.ics">hackathon date</a> to your calendar.</p>
-<p><img src="http://media.tumblr.com/tumblr_m5anvlWIFW1qbhida.jpg" /></p>
-<p>Image: Waldo entering deep-hack-mode at the last hackathon in Munich.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/24671986637'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://blog.buddycloud.com/'>
-
-            
-            buddycloud
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://blog.buddycloud.com/post/24054912256'>buddycloud hackathon date</a> 
-
-            
-            Tue, 29 May 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            <p>Choose the date for the next buddycloud hackathon:</p>
-<p><a href="http://www.doodle.com/9bt2y6ffaxdpv3qb"> http://www.doodle.com/9bt2y6ffaxdpv3qb</a></p>
-<p><img src="http://media.tumblr.com/tumblr_m4tvkfu2JK1qbhida.png" /></p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://blog.buddycloud.com/post/24054912256'>Read more</a>
+            <a href='http://feedproxy.google.com/~r/buddycloudblog/~3/pnlCM0EaVWI/24949954588'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->

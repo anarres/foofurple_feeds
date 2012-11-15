@@ -1,30 +1,23 @@
-
-
 <div class='stream'>
 
     <br>
 
-    <h2><a href='{{ stream_url }}'>{{ stream_title }}</a> <span class='remove_stream' onclick='removeStream()'>(remove stream)</span></h2>
+    <h2><a class="streamTitleList" id="{{ stream_title }}List" href='{{ stream_url }}'>{{ stream_title }}</a> <span class='remove_stream'>(remove stream)</span></h2>
 
     <ul>
 
         {% for f in stream_feeds %}
 
-        <li><a href='{{ f.url }}'>{{ f.name }}</a> <span class='remove_feed' onclick='removeFeed()'>(remove feed)</span></li>
+        <li><a class='{{ stream_title }}' id='{{ f.name }}' href='{{ f.url }}'>{{ f.name }}</a> <span class='remove_feed'>(remove feed)</span></li>
 
         {% endfor %}
 
     </ul>
 
-    <br>
+    <button class='addFeedToStream' id='{{ stream_title }}'>
+        Add a feed to this stream
+    </button>
 
-    Add a feed to this stream:
-
-    <br>
-
-    Name: <input type='text' />
-    Web addres: <input type='text' value='http://' />
-    <button onclick='newFeed()'>Submit</button>
 
     <br><br>
 

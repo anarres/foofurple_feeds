@@ -2,53 +2,12 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
 <title>Blogs</title>
-<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css">
-<script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
 
-/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
-http://stackoverflow.com/questions/1933602/
-how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
-function getElementsByClassName(node,classname) {
-  if (node.getElementsByClassName) { // use native implementation if available
-    return node.getElementsByClassName(classname);
-  } else {
-    return (function getElementsByClass(searchClass,node) {
-        if ( node == null )
-          node = document;
-        var classElements = [],
-            els = node.getElementsByTagName("*"),
-            elsLen = els.length,
-            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
 
-        for (i = 0, j = 0; i < elsLen; i++) {
-          if ( pattern.test(els[i].className) ) {
-              classElements[j] = els[i];
-              j++;
-          }
-        }
-        return classElements;
-    })(classname, node);
-  }
-}
 
-function init() {
-    var objs = getElementsByClassName(document, 'remove_stream');
-    for (var i=0; i<objs.length; i++) {
-        objs[i].addEventListener('click', function (e) {
-            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-    var fobjs = getElementsByClassName(document, 'remove_feed');
-    for (var j=0; j<fobjs.length; j++) {
-        fobjs[j].addEventListener('click', function (e) {
-            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
-    }
-}
-
-</script>
 </head>
 <body onload="init()">
 
@@ -57,7 +16,7 @@ function init() {
 </div> <!--#nav-->
 
 <div id="header">
-    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png" />
+    <img src="/home/katie/prog/foofurple_feeds/media/images/feedreader_logo.png">
     <h1>Blogs</h1>
 </div> <!--#header-->
 
@@ -80,17 +39,17 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121104.12549/toxic-culture-in-university-colleges/'>Toxic culture in university colleges</a> 
+            <a href='http://hoydenabouttown.com/20121115.12591/terrible-horrible-no-good-very-bad-science-journalism-headline-of-the-day/'>Terrible horrible no good very bad science journalism headline of the day</a> 
 
             
             by tigtog
             
-            Sun, 04 Nov 2012
+            Thu, 15 Nov 2012
 
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            A 2009 post from Mary (almost exactly three years ago) is getting a lot of hits today, and I'm deducing that it's because of searching on St Johns college at the University of Sydney due to this SMH story: Culture of anarchy at a college in crisis.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+            I really don't think that's what any scientists did say, actually.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -104,7 +63,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121104.12549/toxic-culture-in-university-colleges/'>Read more</a>
+            <a href='http://hoydenabouttown.com/20121115.12591/terrible-horrible-no-good-very-bad-science-journalism-headline-of-the-day/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -126,17 +85,109 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121104.12547/argument-is-the-human-condition-but-public-argument-is-not-until-the-internet-arrived/'>Argument is the human condition, but public argument is not (until the Internet arrived)</a> 
+            <a href='http://hoydenabouttown.com/20121115.12586/whimsy-4/'>Whimsy</a> 
+
+            
+            by Mindy
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Whimsy, because sometimes you need to see teh awesome.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121115.12586/whimsy-4/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121115.12584/quick-hit-is-this-satire/'>Quick hit: Is this satire?</a> 
+
+            
+            by Mindy
+            
+            Thu, 15 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Satire or serious? You decide.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121115.12584/quick-hit-is-this-satire/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121115.12581/savita-halappanavar-dead-when-an-abortion-could-have-saved-her/'>Savita Halappanavar dead when an abortion could have saved her</a> 
 
             
             by tigtog
             
-            Sun, 04 Nov 2012
+            Wed, 14 Nov 2012
 
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            A fascinating long post from Clay Shirky on the information age's transformation of the media landscape, via @Colvinius who referenced it as part of his 2012 Andrew Olle Media Lecture.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+            She was miscarrying at 17 weeks gestation, there was no way to save the dying foetus, but it still had a heartbeat, so the Catholic doctors refused to terminate the pregnancy, allowing septicaemia to develop and eventually kill her.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -150,20 +201,20 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121104.12547/argument-is-the-human-condition-but-public-argument-is-not-until-the-internet-arrived/'>Read more</a>
+            <a href='http://hoydenabouttown.com/20121115.12581/savita-halappanavar-dead-when-an-abortion-could-have-saved-her/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
 </div><div class='streamItem'>
 
-    
-    <div class="feed_icon default_icon">
+       
+    <div class="feed_icon">
     
 
-        <a href='http://hoydenabouttown.com'>
+        <a href='http://feministactioncambridge.wordpress.com'>
 
-            
-            Hoyden About Town
+               
+            <img src='http://0.gravatar.com/blavatar/80b94b42d935cade5be5386ed9b160d2?s=96&d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png' alt='FeministActionCambridge' />
             
 
         </a>
@@ -172,17 +223,17 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121103.12543/bananas-in-pyjamas-teaching-you-to-like-bad-boys-and-clean-up-all-their-mess/'>Bananas in Pyjamas teaching you to like ‘bad boys’ and clean up all their mess</a> 
+            <a href='http://feministactioncambridge.wordpress.com/2012/11/14/pro-choice-action-save-the-date/'>Pro-choice action – save the date</a> 
 
             
-            by blue milk
+            by Veronica
             
-            Sat, 03 Nov 2012
+            Wed, 14 Nov 2012
 
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            File this one under: Don&#8217;t let your cranky, feminist mother watch your TV shows. So, my three year old son was watching an episode (&#8216;Super Bear&#8217;) of the Australian children&#8217;s show, Bananas in Pyjamas the other day and I walked past and caught a scene that began to irritate me. I was so bewildered by [...]<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+            Did you know there are THREE &#8216;crisis pregnancy centres&#8217; locally who give women misinformation about abortion? In Ely, Cambridge and Newmarket, there are centres run by anti-abortion Christian group Care Confidential, who conceal their anti-abortion stance, pretending to give impartial advice. They say they are accredited by the British Association for Counselling and Psychotherapy (BACP) [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=feministactioncambridge.wordpress.com&#038;blog=27634026&#038;post=914&#038;subd=feministactioncambridge&#038;ref=&#038;feed=1" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -196,20 +247,20 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121103.12543/bananas-in-pyjamas-teaching-you-to-like-bad-boys-and-clean-up-all-their-mess/'>Read more</a>
+            <a href='http://feministactioncambridge.wordpress.com/2012/11/14/pro-choice-action-save-the-date/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
 </div><div class='streamItem'>
 
-    
-    <div class="feed_icon default_icon">
+       
+    <div class="feed_icon">
     
 
-        <a href='http://hoydenabouttown.com'>
+        <a href='http://feministactioncambridge.wordpress.com'>
 
-            
-            Hoyden About Town
+               
+            <img src='http://0.gravatar.com/blavatar/80b94b42d935cade5be5386ed9b160d2?s=96&d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png' alt='FeministActionCambridge' />
             
 
         </a>
@@ -218,17 +269,17 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121103.12540/otterday-and-open-thread-198/'>Otterday! And Open Thread.</a> 
+            <a href='http://feministactioncambridge.wordpress.com/2012/11/14/abortion-mythbusting/'>Abortion Mythbusting</a> 
 
             
-            by Lauredhel
+            by KM
             
-            Fri, 02 Nov 2012
+            Wed, 14 Nov 2012
 
         </div> <!--.item_meta-->
 
         <div class='item_main_main'>
-            Please feel free to use this thread to natter about anything your heart desires. Anything great happening in your life? Anything you want to get off your chest? Books? News stories? What have you created lately? Commiserations, felicitations, temptations, contemplations, speculations? <p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+            We&#8217;re going to send a mythbusting tweet on abortion every day for the next few weeks, and we&#8217;ll keep updating this page with the new tweets, along with references and links to additional information. Abortion Fact #1 Roughly one in three UK women will have an abortion during her lifetime. Sources: The 1 in 3 [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=feministactioncambridge.wordpress.com&#038;blog=27634026&#038;post=1656&#038;subd=feministactioncambridge&#038;ref=&#038;feed=1" width="1" />
         </div> <!--.item_main_main-->
 
         <div class='enclosures'>
@@ -242,7 +293,53 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121103.12540/otterday-and-open-thread-198/'>Read more</a>
+            <a href='http://feministactioncambridge.wordpress.com/2012/11/14/abortion-mythbusting/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/13/394-discussing-consent-rape-with-my-mom-is-leaving-us-both-shredded/'>#394: Discussing consent & rape with my mom is leaving us both shredded.</a> 
+
+            
+            by JenniferP
+            
+            Wed, 14 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Behind a cut for sure. Reasons are in the title, and it gets pretty detailed, so be warned. Dear Captain Awkward (or appropriate guest blogger), I recently had a fight with my mom over the definition of rape and the concept of enthusiastic consent and I don&#8217;t know how to handle the outcome right now. First I [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4375&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/13/394-discussing-consent-rape-with-my-mom-is-leaving-us-both-shredded/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -264,7 +361,743 @@ function init() {
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/0Ki2pTCGIms/'>Trailblazing Black Women Scientists: Carol Mae Jemison in L.A.!</a> 
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/13/lee-atwater-breaks-down-the-gop-southern-strategy-in-1981/'>Lee Atwater breaks down the GOP “Southern Strategy” in 1981</a> 
+
+            
+            by fredericksparks
+            
+            Tue, 13 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            By Frederick Sparks Jimmy Carter&#8217;s grandson, James Carter IV, who brought us the infamous &#8220;47%&#8221; Mitt Romney video, has uncovered the audio recording of an interview of the famed political consultant Atwater by late political science professor Alexander Lamis.  Lamis published the interview without using Atwater&#8217;s name in his 1984 book  The Two Party South, and [...]...
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/13/lee-atwater-breaks-down-the-gop-southern-strategy-in-1981/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121113.12579/media-circus-royal-commission-edition/'>Media Circus: Royal Commission Edition</a> 
+
+            
+            by tigtog
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            What has piqued your media interests lately? <p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121113.12579/media-circus-royal-commission-edition/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/12/3-my-friends-keep-inviting-my-abusive-ex-and-me-to-the-same-parties-despite-being-asked-directly-not-to/'>#393: My friends keep inviting my abusive ex and me to the same parties, despite being asked directly not to.</a> 
+
+            
+            by JenniferP
+            
+            Mon, 12 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            How great is this tip for dealing with people who invade your personal space? Since there&#8217;s no transcript at the link, I&#8217;ll tell you: When someone comes up behind you and is too close, get visibly and audibly startled ( &#8220;Aaaah! Yikes!&#8221;) and move back. You want people to turn around and look at what&#8217;s [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4319&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/12/3-my-friends-keep-inviting-my-abusive-ex-and-me-to-the-same-parties-despite-being-asked-directly-not-to/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/10/392-overdue-apologies/'>#392: Overdue apologies.</a> 
+
+            
+            by JenniferP
+            
+            Sat, 10 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Before we dig into today&#8217;s letter, I really like this &#8220;Ask Polly&#8221; piece at The Awl, I Miss My Maniac Ex. The Maniac Ex is what we around these parts would call a Darth Vader boyfriend. So you focus on that one magical night, in the middle of a sea of terrible nights, where he [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4354&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/10/392-overdue-apologies/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121110.12577/otterday-and-open-thread-199/'>Otterday! And Open Thread.</a> 
+
+            
+            by Lauredhel
+            
+            Fri, 09 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Please feel free to use this thread to natter about anything your heart desires. Anything great happening in your life? Anything you want to get off your chest? Books? News stories? What have you created lately? Commiserations, felicitations, temptations, contemplations, speculations? <p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121110.12577/otterday-and-open-thread-199/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121109.12574/friday-hoyden-sekai-holland/'>Friday Hoyden: Sekai Holland</a> 
+
+            
+            by orlando
+            
+            Fri, 09 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            The current Zimbabwean Minister for Reconciliation, Healing and Integration has a long history with Australia, going back to her days as a university student. Sekai was here this week to accept the Sydney Peace prize, and give its associated lecture.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121109.12574/friday-hoyden-sekai-holland/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://freethoughtblogs.com/blackskeptics'>
+
+            
+            Black Skeptics
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/08/besting-them-at-their-own-game-planned-parenthood-pacs-outperforms-roves/'>Besting them at their own game: Planned Parenthood PACs outperform Rove’s</a> 
+
+            
+            by fredericksparks
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            By Frederick Sparks And it wasn&#8217;t even close. According to the Sunlight Foundation,  97.82% of the expenditures of the Planned Parenthood Action Fund Inc. and 98.58% of the expenditures of Planned Parenthood Votes&#8217; ended in the desired results, in terms of candidates supported and opposed.   As a comparison: The worst performers were the NRA&#8217;s super [...]...
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/08/besting-them-at-their-own-game-planned-parenthood-pacs-outperforms-roves/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121109.12570/dci-peter-fox-calls-for-royal-commission-into-paedophilia-within-the-catholic-church/'>DCI Peter Fox calls for Royal Commission into paedophilia within the Catholic Church</a> 
+
+            
+            by tigtog
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            <q>For people to sit back and say it's not going on, they've got their head in the sand. The greatest frustration is that there is so much power and organisation behind the scenes that police don't have the powers to be able to go in and seize documents and have them disclose things to us.</q><p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121109.12570/dci-peter-fox-calls-for-royal-commission-into-paedophilia-within-the-catholic-church/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121109.12567/conroy-backs-down-on-internet-filter/'>Conroy backs down on internet filter</a> 
+
+            
+            by tigtog
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            It's good to see Stephen Conroy finally face the facts: his filter proposal was about as clever as equipping a blue whale to pursue a vulture.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121109.12567/conroy-backs-down-on-internet-filter/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/08/london-meetup-2/'>London Meetup #2!</a> 
+
+            
+            by JenniferP
+            
+            Thu, 08 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Kate has organized another meetup. Here are the details from her: London meetup #1 was excellent, with about 15 people, and we nearly got thrown out of a library for being awesome too loudly. So here&#8217;s London meetup #2.  This time on a weekend &#38; in central London, by popular demand! 17th November, 11:00 am [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4349&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/08/london-meetup-2/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://freethoughtblogs.com/blackskeptics'>
+
+            
+            Black Skeptics
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/07/2016-the-empire-strikes-back/'>2016: The Empire Strikes Back</a> 
+
+            
+            by blackskeptics
+            
+            Wed, 07 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            By Sikivu Hutchinson Over the past four years President Obama has promoted Wall Street’s capitalist siege against working and middle class homeowners.  He has sanctioned drone attacks on thousands of innocent Middle Eastern people.   He has ignored the deepening crisis of African American unemployment, foreclosure, and mass-incarceration.  He has presided over more deportations of undocumented [...]...
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/07/2016-the-empire-strikes-back/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/07/391-how-to-train-your-rageasaurus/'>#391: How To Train Your Rageasaurus</a> 
+
+            
+            by elodieunderglass
+            
+            Wed, 07 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Howdy Cap&#8217;n~ My mother had an affair and left my father for my former best friend and coworker, whom she met thru me and my job. This happened over a year ago, and I&#8217;m past the initial shock.. I came to realize I cannot change what happened, and that I can either stay angry about [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4344&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/07/391-how-to-train-your-rageasaurus/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://hoydenabouttown.com'>
+
+            
+            Hoyden About Town
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://hoydenabouttown.com/20121107.12557/whimsy-ook-ook-where-is-the-librarian/'>Whimsy: Ook!  Ook? Where is the Librarian?</a> 
+
+            
+            by tigtog
+            
+            Tue, 06 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Please share anything that has recently surprised, delighted, intrigued or otherwise positively engaged you: think of these threads as a brain-bleach repository.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://hoydenabouttown.com/20121107.12557/whimsy-ook-ook-where-is-the-librarian/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/06/389-how-can-i-support-my-mom-without-getting-swamped-by-her-emotions/'>#390: How can I support my mom without getting swamped by her emotions?</a> 
+
+            
+            by alphakitty
+            
+            Tue, 06 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Dear Captain Awkward: My dad&#8217;s health is declining- in the past three years he&#8217;s had a quadruple bypass, and is now on dialysis. My mom, who doesn&#8217;t have a big support network and who isn&#8217;t talkative about her feelings at the best of times, is running herself ragged keeping up with his doctors appointments, sorting [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4309&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/06/389-how-can-i-support-my-mom-without-getting-swamped-by-her-emotions/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://freethoughtblogs.com/blackskeptics'>
+
+            
+            Black Skeptics
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/06/california-in-crisis-critical-ballot-measures/'>California In Crisis: Critical Ballot Measures</a> 
+
+            
+            by blackskeptics
+            
+            Tue, 06 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            California Voter Recommendations from Black Skeptics &#38; Radical Women Los Angeles: We live in contradictory times, and the ballot reflects this with several, mostly bad, tax propositions plus an entreaty to eliminate the death penalty, repeal Three Strikes and increase funding for K-16 education. Proposition 30: Temporary Tax Increases for Education and other Needs— VOTE YES According [...]...
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/06/california-in-crisis-critical-ballot-measures/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+       
+    <div class="feed_icon">
+    
+
+        <a href='http://captainawkward.com'>
+
+               
+            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://captainawkward.com/2012/11/04/hello-again/'>Hello again!</a> 
+
+            
+            by JenniferP
+            
+            Sun, 04 Nov 2012
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            Since we last spoke, I went home to New England to visit my folks, caught the edges of Hurricane Sandy in Boston (everyone in my family is safe and has power back, thankfully. I hope readers can say the same). I turned in some job applications for tenure-track film professor jobs, graded all the things, [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4278&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            
+
+            
+
+            
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='http://captainawkward.com/2012/11/04/hello-again/'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div><div class='streamItem'>
+
+    
+    <div class="feed_icon default_icon">
+    
+
+        <a href='http://freethoughtblogs.com/blackskeptics'>
+
+            
+            Black Skeptics
+            
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/02/trailblazing-black-women-scientists-carol-mae-jemison-in-l-a/'>Trailblazing Black Women Scientists: Carol Mae Jemison in L.A.!</a> 
 
             
             by blackskeptics
@@ -288,193 +1121,7 @@ function init() {
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/0Ki2pTCGIms/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://hoydenabouttown.com'>
-
-            
-            Hoyden About Town
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121101.12537/is-australia-more-feminist/'>Is Australia more feminist?</a> 
-
-            
-            by blue milk
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            The Australian prime minister Julia Gillard&#8217;s labelling of the leader of the opposition, Tony Abbott, a &#8220;misogynist&#8221; has become the focus of intense debate both in Australia and here in the UK. What has been most striking for me is the recent news that Gillard received a huge boost in her Australian approval ratings immediately [...]<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121101.12537/is-australia-more-feminist/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://hoydenabouttown.com'>
-
-            
-            Hoyden About Town
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121101.12534/whimsy-3/'>Whimsy</a> 
-
-            
-            by Mindy
-            
-            Thu, 01 Nov 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Please share anything that has recently surprised, delighted, intrigued or otherwise positively engaged you: think of these threads as a brain-bleach repository.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121101.12534/whimsy-3/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://hoydenabouttown.com'>
-
-            
-            Hoyden About Town
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121030.12532/media-circus-read-my-memoirs-edition/'>Media Circus: read my memoirs edition</a> 
-
-            
-            by tigtog
-            
-            Tue, 30 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Memoirs, asylum seekers, hurricanes and sexual harassment.  What else has piqued your media interests lately? <p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121030.12532/media-circus-read-my-memoirs-edition/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://hoydenabouttown.com'>
-
-            
-            Hoyden About Town
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121030.12528/frankenstorm/'>Frankenstorm</a> 
-
-            
-            by tigtog
-            
-            Mon, 29 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Like many folks with online friends in the North-East of the USA, I've been watching the weather reports with great big saucer eyes.
-
-Keep safe, and if you feel like it, please drop a comment here telling us how you're going.<p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121030.12528/frankenstorm/'>Read more</a>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/11/02/trailblazing-black-women-scientists-carol-mae-jemison-in-l-a/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -496,7 +1143,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/SdgjMaqgOBc/'>Don’t Pray for Me!  Prayer as Bullying and Ego-Trippin’!</a> 
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/29/dont-pray-for-me-prayer-as-a-bullying-and-ego-trippin/'>Don’t Pray for Me!  Prayer as Bullying and Ego-Trippin’!</a> 
 
             
             by blackskeptics
@@ -520,7 +1167,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/SdgjMaqgOBc/'>Read more</a>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/29/dont-pray-for-me-prayer-as-a-bullying-and-ego-trippin/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -567,98 +1214,6 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
 
         <div class='read_more'>
             <a href='http://www.space-invaders.eu/2012/10/media-control-propaganda-and-choice/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://hoydenabouttown.com'>
-
-            
-            Hoyden About Town
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121028.12526/racebending-and-cloud-atlas/'>Racebending and Cloud Atlas</a> 
-
-            
-            by tigtog
-            
-            Sat, 27 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            <p><em>Variety</em> described the notion of white actors playing Asians as “exciting,” suggesting that the Wachowskis “put the lie to the notion that casting — an inherently discriminatory art — cannot be adapted to a more enlightened standard of performance over mere appearance.” The irony of this declaration is overwhelming — praising a film for “enlightened” casting choices that merely replay old discriminatory practices.</p><p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121028.12526/racebending-and-cloud-atlas/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://hoydenabouttown.com'>
-
-            
-            Hoyden About Town
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://hoydenabouttown.com/20121027.12523/otterday-and-open-thread-197/'>Otterday! And Open Thread.</a> 
-
-            
-            by Lauredhel
-            
-            Fri, 26 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Please feel free to use this thread to natter about anything your heart desires. Anything great happening in your life? Anything you want to get off your chest? Books? News stories? What have you created lately? Commiserations, felicitations, temptations, contemplations, speculations? <p><br />Copyright notice: (c)2005-2012 <a href="http://hoydenabouttown.com/">Hoyden About Town</a> authors unless otherwise noted.  All rights reserved.</p>
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://hoydenabouttown.com/20121027.12523/otterday-and-open-thread-197/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -772,7 +1327,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/oxpfQnANLxM/'>How White America Prospers</a> 
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/24/how-white-america-prospers/'>How White America Prospers</a> 
 
             
             by blackskeptics
@@ -796,7 +1351,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/oxpfQnANLxM/'>Read more</a>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/24/how-white-america-prospers/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -910,7 +1465,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/tNpGG0REfK8/'>The Big Lie: Human Rights vs. “Special Rights”</a> 
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/20/the-big-lie-human-rights-vs-special-rights/'>The Big Lie: Human Rights vs. “Special Rights”</a> 
 
             
             by blackskeptics
@@ -934,53 +1489,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/tNpGG0REfK8/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/20/388-please-let-me-go/'>#388: Please let me go.</a> 
-
-            
-            by JenniferP
-            
-            Sat, 20 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Dear Captain Awkward, I have decided to end my 4-year relationship with my boyfriend. Throughout the last 4 years, despite my best efforts to convince myself, I have never been truly passionate and enthusiastic about this relationship, though we&#8217;ve definitely had some good moments. He on the other hand has been extremely invested in it. [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4249&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/20/388-please-let-me-go/'>Read more</a>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/20/the-big-lie-human-rights-vs-special-rights/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1002,7 +1511,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/Xf3LlVYdFaQ/'>The Spectator Sport of Black Women Bashing</a> 
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/19/the-spectator-sport-of-black-women-bashing/'>The Spectator Sport of Black Women Bashing</a> 
 
             
             by blackskeptics
@@ -1026,7 +1535,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/Xf3LlVYdFaQ/'>Read more</a>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/19/the-spectator-sport-of-black-women-bashing/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1048,7 +1557,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
     <div class='item_main'>
 
         <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/HvDjyeptEGg/'>Support for Greta Christina</a> 
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/19/support-for-greta-christina/'>Support for Greta Christina</a> 
 
             
             by blackskeptics
@@ -1072,191 +1581,7 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
         </div> <!--.enclosures-->
 
         <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/HvDjyeptEGg/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/19/387-the-coffee-made-me-do-it/'>#387: The coffee made me do it.</a> 
-
-            
-            by JenniferP
-            
-            Fri, 19 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Hi Captain Awkward, I have a best friend who&#8217;s already like a brother to me. He&#8217;s married and they&#8217;re expecting their first child. However he&#8217;s still struggling to make his ends meet. Hence I only get to see him once in a while. Usually when we meet, we have good and sometimes profound conversation, but [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4243&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/19/387-the-coffee-made-me-do-it/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/19/386-facing-down-a-predator/'>#386: Facing down a predator.</a> 
-
-            
-            by JenniferP
-            
-            Fri, 19 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Behind a cut for discussions of sexual abuse. Hi Captain Awkward,   I don&#8217;t know if you appreciate trigger warnings, since most of what you deal with sounds like it would apply, but this letter is about my dad who molested me.   When I was starting puberty, my dad molested me.  I told my mom, [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4240&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/19/386-facing-down-a-predator/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/18/385-my-ex-friend-and-his-bullshit-lies/'>#385: My ex-friend and his bullshit lies.</a> 
-
-            
-            by JenniferP
-            
-            Thu, 18 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Hey Captain Awkward&#8230; So! I used to be BFF with this guy. I eventually ended things after it took a turn for the weird &#8211; he became incredibly demanding of my time and attention and started telling me things that, frankly, freaked me out. Our friendship ended after we took a trip together, during which I became increasingly uncomfortable [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4236&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/18/385-my-ex-friend-and-his-bullshit-lies/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/18/383-384-ladyboners/'>#383 & #384: Ladyboners</a> 
-
-            
-            by JenniferP
-            
-            Thu, 18 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Dear Team Awwkard, Ok so here it is: I’m back at university after having to take time out due to depression and a very bad reaction to meds last year. I have a feeling that the depression was in a large part due to the relationship I was in at the time where my partner [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4225&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/18/383-384-ladyboners/'>Read more</a>
+            <a href='http://freethoughtblogs.com/blackskeptics/2012/10/19/support-for-greta-christina/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1312,52 +1637,6 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
     <div class="feed_icon">
     
 
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/17/382-my-sister-probably-isnt-coming-home-for-thanksgiving-how-do-i-tell-her-how-hurt-i-am/'>#382: My sister probably isn’t coming home for Thanksgiving. How do I tell her how hurt I am?</a> 
-
-            
-            by JenniferP
-            
-            Wed, 17 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Hi Captain Awkward, So here&#8217;s my situation (long, apologies): I have one younger sister who I see pretty infrequently, as I live on the East Coast and she attends school in the Midwest (our hometown is also in the Midwest). We bickered quite a bit growing up and are fairly different people to this day, [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4221&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/17/382-my-sister-probably-isnt-coming-home-for-thanksgiving-how-do-i-tell-her-how-hurt-i-am/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
         <a href='http://feministactioncambridge.wordpress.com'>
 
                
@@ -1395,98 +1674,6 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
 
         <div class='read_more'>
             <a href='http://feministactioncambridge.wordpress.com/2012/10/17/discussion-how-to-talk-about-feminism/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://freethoughtblogs.com/blackskeptics'>
-
-            
-            Black Skeptics
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/CUtlovvMWpM/'>FL Judge:  Schizophrenic death row inmate’s Jesus visions no crazier than many Christians’</a> 
-
-            
-            by fredericksparks
-            
-            Tue, 16 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            By Frederick Sparks He&#8217;s sane enough for us to kill him. In 1986, the U.S. Supreme Court in Ford v. Wainright confirmed the common law principle that execution of the mentally insane violates the constitution (&#8220; For today, no less than before, we may seriously question the retributive value of executing a person who has no comprehension [...]...
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/CUtlovvMWpM/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://captainawkward.com'>
-
-               
-            <img src='http://s2.wp.com/i/buttonw-com.png' alt='CaptainAwkward.com' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://captainawkward.com/2012/10/16/381-how-do-i-tell-my-sad-friend-im-getting-engaged/'>#381: How do I tell my sad friend I’m getting engaged?</a> 
-
-            
-            by JenniferP
-            
-            Tue, 16 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Dear Captain Awkward, So, this friend is someone I&#8217;ve known for nearly a decade. We went to college together, we were roommates during and after college together, we&#8217;ve collaborated on work together, we hang out weekly, we have certain holidays we spend with each other . . . that sort of thing. We&#8217;ve had our [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=captainawkward.com&#038;blog=18848858&#038;post=4216&#038;subd=captainawkwarddotcom&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://captainawkward.com/2012/10/16/381-how-do-i-tell-my-sad-friend-im-getting-engaged/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -1625,144 +1812,6 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
 
         <div class='read_more'>
             <a href='http://feministactioncambridge.wordpress.com/2012/10/10/musings-on-roles-in-non-hierarchical-groups-prompted-by-slutwalk-london/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://freethoughtblogs.com/blackskeptics'>
-
-            
-            Black Skeptics
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/zuNYQSozSCA/'>Next Wave Atheist Leaders and White Privilege</a> 
-
-            
-            by blackskeptics
-            
-            Wed, 10 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            By Diane Arellano Recently the blog &#8220;Considered Exclamations&#8221; featured a post by AH Tripp challenging the selective endorsement of the “Next Generation of atheist activists.” This “crop of next wave leaders” is virtually all-white and lauded for tackling perennial secular and atheist issues such as questioning prayer in school. Tripp wondered why the social justice [...]...
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/zuNYQSozSCA/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://freethoughtblogs.com/blackskeptics'>
-
-            
-            Black Skeptics
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/TGk41qQvIxI/'>Slippin’ and A Fallin’: Cutting the Groupthink</a> 
-
-            
-            by blackskeptics
-            
-            Mon, 08 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            By annalise fonza, Ph.D. Like most of you I gathered together with a group of people to watch the first presidential debate between President Barack Obama and    Republican Candidate (the former Governor) Mitt Romney.  While at this particular gathering I noticed that most of the folks were not tweeting, not facebooking.  They were talking, from [...]...
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/TGk41qQvIxI/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-    
-    <div class="feed_icon default_icon">
-    
-
-        <a href='http://freethoughtblogs.com/blackskeptics'>
-
-            
-            Black Skeptics
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/cTf7gX6QFg4/'>Robber Baron Bingo</a> 
-
-            
-            by blackskeptics
-            
-            Sun, 07 Oct 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            By Naima Washington Once again, Dr. Sikivu Hutchinson wields her intellectual and critical scalpel and, in her essay: Mass Mitt Does South of the Border, she removes the false faces of both candidates who are running for the number one job on the planet. A few months ago, I saw an old film which stars [...]...
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://feedproxy.google.com/~r/freethoughtblogs/blackskeptics/~3/cTf7gX6QFg4/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->
@@ -2269,98 +2318,6 @@ Keep safe, and if you feel like it, please drop a comment here telling us how yo
 
         <div class='read_more'>
             <a href='http://feministactioncambridge.wordpress.com/2012/08/26/another-small-act-of-censorship-by-our-corporate-overlords/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://feministactioncambridge.wordpress.com'>
-
-               
-            <img src='http://0.gravatar.com/blavatar/80b94b42d935cade5be5386ed9b160d2?s=96&d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png' alt='FeministActionCambridge' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://feministactioncambridge.wordpress.com/2012/08/14/crcc-fundraising/'>Cambridge Rape Crisis Centre Fundraising Opportunities</a> 
-
-            
-            by Alexa
-            
-            Tue, 14 Aug 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            Dear women, Cambridge Rape Crisis Centre supports women and girls who have survived or are currently experiencing rape or childhood sexual abuse. We offer a telephone helpline service and face-to-face counselling. We need to raise £30k to keep our services running for the next 12 months. We are looking for female fundraising volunteers who can [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=feministactioncambridge.wordpress.com&#038;blog=27634026&#038;post=1456&#038;subd=feministactioncambridge&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://feministactioncambridge.wordpress.com/2012/08/14/crcc-fundraising/'>Read more</a>
-        </div> <!--.read_more-->
-
-    </div> <!--.item_main-->
-</div><div class='streamItem'>
-
-       
-    <div class="feed_icon">
-    
-
-        <a href='http://feministactioncambridge.wordpress.com'>
-
-               
-            <img src='http://0.gravatar.com/blavatar/80b94b42d935cade5be5386ed9b160d2?s=96&d=http%3A%2F%2Fs2.wp.com%2Fi%2Fbuttonw-com.png' alt='FeministActionCambridge' />
-            
-
-        </a>
-    </div> <!--.feed_icon-->
-
-    <div class='item_main'>
-
-        <div class='item_meta'>
-            <a href='http://feministactioncambridge.wordpress.com/2012/08/09/discussion-meeting-feminism-and-race-22nd-august/'>Discussion Meeting: Feminism and Race, 22nd August</a> 
-
-            
-            by TeaKirsten
-            
-            Thu, 09 Aug 2012
-
-        </div> <!--.item_meta-->
-
-        <div class='item_main_main'>
-            The discussion group for the 22nd August will be on the subject of Feminism and Race. We&#8217;ll be covering the ways that race and other issues can act as divisions within feminist groups, and looking at how to talk productively about race. We&#8217;re lucky to have an external facilitator for this session, Ila Chandavarkar, who [...]<img alt="" border="0" height="1" src="http://stats.wordpress.com/b.gif?host=feministactioncambridge.wordpress.com&#038;blog=27634026&#038;post=1451&#038;subd=feministactioncambridge&#038;ref=&#038;feed=1" width="1" />
-        </div> <!--.item_main_main-->
-
-        <div class='enclosures'>
-
-            
-
-            
-
-            
-
-        </div> <!--.enclosures-->
-
-        <div class='read_more'>
-            <a href='http://feministactioncambridge.wordpress.com/2012/08/09/discussion-meeting-feminism-and-race-22nd-august/'>Read more</a>
         </div> <!--.read_more-->
 
     </div> <!--.item_main-->

@@ -1,0 +1,57 @@
+[
+    {
+    "stream_name":"Fotostream",
+    "feeds":
+        [{"name":"Govangocrafts","url":"http://api.flickr.com/services/feeds/photos_public.gne?id=30475375@N04&lang=en-us&format=rss_200"},
+        {"name":"Natalie Dee", "url":"http://www.nataliedee.com/rss/rss.php"},
+        {"name":"Super-cute", "url":"http://backend.deviantart.com/rss.xml?q=gallery%3Asuper-cute%2F5987508&type=deviation"},
+        {"name":"Lesbian Space Pirates", "url":"http://lesbianspacepirates.com/rss.php"},
+        {"name":"Riot Nrrd", "url":"http://www.riotnrrdcomics.com/feed/"},
+        {"name":"Hark! A Vagrant", "url":"http://beatonna.tumblr.com/rss"},
+        {"name":"XKCD", "url":"http://xkcd.com/atom.xml"}] 
+    },
+    { 
+    "stream_name":"Blogs",
+    "feeds": 
+        [{"name":"Captain awkward","url":"http://www.captainawkward.com/feed"}, 
+         {"name":"Hoyden About Town","url":"http://hoydenabouttown.com/feed/"},
+         {"name":"Feminist Action Cambridge","url":"http://www.feministactioncambridge.wordpress.com/feed"},
+         {"name":"Black skeptics", "url":"http://freethoughtblogs.com/blackskeptics/feed/"},
+        {"name":"Space Invaders","url":"http://www.space-invaders.eu/?feed=rss2"}
+        ]
+    },
+
+
+    { 
+    "stream_name":"Microblogs / Statuses",
+    "feeds": 
+        [{"name":"Unhosted","url":"http://identi.ca/api/statuses/user_timeline/311670.atom"},
+        {"name":"Freifunk","url":"http://identi.ca/api/statusnet/groups/timeline/1770.atom"},
+        {"name":"softmetz","url":"http://identi.ca/api/statuses/user_timeline/85379.atom"}
+        ]
+    },
+
+
+    { 
+    "stream_name":"Data, programming",
+    "feeds":
+        [{"name":"Whimsley","url":"http://whimsley.typepad.com/whimsley/atom.xml"},
+        {"name":"Social Media Collective","url":"http://socialmediacollective.org/feed/"},
+        {"name": "Buddycloud blog", "url":"http://blog.buddycloud.com/rss"},
+        {"name": "Dreamwidth news", "url":"http://dw-news.dreamwidth.org/data/atom"},
+        {"name": "Dreamwidth dev", "url":"http://dw-dev.dreamwidth.org/data/atom"},
+        {"name":"Softmetz", "url":"http://identi.ca/api/statuses/user_timeline/85379.atom"},
+        {"name": "Foofurple blog", "url":"https://foofurple.wordpress.com/feed/"}
+        ]
+    },
+    {
+    "stream_name":"Auf Deutsch",
+    "feeds":
+        [{"name":"SWR Wissen","url":"http://www1.swr.de/podcast/xml/swr2/wissen.xml"},
+        {"name":"Sendung mit der Maus","url":"http://podcast.wdr.de/maus.xml"},
+        {"name":"Quanks und co", "url":"http://podcast.wdr.de/quarks.xml"},
+        {"name":"DW Journal Reporer","url":"http://rss.dw.de/xml/podcast_journal-reporter"},
+        {"name":"DW Projekt Zukunft","url":"http://rss.dw.de/xml/podcast_projekt-zukunft"}
+        ]
+    }
+]
