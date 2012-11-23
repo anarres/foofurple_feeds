@@ -72,13 +72,31 @@ def fetch_feeds():
             </p>
         </div>
 
+        <div id="addStream">
+            <p id="addStreamClose" onclick="addStreamClose()">close</p>
+            <h3>Add a new stream</h3>
+            <p>
+                Stream name:
+                <input type='text' id="newStreamName" />
+                <button onclick="reallyAddStream()">Submit</button>
+            </p>
+        </div>
+
         <div id="saveAllChanges">
             <p id="saveAllChangesClose" onclick="saveAllChangesClose()">close</p>
             <h3>Save all changes</h3>
             <p>To save your changes, please right-click the file below and save it as /home/katie/prog/foofurple_feeds/streams.json. 
             <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
             <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
-        </div>"""
+        </div>
+
+        <div id="streamsGoHere">
+        <p>
+            A stream is a bunch of feeds grouped together and displayed on the same page. If you only follow a few feeds
+            you may want to include them all in just one stream. However if you have lots of feeds, you might want to divide 
+            them up. For instance, you could have a 'Friends and social media' stream, a 'Podcasts and video stream', a 
+            'My favourite blogs' stream, a 'Recipes' stream, a 'Tech' stream, a 'Kitten and puppy pictures' stream...
+        </p>"""
 
 
 
@@ -88,7 +106,11 @@ def fetch_feeds():
 
     for s in sets_of_feeds:
         settings_main_content += stream.render({'stream_title':s.title, 'stream_url':s.get_filename(), 'stream_feeds':s.feeds_list})
-    settings_main_content += "<button onclick='saveAllChanges()'>SAVE ALL CHANGES</button>"
+
+    settings_main_content += "</div> <!--#streamGoHere-->"
+
+    settings_main_content += "<button onclick='addStream()'>Create a new stream</button>"
+    settings_main_content += "<button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>"
 
     index_html = page.render({'main_content':settings_main_content, 'title':'Home', 'nav':nav, 'javascript':settings_js})
     f = open('/home/katie/prog/foofurple_feeds/output/index.html', 'w')

@@ -32,6 +32,11 @@ var streamName;
 function newFeedFooClose() {
     document.getElementById("newFeedFoo").style.display = 'none';
 }
+function addStreamClose() {
+    document.getElementById('addStream').style.display = 'none';
+}
+
+
 function saveAllChangesClose() {
     document.getElementById("saveAllChanges").style.display = 'none';
 }
@@ -61,9 +66,28 @@ function reallyAddFeed() {
     listObj.innerHTML += newHtml;
     newFeedFooClose();    
 }
+function addStream() {
+    document.getElementById('addStream').style.display = "block";
+}
+function reallyAddStream() {
+    var newStreamName = document.getElementById('newStreamName').value;
+    var myDiv = document.getElementById("streamsGoHere");
+    var html = "<div class='stream'> <h2><a class='streamTitleList' id='";
+    html += newStreamName;
+    html += "List' href=''>";
+    html += newStreamName;
+    html += "</a> <span class='remove_stream'>(remove stream)</span></h2> <ul id='";
+    html += newStreamName;
+    html += "ListReally'>  </ul>  <button class='addFeedToStream' id='";
+    html += newStreamName;
+    html += "'>Add a feed to this stream </button></div> <!--.stream-->";
+    myDiv.innerHTML += html;
+    addListeners();
+    addStreamClose();
+}
+
 
 function saveAllChanges() {
-    document.getElementById('saveAllChanges').style.left="50px";
 
     //construct the new JSON file
     var ulArray = getElementsByClassName(document, 'streamTitleList');
@@ -96,35 +120,49 @@ function saveAllChanges() {
 
     //encodeURIComponent(content);
     var uriFoo = "data:text/json;UTF-8," + output;
-    saveAllChangesClose();
 
+    document.getElementById('saveAllChangesLink').setAttribute('href', uriFoo);
+    document.getElementById('saveAllChanges').style.display="block";
 }
 
-function init() {
+function addListeners() {
 
     var kobjs = getElementsByClassName(document, 'addFeedToStream');
-    for (var i=0; i<kobjs.length; i++) {
-        kobjs[i].addEventListener('click', function (e) {
-            addFeedToStream(e);
-        }, false);
+    for (var f=0; f<kobjs.length; f++) {
+
+        // Only add event listener if the isn't one already
+        if (typeof(kobjs[f].onclick) != "function") {
+            kobjs[f].addEventListener('click', function (e) {
+                addFeedToStream(e);
+            }, false);
+        }
     }
 
     var objs = getElementsByClassName(document, 'remove_stream');
     for (var i=0; i<objs.length; i++) {
-        objs[i].addEventListener('click', function (e) {
-            e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
+
+        // Only add event listener if the isn't one already
+        if (typeof(objs[i].onclick) != "function") {
+            objs[i].addEventListener('click', function (e) {
+                e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
+            }, false);
+        }
     }
 
     var fobjs = getElementsByClassName(document, 'remove_feed');
     for (var j=0; j<fobjs.length; j++) {
-        fobjs[j].addEventListener('click', function (e) {
-            e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
-        }, false);
+
+        // Only add event listener if the isn't one already
+        if (typeof(fobjs[j].onclick) != "function") {
+            fobjs[j].addEventListener('click', function (e) {
+                e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
+            }, false);
+        }
     }
 
     var gobjs = getElementsByClassName(document, 'add_feed');
     for (var k=0; k<gobjs.length; k++) {
+
         gobjs[k].addEventListener('click', function (e) {
 
             var parentDiv = e.target.parentNode;

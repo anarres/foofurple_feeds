@@ -9,7 +9,7 @@
 {{ javascript }}
 
 </head>
-<body onload="init()">
+<body onload="addListeners()">
 
 <div id="nav">
     {{ nav }}
