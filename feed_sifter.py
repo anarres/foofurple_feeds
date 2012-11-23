@@ -78,10 +78,6 @@ def get_entry_link(e):
     except:
         return "ENTRY LINK UNKNOWN"
 
-
-
-
-
 def get_entry_title(e):
     """ Takes a feedparser entry object """
     try:
@@ -148,9 +144,6 @@ def get_video(e):
         if enclo.type[:5] == 'video':
             urls.append(enclo.url)
     return urls
-
-
-
 
 
 """

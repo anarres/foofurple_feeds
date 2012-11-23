@@ -24,14 +24,22 @@ function getElementsByClassName(node,classname) {
   }
 }
 
-// --------------------------------------------------------- GLOBAL VARS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+// --------------------------------------------------------- GLOBAL VARS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 var listObj;
+var streamName;
+
+function newFeedFooClose() {
+    document.getElementById("newFeedFoo").style.display = 'none';
+}
+function saveAllChangesClose() {
+    document.getElementById("saveAllChanges").style.display = 'none';
+}
 
 function addFeedToStream(e) {
-
-    document.getElementById("newFeedFoo").style.left = "50px";
-    var listId = "" + e.target.id + "List";
+    document.getElementById("newFeedFoo").style.display = 'block';
+    streamName = e.target.id;
+    var listId = "" + e.target.id + "ListReally";
     listObj = document.getElementById(listId);
 }
 
@@ -39,26 +47,26 @@ function reallyAddFeed() {
     var fName = document.getElementById('elephant').value;
     var fUrl = document.getElementById('walrus').value;
 
-    var newHtml = "<li><a href='";
+    var newHtml = "<li><a class='";
+    newHtml += streamName;
+
+    newHtml += "' id='";
+    newHtml += fName;
+    newHtml += "' href='";
     newHtml += fUrl;
     newHtml += "'>";
     newHtml += fName;
     newHtml += "</a> <span class='msg' style='color:blue;font-size:0.8em;'>(New feed: click SAVE at the bottom to save)</span></li>";
 
-
     listObj.innerHTML += newHtml;
-    document.getElementById("newFeedFoo").style.left = "-1000px";    
-
+    newFeedFooClose();    
 }
 
-
 function saveAllChanges() {
-
     document.getElementById('saveAllChanges').style.left="50px";
 
     //construct the new JSON file
     var ulArray = getElementsByClassName(document, 'streamTitleList');
-
     var output = "[";
 
     for (var i=0; i<ulArray.length; i++) {
@@ -66,9 +74,7 @@ function saveAllChanges() {
         output += ulArray[i].id.slice(0,-4);
         output += "\",";
         output += "\"feeds\": [";
-
         var listItems = getElementsByClassName(document,ulArray[i].id.slice(0,-4));
-
         for (var j=0; j<listItems.length; j++) {
             output += "{\"name\":\"";
             output += listItems[j].getAttribute('id');
@@ -90,7 +96,7 @@ function saveAllChanges() {
 
     //encodeURIComponent(content);
     var uriFoo = "data:text/json;UTF-8," + output;
-    document.getElementById('saveAllChangesLink').setAttribute('href',uriFoo);
+    saveAllChangesClose();
 
 }
 

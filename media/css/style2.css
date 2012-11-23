@@ -65,9 +65,6 @@ input, button {
 button {
     margin: 10px 0px;
 }
-input, textarea {
-    cursor: text;
-}
 
 /* Nav */ 
 #nav {
@@ -83,6 +80,7 @@ input, textarea {
     border-radius: 3px;
     font-weight: normal;
 }
+
 /* Footer */
 #footer {
     font-size: 0.8em;
@@ -90,36 +88,8 @@ input, textarea {
     margin: 5px 0px;
     padding: 5px 0px;
 }
-/* ----------------------------------------------------------- Specific styles */
 
-#newFeedFoo {
-    padding:10px;
-    padding-top:5px;
-    border:3px solid grey;
-    border-radius: 5px;
-    position:fixed;
-    top:10px;
-    left:10px;
-    z-index:2;
-    display: none;
-}
-#newFeedFooClose, #saveAllChangesClose {
-    cursor: pointer;
-    float: right;
-}
-#saveAllChanges {
-    position:fixed;
-    top:10px;
-    left:10px;
-    z-index:2;
-    background-color: white;
-    padding:10px;
-    padding-top:5px;
-    border:3px solid grey;
-    border-radius: 5px;
-    display: none;
-}
-
+/* Specific styles */
 .streamItem {
     border-bottom: 2px solid #bbbbbb;
     border-radius: 5px;
@@ -172,11 +142,6 @@ div.read_more {
     font-size: 0.8em;
     text-align: right;
 }
-
-
-
-
-
 div.list_item {
     font-size: 0.8em;
 }
@@ -188,27 +153,39 @@ div.list_item img {
     font-size: 0.6em;
     color: red;
     cursor: pointer;
-
 )
 
 div.stream {
     margin: 20px 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
 .msg {
     color: blue;
     font-weight: bold;
 }
+#newFeedFoo {
+    background-color: red;    
+    padding:10px;
+    padding-top:5px;
+    border:3px solid grey;
+    border-radius: 5px;
+}
+#newFeedFooClose, #saveAllChangesClose {
+    float: right;
+}
+/*
+#saveAllChanges {
+    position:fixed;
+    top:10px;
+    left:10px;
+    z-index:2;
+    background-color: white;
+    padding:10px;
+    padding-top:5px;
+    border:3px solid grey;
+    border-radius: 5px;
+    display: hidden;
+}
+*/
 
 
 
