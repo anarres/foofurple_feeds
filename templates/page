@@ -11,27 +11,43 @@
 </head>
 <body onload="addListeners()">
 
+<div id="wrapper">
+
 <div id="container">
 
 <div id="side">
-    <img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" alt="Cute baby dinosaur logo">
+    <a href="index.html"><img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" alt="Cute baby dinosaur logo"></a>
     <br>
-    <h1>Feed Reader</h1>
+    <h1><a href="index.html">Feed Reader</a></h1>
+
+    <div id="nav">
+        {{ nav }}
+    </div> <!--#nav-->
+
 </div>
 
-<div id="nav">
-    {{ nav }}
-</div> <!--#nav-->
+<div id="settings_nav">
+    {{ settings_nav }}
+</div> <!--#settings_nav-->
+
 
 <div id="main">
     {{ main_content }}
 </div> <!--#main-->
 
-<div id="footer">
-<p>This is the bottom of the page. Hope you've enjoyed reading.</p>
-</div> <!--#footer-->
 
 </div> <!--#container-->
+
+
+<div id="push"></div>
+
+</div> <!-- close wrapper --> 
+
+<div id="footer">
+<div id="footer_inner">
+<p>This is the bottom of the page. Thanks for reading!</p>
+</div>
+</div>
 
 </body>
 </html>

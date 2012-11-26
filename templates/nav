@@ -1,6 +1,7 @@
 <ul>
 
-    <li><a href='{{ OUTPUT_DIR }}index.html'>Home</a></li>
+    <li><h3>My streams:</h3></li>
+
     {{ nav_items }}
 
 </ul>

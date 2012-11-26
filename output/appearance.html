@@ -11,30 +11,42 @@
 </head>
 <body onload="addListeners()">
 
+<div id="wrapper">
+
 <div id="container">
 
 <div id="side">
-    <img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" alt="Cute baby dinosaur logo">
+    <a href="index.html"><img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" alt="Cute baby dinosaur logo"></a>
     <br>
-    <h1>Feed Reader</h1>
+    <h1><a href="index.html">Feed Reader</a></h1>
+
+    <div id="nav">
+        <ul>
+
+    <li><h3>My streams:</h3></li>
+
+    
+                <li><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li>
+                <li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li>
+                <li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li>
+                <li class='current'><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li>
+
+</ul>
+    </div> <!--#nav-->
+
 </div>
 
-<div id="nav">
+<div id="settings_nav">
     <ul>
 
     <li><a href='index.html'>Home</a></li>
-    
-
-    <li><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li>
-
-    <li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li>
-
-    <li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li>
-
-    <li><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li>
+    <li><a href='settings.html'>Set-up</a></li>
+    <li><a href='appearance.html'>Appearance</a></li>
 
 </ul>
-</div> <!--#nav-->
+
+</div> <!--#settings_nav-->
+
 
 <div id="main">
     
@@ -75,11 +87,19 @@
 
 </div> <!--#main-->
 
-<div id="footer">
-<p>This is the bottom of the page. Hope you've enjoyed reading.</p>
-</div> <!--#footer-->
 
 </div> <!--#container-->
+
+
+<div id="push"></div>
+
+</div> <!-- close wrapper --> 
+
+<div id="footer">
+<div id="footer_inner">
+<p>Footer text</p>
+</div>
+</div>
 
 </body>
 </html>

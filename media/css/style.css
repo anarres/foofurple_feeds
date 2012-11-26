@@ -5,12 +5,30 @@
     font-family: Helvetica, sans-serif;
     color: #1e0f01;
 }
+html, body {
+    height: 100%;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+#footer, #push {
+	height: 142px; /* .push must be the same height as .footer */
+    clear: both;
+}
+#footer_inner {
+    max-width: 700px;
+    margin: 0px auto;
+    border-top: 3px solid #34b8ba;
+}
 h2, h3, h4, h5, h6 {
     font-size: 1.3em;
     font-weight: normal;
     padding: 10px 0px;
 }
-h1 {
+h1, h1 a {
     font-family: Georgia, serif;
     font-weight: bold;
     font-size: 0.8em;
@@ -51,7 +69,7 @@ input, textarea {
     cursor: text;
 }
 #container {
-    max-width: 1000px;
+    max-width: 920px;
     margin: 0px auto;
 }
 #main {
@@ -59,29 +77,58 @@ input, textarea {
     min-width: 100px;
     margin-left: 10px;
     margin-bottom: 100px;
+    margin-top: 40px;
     float: left;
     border-top: 3px solid #34b8ba;
 }
 #side {
-    width: 150px;
-    padding-right:50px;
+    width: 180px;
+    padding-right:20px;
     float: left;
 }
 
 /* Nav */ 
 #nav {
-    margin: 10px 0px;
+    margin: 2px 0px;
 }
 #nav li {
+    list-style: none;
+    border-radius: 6px;
+    padding: 2px 4px;
+    margin: 4px 0px;
+}
+#nav li.current {
+    border: 2px solid #34b8ba;
+    background-color:#e6fbff;
+}
+#nav h3 {
+    padding-top:20px;
+    padding-bottom: 0px;
+    text-align: left;
+}
+#nav a {
+    font-weight: normal;
+}
+
+
+/* settings_nav */ 
+#settings_nav {
+    margin: 2px 0px;
+    margin-right: 60px;
+
+    text-align: right;
+}
+#settings_nav li {
     display: inline;
     list-style: none;
 }
-#nav a {
-    padding: 3px 30px;
+#settings_nav a {
+    padding: 2px 8px;
     padding-left: 0px;
-    border-radius: 3px;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 0.8em;
 }
+
 
 /* Footer */
 #footer {
@@ -98,7 +145,7 @@ input, textarea {
     height: auto;
 }
 
-/* Splash page */
+/* Splash home page */
 div.fancy {
     border-radius:5px;
     border: 3px solid #34b8ba;
@@ -107,7 +154,7 @@ div.fancy {
     float: left;
     padding: 10px;
     padding-bottom: 20px;
-    margin: 10px;
+    margin: 20px;
     background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');
     background-size: 100% 100%;
 }
