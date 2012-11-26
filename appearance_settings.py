@@ -1,0 +1,5 @@
+bgColor = "ffffff"
+textColor = "000000"
+linkColor = "blue"
+linkColorHover = "green"
+logo = "logo1"

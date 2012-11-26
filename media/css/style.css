@@ -2,43 +2,22 @@
 * {
     margin: 0px;
     padding: 0px;
-}
-body {
-    max-width:900px;
-    margin: 0px auto;
-    background-color: #f0f3db;
-}
-#header img {
-    width: 120px;
-    height: auto;
-}
-#main {
-    max-width: 900px;
-    min-width: 100px;
-    margin-left: 10px;
-    margin-bottom: 100px;
-    float: left;
-    border-top: 2px solid #bbbbbb;
-}
-#footer {
-    clear: both;
-}
-
-/* Typography */
-body {
     font-family: Helvetica, sans-serif;
     color: #1e0f01;
-}
-h1 {
-    font-size: 2em;
-    font-weight: normal;
-    margin-bottom: 5px;
-    text-align:right;
 }
 h2, h3, h4, h5, h6 {
     font-size: 1.3em;
     font-weight: normal;
     padding: 10px 0px;
+}
+h1 {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 0px;
+    text-align: center;
+    color: #34b8ba;
+    color: #006466;
 }
 p {
     line-height: 1.2em;
@@ -62,11 +41,31 @@ input, button {
     cursor: pointer;
     margin: 1px 0px;
 }
+input.radioButton {
+    display: inline;
+}
 button {
     margin: 10px 0px;
 }
 input, textarea {
     cursor: text;
+}
+#container {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+#main {
+    max-width: 700px;
+    min-width: 100px;
+    margin-left: 10px;
+    margin-bottom: 100px;
+    float: left;
+    border-top: 3px solid #34b8ba;
+}
+#side {
+    width: 150px;
+    padding-right:50px;
+    float: left;
 }
 
 /* Nav */ 
@@ -83,13 +82,36 @@ input, textarea {
     border-radius: 3px;
     font-weight: normal;
 }
+
 /* Footer */
 #footer {
     font-size: 0.8em;
     text-align: center;
     margin: 5px 0px;
     padding: 5px 0px;
+    clear: both;
 }
+
+/* Header */
+#header img {
+    width: 120px;
+    height: auto;
+}
+
+/* Splash page */
+div.fancy {
+    border-radius:5px;
+    border: 3px solid #34b8ba;
+    text-align: center;
+    width: 150px;
+    float: left;
+    padding: 10px;
+    padding-bottom: 20px;
+    margin: 10px;
+    background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');
+    background-size: 100% 100%;
+}
+
 /* ----------------------------------------------------------- Specific styles */
 
 #newFeedFoo, #addStream, #saveAllChanges {
@@ -108,10 +130,8 @@ input, textarea {
     cursor: pointer;
     float: right;
 }
-
 .streamItem {
-    border-bottom: 2px solid #bbbbbb;
-    border-radius: 5px;
+    border-bottom: 3px solid #34b8ba;
 }
 div.feed_icon {
     width: 80px;
@@ -122,13 +142,17 @@ div.default_icon {
     padding: 3px;
     min-height: 60px;
     text-align: center;
+    border: 3px solid #34b8ba;
+    border-radius: 3px;
 }
 div.default_icon a {
     font-size: 0.8em;
 }
 div.feed_icon img {
-    max-width: 60px;
+    max-width: 80px;
     height: auto;
+    border: 3px solid #34b8ba;
+    border-radius: 3px;
 }
 div.item_main {
     max-width: 800px;
@@ -161,11 +185,6 @@ div.read_more {
     font-size: 0.8em;
     text-align: right;
 }
-
-
-
-
-
 div.list_item {
     font-size: 0.8em;
 }
@@ -177,30 +196,14 @@ div.list_item img {
     font-size: 0.6em;
     color: red;
     cursor: pointer;
-
 )
-
 div.stream {
     margin: 20px 0px;
     padding: 20px 0px;
     clear: both;
 }
-
-
-
-
-
-
-
-
-
-
-
 .msg {
     color: blue;
     font-weight: bold;
 }
-
-
-
 

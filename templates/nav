@@ -1,0 +1,6 @@
+<ul>
+
+    <li><a href='{{ OUTPUT_DIR }}index.html'>Home</a></li>
+    {{ nav_items }}
+
+</ul>

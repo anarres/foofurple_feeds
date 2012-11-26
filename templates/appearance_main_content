@@ -1,0 +1,35 @@
+
+        <p>
+        <a href="">Edit the CSS stylesheet</a> (if you mess it up you can always <a href="">restore the original</a>).
+        </p>
+
+        <p>Background color:</p>
+        <input type="text" id="bgColor" />
+
+        <p>Text color:</p>
+        <input type="text" id="textColor" />
+
+        <p>Link color:</p>
+        <input type="text" id="linkColor" />
+
+        <p>Link color when the mouse hovers over it:</p>
+        <input type="text" id="linkColorHover" />
+
+        <p>Logo:</p>
+
+        <p>
+        <input class='radioButton' type="radio" name="logo" value="logo1" selected="selected">logo1
+        </p>
+
+        <p>
+        <input class='radioButton' type="radio" name="logo" value="logo2" selected="selected">logo2
+        </p>
+
+        <p>
+        <input class='radioButton' type="radio" name="logo" value="noLogo" selected="selected">No logo
+        </p>
+
+        <button id="preview">Preview</button>
+
+        <button id="save">Save all changes</button>
+
