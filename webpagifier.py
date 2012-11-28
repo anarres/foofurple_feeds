@@ -89,8 +89,11 @@ def make_all_the_webpages(streams_list):
     f.close()
 
     # Write the settings page
-    settings_main_content = open('%ssettings_main_content' % TEMPLATES_DIR,'r').read()
     settings_js = "<script type='text/javascript' src='%sjs/settings.js'></script>" % MEDIA_DIR
+    settings_main_content = open('%ssettings_main_content' % TEMPLATES_DIR,'r').read()
+
+    for s in streams_list:
+        settings_main_content += stream_template.render({'stream_title':s.title, 'stream_url':s.get_filename(), 'stream_feeds':s.feeds_list})
     settings_main_content += "</div> <!--#streamGoHere-->"
     settings_main_content += "<button onclick='addStream()'>Create a new stream</button>"
     settings_main_content += "<button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>"

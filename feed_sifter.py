@@ -32,7 +32,6 @@ class SetOfFeeds(object):
 
     def get_filename(self):
         return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
-
     
 
 """
@@ -191,22 +190,3 @@ def get_info( parsed_datums ):
 
 
 
-def get_parsed_data(urls=[]):
-
-    webbrowser.open('file:///home/katie/prog/foofurple_feeds/wait.html')
-    parsed_datums = []
-
-    print 'Saving feed data to ./.feedcache'
-    storage = shelve.open('.feedcache')
-    try:
-        fc = cache.Cache(storage)
-        for url in urls:
-            parsed_data = fc.fetch(url)
-            """
-            for entry in parsed_data.entries:
-                parsed_datums.append(entry)
-            """
-            parsed_datums.append(parsed_data)
-    finally:
-        storage.close()
-    return parsed_datums

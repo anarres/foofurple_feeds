@@ -17,9 +17,5 @@ appearance_main_content = open('%sappearance_main_content' % TEMPLATES_DIR,'r').
 
 MAX_THREADS=5
 STORAGE_DIR='/home/katie/prog/foofurple_feeds/tmp/feedcache_example'
-image1 = "%simages/message1.gif" % MEDIA_DIR
-image2 = "%simages/message2.gif" % MEDIA_DIR
-image3 = "%simages/message3.gif" % MEDIA_DIR
-
 
 
