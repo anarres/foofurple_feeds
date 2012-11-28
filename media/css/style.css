@@ -115,12 +115,20 @@ input, textarea {
 #settings_nav {
     margin: 2px 0px;
     margin-right: 60px;
-
     text-align: right;
 }
 #settings_nav li {
     display: inline;
     list-style: none;
+
+    border-radius: 6px;
+    padding: 2px 4px;
+    margin: 4px 0px;
+}
+
+#settings_nav li.current {
+    border: 2px solid #34b8ba;
+    background-color:#e6fbff;
 }
 #settings_nav a {
     padding: 2px 8px;

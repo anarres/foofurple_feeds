@@ -1,9 +1,43 @@
+#!/usr/bin/env python
 # coding: utf-8
 
+# Import system modules
+import Queue
 import sys
-import time
 import shelve
+import threading
+import json
+from Tkinter import *
+from PIL import ImageTk, Image
+import webbrowser
+import time
+
+from feed_utils import _slugify
+
+# Import local modules
 import cache
+
+from settings import *
+
+class SetOfFeeds(object):
+    """ A 'stream' or set of feeds grouped together """
+
+    def __init__(self, title, feeds_list):
+        self.title = title
+        self.feeds_list = feeds_list
+
+    def __str__(self):
+        return "SetOfFeeds object with title: %s" % self.title
+
+    def get_urls(self):
+        urls = []
+        for f in self.feeds_list:
+            urls.append(f['url'])
+        return urls
+
+    def get_filename(self):
+        return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
+
 
 """
 CLASSES FOR PUTTING FEED DATA INTO THE FORMAT I WANT TO DISPLAY
@@ -31,6 +65,8 @@ class EntryInfo(object):
         if self.content == 0:
             my_dict['entry_content'] = "<p>%s</p>" % self.description
         return my_dict
+
+
 
 class FeedInfo(object):
     def __init__(self, link, title, logo):
@@ -146,24 +182,6 @@ def get_video(e):
     return urls
 
 
-"""
-Feedcache - FIXME credit
-"""
-def feedcache_foo(urls=[]):
-    """ Uses feedcache to return a list containing parsed data for each feed url """
-
-    print 'Saving feed data to ./.feedcache'
-    storage = shelve.open('.feedcache')
-    try:
-        fc = cache.Cache(storage)
-        parsed_datums = []
-        for url in urls:
-            parsed_datums.append( fc.fetch(url) )
-    finally:
-        storage.close()
-    return parsed_datums
-
-
 def get_info( parsed_datums ):
     entry_info_objs = []
     for d in parsed_datums:
@@ -177,3 +195,22 @@ def get_info( parsed_datums ):
 
 
 
+def get_parsed_data(urls=[]):
+
+    webbrowser.open('file:///home/katie/prog/foofurple_feeds/wait.html')
+    parsed_datums = []
+
+    print 'Saving feed data to ./.feedcache'
+    storage = shelve.open('.feedcache')
+    try:
+        fc = cache.Cache(storage)
+        for url in urls:
+            parsed_data = fc.fetch(url)
+            """
+            for entry in parsed_data.entries:
+                parsed_datums.append(entry)
+            """
+            parsed_datums.append(parsed_data)
+    finally:
+        storage.close()
+    return parsed_datums
