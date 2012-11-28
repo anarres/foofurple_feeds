@@ -2,22 +2,17 @@
 # coding: utf-8
 
 # Import system modules
-import Queue
 import sys
 import shelve
-import threading
 import json
-from Tkinter import *
-from PIL import ImageTk, Image
 import webbrowser
 import time
-
 from feed_utils import _slugify
 
 # Import local modules
 import cache
-
 from settings import *
+
 
 class SetOfFeeds(object):
     """ A 'stream' or set of feeds grouped together """
@@ -38,6 +33,7 @@ class SetOfFeeds(object):
     def get_filename(self):
         return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
 
+    
 
 """
 CLASSES FOR PUTTING FEED DATA INTO THE FORMAT I WANT TO DISPLAY
