@@ -14,7 +14,7 @@ import cache
 from settings import *
 
 
-class SetOfFeeds(object):
+class Stream(object):
     """ A 'stream' or set of feeds grouped together """
 
     def __init__(self, title, feeds_list):
@@ -22,7 +22,7 @@ class SetOfFeeds(object):
         self.feeds_list = feeds_list
 
     def __str__(self):
-        return "SetOfFeeds object with title: %s" % self.title
+        return "Stream object with title: %s" % self.title
 
     def get_urls(self):
         urls = []

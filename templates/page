@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
 <title>{{ title }}</title>
-<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
+<link rel="stylesheet" type="text/css" href="{{ GLOBS.MEDIA_DIR }}css/style.css"></link>
 
 {{ javascript }}
 
@@ -16,7 +16,7 @@
 <div id="container">
 
 <div id="side">
-    <a href="index.html"><img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" alt="Cute baby dinosaur logo"></a>
+    <a href="index.html"><img src="{{ GLOBS.MEDIA_DIR }}images/dinoLogo.png" alt="Cute baby dinosaur logo"></a>
     <br>
     <h1><a href="index.html">Feed Reader</a></h1>
 

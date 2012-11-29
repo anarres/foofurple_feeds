@@ -1,7 +1,0 @@
-<ul>
-
-    <li><h3>My streams:</h3></li>
-
-    {{ nav_items }}
-
-</ul>

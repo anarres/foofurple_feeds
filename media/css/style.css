@@ -37,6 +37,13 @@ h1, h1 a {
     color: #34b8ba;
     color: #006466;
 }
+h2 {
+    font-family: Georgia, serif;
+    //text-align: center;
+    padding: 20px 0px;
+    padding-bottom: 10px;
+    font-size: 1.6em;
+}
 p {
     line-height: 1.2em;
     padding: 3px 0px;
