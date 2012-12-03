@@ -1,43 +1,36 @@
 #!/usr/bin/env python
 # coding: utf-8
+#
+# feed_sifter.py
+# takes data from feedparser/feedcache and repackages it 
+# so as to be displays in 'streams' or sets of feeds.
+#
+#
+#
 
-# Import system modules
-import sys
 import shelve
-import json
-import webbrowser
 import time
-from feed_utils import _slugify
 
-# Import local modules
 import cache
 from settings import *
 
+#
+# CLASSES TO HOLD THE REPACKAGED DATA
+#
+class FeedInfo(object):
+    """ Represents an RSS or Atom feed """
 
-class Stream(object):
-    """ A 'stream' or set of feeds grouped together """
-
-    def __init__(self, title, feeds_list):
+    def __init__(self, link, title, logo):
+        self.link = link
         self.title = title
-        self.feeds_list = feeds_list
-
+        self.logo = logo     
     def __str__(self):
-        return "Stream object with title: %s" % self.title
+        return "FeedInfo object: title: %s, link: %s, logo: %s." % (self.title, self.link, self.logo)
 
-    def get_urls(self):
-        urls = []
-        for f in self.feeds_list:
-            urls.append(f['url'])
-        return urls
 
-    def get_filename(self):
-        return "%s%s.html" % (OUTPUT_DIR, _slugify(self.title))
-    
+class StreamItem(object):
+    """ Contains all the data needed to display one item / post / tweet in a stream """
 
-"""
-CLASSES FOR PUTTING FEED DATA INTO THE FORMAT I WANT TO DISPLAY
-"""
-class EntryInfo(object):
     def __init__(self, feed_obj, link, title, author, description, content, date, images, audio, video):
         self.feed_obj = feed_obj
         self.link = link
@@ -52,29 +45,47 @@ class EntryInfo(object):
         self.video = video                 # A list of urls
 
     def __str__(self):
-        return "EntryInfo object, title: %s." % self.title
-
-    def get_dict(self):
-        my_dict = {'entry_link':self.link, 'entry_title':self.title, 'entry_author':self.author, 'entry_description':self.description, 'entry_content':self.content, 'entry_date':self.nice_date, 'feed_link':self.feed_obj.link, 'feed_title':self.feed_obj.title, 'feed_logo':self.feed_obj.logo, 'images':self.images, 'audio':self.audio, 'video':self.video}
-
-        if self.content == 0:
-            my_dict['entry_content'] = "<p>%s</p>" % self.description
-        return my_dict
+        return "StreamItem object, title: %s." % self.title
 
 
 
-class FeedInfo(object):
-    def __init__(self, link, title, logo):
-        self.link = link
+class Stream(object):
+    """ A 'stream' or set of feeds whose feed items are to be displayed together """
+
+    def __init__(self, title, slug, feeds, stream_items):
         self.title = title
-        self.logo = logo     
+        self.slug = slug
+        self.filepath = "%s%s.html" % (OUTPUT_DIR, slug)
+        self.feeds = feeds
+        self.stream_items = stream_items
+
     def __str__(self):
-        return "FeedInfo object: title: %s, link: %s, logo: %s." % (self.title, self.link, self.logo)
+        return "Stream object with title: %s" % self.title
 
 
-"""
-FUNCTIONS FOR CONVERTING PARSED FEED INTO THE INFO I WANT TO DISPLAY
-"""
+
+#
+# FUNCTIONS FOR REPACKAGING FEED DATA
+#
+def get_info( stream_data ):
+    """ Takes the feedparser/feedcache data for a stream
+        and packages it as a list of StreamItem objects """
+
+    stream_items = []
+    for d in stream_data:
+        feed_info_obj = FeedInfo( get_feed_link(d.feed), 
+            get_feed_title(d.feed), get_feed_logo(d.feed) )
+
+        for e in d.entries:
+            e_info_obj = StreamItem(feed_info_obj, get_entry_link(e), 
+                get_entry_title(e), get_entry_author(e), 
+                get_entry_description(e), get_entry_content(e), 
+                get_entry_date(e), get_images(e), get_audio(e), get_video(e))
+            stream_items.append(e_info_obj)
+
+    return sorted(stream_items, key=lambda e: e.date, reverse=True)
+
+
 def get_feed_title(feed):
     """ Takes a feedparser feed object """
     try:
@@ -175,18 +186,5 @@ def get_video(e):
         if enclo.type[:5] == 'video':
             urls.append(enclo.url)
     return urls
-
-
-def get_info( parsed_datums ):
-    entry_info_objs = []
-    for d in parsed_datums:
-        f = d.feed
-        feed_info_obj = FeedInfo( get_feed_link(f), get_feed_title(f), get_feed_logo(f) )
-
-        for e in d.entries:
-            e_info_obj = EntryInfo( feed_info_obj, get_entry_link(e), get_entry_title(e), get_entry_author(e), get_entry_description(e), get_entry_content(e), get_entry_date(e), get_images(e), get_audio(e), get_video(e) )
-            entry_info_objs.append(e_info_obj)
-    return sorted(entry_info_objs, key=lambda e: e.date, reverse=True)
-
 
 

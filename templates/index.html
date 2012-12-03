@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %} 
+
+Feed Reader
+
+{% endblock %}
+
+{% block settings_nav %} 
+
+<ul>
+    <li><a href='index.html'>Home</a></li>
+    <li><a href='settings.html'>Set-up</a></li>
+    <li><a href='appearance.html'>Appearance</a></li>
+    <li><a href='about.html'>About</a></li>
+</ul>
+
+{% endblock %}
+
+
+
+{% block main_content %}
+
+<h2>My Streams:</h2>
+
+<ul>
+
+    {% for s in streams %}
+
+    <div class='fancy'>
+        <h3><a href='{{ s.filepath }}'>{{ s.title }}</a></h3>
+    </div> <!--.fancy-->
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+
+
+{% block title %} 
+
+{{ stream.title }} | Feed Reader
+
+{% endblock %}
+
+
+
+{% block settings_nav %} 
+
+<ul>
+    <li><a href='index.html'>Home</a></li>
+    <li><a href='settings.html'>Set-up</a></li>
+    <li><a href='appearance.html'>Appearance</a></li>
+    <li><a href='about.html'>About</a></li>
+</ul>
+
+{% endblock %}
+
+
+
+
+{% block nav %}
+
+<h2>My Streams:</h2>
+
+<ul>
+
+{% for s in streams %}
+
+    {% if stream.title == s.title %}
+
+    <li class='current'><a href='{{ s.filepath }}'>{{ s.title }}</a></li>
+
+    {% else %}
+
+    <li><a href='{{ s.filepath }}'>{{ s.title }}</a></li>
+
+    {% endif %}
+
+{% endfor %}
+
+</ul>
+
+{% endblock %}
+
+
+
+{% block main_content %}
+
+<h2>{{ stream.title }}</h2>
+
+{% for i in stream.stream_items %}
+
+<div class='streamItem'>
+
+    {% if i.feed_obj.logo == "FEED LOGO UNKNOWN" %}
+    <div class="feed_icon default_icon">
+    {% else %}   
+    <div class="feed_icon">
+    {% endif %}
+
+        <a href='{{ i.feed_obj.link }}'>
+
+            {% if i.feed_obj.logo == "FEED LOGO UNKNOWN" %}
+            {{ i.feed_obj.title }}
+            {% else %}   
+            <img src='{{ i.feed_obj.logo }}' alt='{{ i.feed_obj.title }}' />
+            {% endif %}
+
+        </a>
+    </div> <!--.feed_icon-->
+
+    <div class='item_main'>
+
+        <div class='item_meta'>
+            <a href='{{ i.link }}'>{{ i.title }}</a> 
+
+            {% if not i.author == "?" %}
+            by {{ i.author }}
+            {% endif %}
+            {{ entry_date }}
+
+        </div> <!--.item_meta-->
+
+        <div class='item_main_main'>
+            {{ i.description }}
+        </div> <!--.item_main_main-->
+
+        <div class='enclosures'>
+
+            {% for image in i.images %}
+                <a href='{{ image }}'><img src='{{ image }}'></a>
+            {% endfor %}
+
+            {% for audio in i.audios %}
+                <a href='{{ audio }}'>Audio link</a>
+            {% endfor %}
+
+            {% for video in i.videos %}
+                <a href='{{ video }}'>Video link</a>
+            {% endfor %}
+
+        </div> <!--.enclosures-->
+
+        <div class='read_more'>
+            <a href='{{ i.link }}'>Read more</a>
+        </div> <!--.read_more-->
+
+    </div> <!--.item_main-->
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+

@@ -3,10 +3,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
-<title>Appearance</title>
+<title>
+ 
+
+Appearance | Feed Reader
+
+
+</title>
 <link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
 
-<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/media/js/appearanceSettings.js'></script>
+
+
+<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/media/js/appearance.js'></script>
+
+ 
 
 </head>
 <body onload="addListeners()">
@@ -16,64 +26,97 @@
 <div id="container">
 
 <div id="side">
-    <a href="index.html"><img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" alt="Cute baby dinosaur logo"></a>
+    <a href="/home/katie/prog/foofurple_feeds/output/index.html">
+        <img src="/home/katie/prog/foofurple_feeds/media/images/dinoLogo.png" 
+            alt="Cute baby dinosaur logo">
+    </a>
     <br>
     <h1><a href="index.html">Feed Reader</a></h1>
 
     <div id="nav">
-        <h2>My Streams:</h2><ul><li class='current'><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li><li class='current'><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li><li class='current'><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li><li class='current'><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li></ul>
+
+        
+
+<h2>My Streams:</h2>
+
+<ul>
+
+
+
+    <li><a href='/home/katie/prog/foofurple_feeds/output/fotostream.html'>Fotostream</a></li>
+
+
+
+    <li><a href='/home/katie/prog/foofurple_feeds/output/blogs.html'>Blogs</a></li>
+
+
+
+    <li><a href='/home/katie/prog/foofurple_feeds/output/data-programming.html'>Data, programming</a></li>
+
+
+
+    <li><a href='/home/katie/prog/foofurple_feeds/output/auf-deutsch.html'>Auf Deutsch</a></li>
+
+
+
+</ul>
+
+
+
     </div> <!--#nav-->
 
 </div>
 
 <div id="settings_nav">
-    
-<ul>
+     
 
+<ul>
     <li><a href='index.html'>Home</a></li>
     <li><a href='settings.html'>Set-up</a></li>
     <li class='current'><a href='appearance.html'>Appearance</a></li>
-
+    <li><a href='about.html'>About</a></li>
 </ul>
+
 
 </div> <!--#settings_nav-->
 
 
 <div id="main">
     
-        <p>
-        <a href="">Edit the CSS stylesheet</a> (if you mess it up you can always <a href="">restore the original</a>).
-        </p>
 
-        <p>Background color:</p>
-        <input type="text" id="bgColor" />
+    <p>
+    <a href="">Edit the CSS stylesheet</a> (if you mess it up you can always <a href="">restore the original</a>).
+    </p>
 
-        <p>Text color:</p>
-        <input type="text" id="textColor" />
+    <p>Background color:</p>
+    <input type="text" id="bgColor" />
 
-        <p>Link color:</p>
-        <input type="text" id="linkColor" />
+    <p>Text color:</p>
+    <input type="text" id="textColor" />
 
-        <p>Link color when the mouse hovers over it:</p>
-        <input type="text" id="linkColorHover" />
+    <p>Link color:</p>
+    <input type="text" id="linkColor" />
 
-        <p>Logo:</p>
+    <p>Link color when the mouse hovers over it:</p>
+    <input type="text" id="linkColorHover" />
 
-        <p>
-        <input class='radioButton' type="radio" name="logo" value="logo1" selected="selected">logo1
-        </p>
+    <p>Logo:</p>
 
-        <p>
-        <input class='radioButton' type="radio" name="logo" value="logo2" selected="selected">logo2
-        </p>
+    <p>
+    <input class='radioButton' type="radio" name="logo" value="logo1" selected="selected">logo1
+    </p>
 
-        <p>
-        <input class='radioButton' type="radio" name="logo" value="noLogo" selected="selected">No logo
-        </p>
+    <p>
+    <input class='radioButton' type="radio" name="logo" value="logo2" selected="selected">logo2
+    </p>
 
-        <button id="preview">Preview</button>
+    <p>
+    <input class='radioButton' type="radio" name="logo" value="noLogo" selected="selected">No logo
+    </p>
 
-        <button id="save">Save all changes</button>
+    <button id="preview">Preview</button>
+
+    <button id="save">Save all changes</button>
 
 
 </div> <!--#main-->

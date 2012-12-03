@@ -1,13 +1,26 @@
+#!/usr/bin/env python
+# coding: utf-8
+
 import json
 import shelve
+import webbrowser
 
 import cache
 import webpagifier
 import feed_sifter
+from settings import OUTPUT_DIR
+from feed_utils import _slugify
+
+def display_wait_page():
+    webbrowser.open('%swait.html' % OUTPUT_DIR)
+
+def display_home_page():
+    webbrowser.open('%sindex.html' % OUTPUT_DIR)
 
 
-# Use Feedcache and FeedParser to get and cache the feeds
 def get_parsed_data(urls=[]):
+    """ Use Feedcache and FeedParser to get and cache the feeds """
+
     parsed_datums = []
     print 'Saving feed data to ./.feedcache'
     storage = shelve.open('.feedcache')
@@ -21,21 +34,66 @@ def get_parsed_data(urls=[]):
     return parsed_datums
 
 
+
+def title_match(streams,s_name):
+    result = False
+    for stream in streams:
+        if stream.title == s_name:
+            result = True
+            break
+    return result
+
+def slug_match(streams,s_slug):
+    result = False
+    for stream in streams:
+        if stream.slug == s_slug:
+            result = True
+            break
+    return result
+
+def unique_title_and_slug(streams,s):
+    title = s['stream_name']
+    if title_match(streams, title):
+        c = 1
+        while True:
+            c += 1
+            title = s['stream_name'] + str(c)
+            if not title_match(streams, title):
+                break
+    slug = _slugify(title)
+    if slug_match(streams, slug):
+        c = 1
+        while True:
+            c += 1
+            slug = _slugify(title) + str(c)
+            if not slug_match(streams, slug):
+                break
+    return (title, slug)
+
+
+
 def main():
-    webpagifier.display_wait_page()
-    streams = json.loads(open('streams.json','r').read())
-    sets_of_feeds = []
+    display_wait_page()
+    json_streams = json.loads(open('streams.json','r').read())
+    streams = []
 
-    for s in streams:
-        sets_of_feeds.append( feed_sifter.Stream(s['stream_name'], s['feeds']) )
+    for s in json_streams:
+        (stream_name, stream_slug) = unique_title_and_slug(streams, s)
 
-    for s in sets_of_feeds:
-        parsed_datums = get_parsed_data(urls=s.get_urls())
-        s.entry_info_objects = feed_sifter.get_info(parsed_datums)
+        urls = []
+        feeds = []
+        for f in s['feeds']:
+            urls.append(f['url'])
+            new_dict = {'url':f['url'],'name':f['name']}
+            feeds.append(new_dict)
 
-    webpagifier.make_all_the_webpages(sets_of_feeds)
-    webpagifier.display_home_page()
+        parsed_datums = get_parsed_data(urls=urls)
+        entry_info_objects = feed_sifter.get_info(parsed_datums)
+        streams.append( feed_sifter.Stream(stream_name, stream_slug, feeds, entry_info_objects) )
 
+    webpagifier.make_all_the_webpages(streams)
+    display_home_page()
 
 main()
+
 

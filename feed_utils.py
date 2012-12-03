@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# coding: utf-8
+
 def _slugify(value):
 
     import re

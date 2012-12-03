@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+
+{% block title %} 
+
+Settings | Feed Reader
+
+{% endblock %}
+
+
+
+{% block javascript %}
+
+<script type='text/javascript' src='{{ GLOBS.MEDIA_DIR }}js/settings.js'></script>
+
+{% endblock %}
+
+
+
+{% block settings_nav %} 
+
+<ul>
+    <li><a href='index.html'>Home</a></li>
+    <li class='current'><a href='settings.html'>Set-up</a></li>
+    <li><a href='appearance.html'>Appearance</a></li>
+    <li><a href='about.html'>About</a></li>
+</ul>
+
+{% endblock %}
+
+
+
+
+{% block nav %}
+
+<h2>My Streams:</h2>
+
+<ul>
+
+{% for stre in streams %}
+
+    <li><a href='{{ stre.filepath }}'>{{ stre.title }}</a></li>
+
+{% endfor %}
+
+</ul>
+
+{% endblock %}
+
+
+
+{% block main_content %}
+
+<div id="newFeedFoo">
+    <p id="newFeedFooClose" onclick="newFeedFooClose()">close</p>
+    <h3>Add a new feed:</h3>
+    <p>
+        Feed name:
+        <input type='text' id="elephant" />
+        Feed url:
+        <input type='text' id="walrus" />
+        <button onclick="reallyAddFeed()">Submit</button>
+    </p>
+</div>
+<div id="addStream">
+    <p id="addStreamClose" onclick="addStreamClose()">close</p>
+    <h3>Add a new stream</h3>
+    <p>
+        Stream name:
+        <input type='text' id="newStreamName" />
+        <button onclick="reallyAddStream()">Submit</button>
+    </p>
+</div>
+<div id="saveAllChanges">
+    <p id="saveAllChangesClose" onclick="saveAllChangesClose()">close</p>
+    <h3>Save all changes</h3>
+    <p>To save your changes, please right-click the file below and save it as FIXME streams.json. 
+    <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
+    <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
+</div>
+
+<div id="streamsGoHere">
+
+<p>This is the place to add, remove, and organise your feeds.</p>
+
+
+
+{% for s in streams %}
+
+<div class='stream'>
+
+    <h2><a class="streamTitleList" id="{{ s.title }}List" href='{{ s.filepath }}'>
+        {{ s.title }}</a> <span class='remove_stream'>(remove stream)</span></h2>
+
+    <ul id="{{ s.title }}ListReally">
+
+        {% for f in s.feeds %}
+
+
+        <li><a class='{{ s.title }}' id='{{ f.name }}' href='{{ f.url }}'>
+            {{ f.name }}</a> <span class='remove_feed'>(remove feed)</span></li>
+
+        {% endfor %}
+
+    </ul>
+
+    <button class='addFeedToStream' id='{{ s.title }}'>
+        Add a feed to this stream
+    </button>
+
+</div> <!--.stream-->
+
+{% endfor %}
+
+</div> <!--#streamsGoHere-->
+
+<button onclick='addStream()'>Create a new stream</button>
+<button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
+
+{% endblock %}
+

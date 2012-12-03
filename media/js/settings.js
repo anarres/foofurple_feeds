@@ -61,7 +61,7 @@ function reallyAddFeed() {
     newHtml += fUrl;
     newHtml += "'>";
     newHtml += fName;
-    newHtml += "</a> <span class='msg' style='color:blue;font-size:0.8em;'>(New feed: click SAVE at the bottom to save)</span></li>";
+    newHtml += "</a> <span class='msg' style='color:blue;font-size:0.8em;'>To finish adding this feed, you'll have to save your settings by clicking the SAVE ALL button at the bottom of this page.</span></li>";
 
     listObj.innerHTML += newHtml;
     newFeedFooClose();    
