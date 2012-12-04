@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
+<title>
+Settings | Feed Reader
+</title>
+<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/media/js/utils.js'></script>
+<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/media/js/jsonFoo.js'></script>
+
+<script>
+
+function loadStreams() {
+    var html = "";
+
+    for (var i=0; i<jsonStreams.length; i++) {
+        html += "<div class='stream'>";
+        html += "<h2><a class='streamTitleList' id='";
+        html += jsonStreams[i]['stream_name'];
+        html += "List'>";
+        html += jsonStreams[i]['stream_name'];
+        html += "</a> <span class='remove_stream'>(remove stream)</span></h2>";
+        html += "<ul id='";
+        html += jsonStreams[i]['stream_name'];
+        html += "ListReally'>";
+
+        for (var j=0; j<jsonStreams[i]['feeds'].length; j++) {
+            html += "<li><a class='";
+            html += jsonStreams[i]['stream_name'];
+            html += "' id='";
+            html += jsonStreams[i]['feeds'][j]['name'];
+            html += "' href='";
+            html += jsonStreams[i]['feeds'][j]['url'];
+            html += "'>";
+            html += jsonStreams[i]['feeds'][j]['name'];
+            html += "</a> <span class='remove_feed'>(remove feed)</span></li>";
+        }
+        html += "</ul>";
+        html += "<button class='addFeedToStream' id='";
+        html += jsonStreams[i]['stream_name'];
+        html += "'>Add a feed to this stream</button>";
+        html += "</div> <!--.stream-->";
+    }
+
+    document.getElementById('streamsGoHere').innerHTML = html;
+}
+
+</script> 
+
+</head>
+<body onload="loadStreams()">
+<h1>foo</h1>
+
+<div id="streamsGoHere">
+
+</div>
+
+
+</body>
+</html>

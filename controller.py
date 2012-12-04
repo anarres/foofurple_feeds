@@ -8,7 +8,7 @@ import webbrowser
 import cache
 import webpagifier
 import feed_sifter
-from settings import OUTPUT_DIR
+from settings import OUTPUT_DIR, JSON_DIR
 from feed_utils import _slugify
 
 def display_wait_page():
@@ -34,8 +34,8 @@ def get_parsed_data(urls=[]):
     return parsed_datums
 
 
-
 def title_match(streams,s_name):
+    """ Used to make sure stream titles and slugs are unique """
     result = False
     for stream in streams:
         if stream.title == s_name:
@@ -44,6 +44,7 @@ def title_match(streams,s_name):
     return result
 
 def slug_match(streams,s_slug):
+    """ Used to make sure stream titles and slugs are unique """
     result = False
     for stream in streams:
         if stream.slug == s_slug:
@@ -52,6 +53,7 @@ def slug_match(streams,s_slug):
     return result
 
 def unique_title_and_slug(streams,s):
+    """ Used to make sure stream titles and slugs are unique """
     title = s['stream_name']
     if title_match(streams, title):
         c = 1
@@ -71,10 +73,9 @@ def unique_title_and_slug(streams,s):
     return (title, slug)
 
 
-
 def main():
     display_wait_page()
-    json_streams = json.loads(open('streams.json','r').read())
+    json_streams = json.loads(open('%sstreams.json' % JSON_DIR,'r').read())
     streams = []
 
     for s in json_streams:

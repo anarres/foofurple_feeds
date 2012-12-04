@@ -49,6 +49,15 @@ p {
     line-height: 1.2em;
     padding: 7px 0px;
 }
+
+p.msg {
+    color: blue;
+    font-size:0.8em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+
 a {
     color: #aa0000;
     text-decoration: none;
@@ -118,7 +127,6 @@ input, textarea {
     font-weight: normal;
 }
 
-
 /* settings_nav */ 
 #settings_nav {
     margin: 2px 0px;
@@ -133,7 +141,6 @@ input, textarea {
     padding: 2px 4px;
     margin: 4px 0px;
 }
-
 #settings_nav li.current {
     border: 2px solid #34b8ba;
     background-color:#e6fbff;
@@ -144,7 +151,6 @@ input, textarea {
     font-weight: bold;
     font-size: 0.8em;
 }
-
 
 /* Footer */
 #footer {
@@ -163,17 +169,28 @@ input, textarea {
 
 /* Splash home page */
 div.fancy {
-    border-radius:5px;
-    border: 3px solid #34b8ba;
+    border-radius:10px;
+    border: 3px solid grey;
     text-align: center;
     width: 150px;
+    min-height: 100px;
     float: left;
-    padding: 10px;
-    padding-bottom: 20px;
-    margin: 20px;
-    background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');
+    padding: 0px 20px;
+    margin: 15px;
+    background-image: url('/home/katie/prog/foofurple_feeds/media/images/button-bg.png');
     background-size: 100% 100%;
 }
+div.fancy h3 a {
+    color: #fdfae2;
+}
+div.fancy h3 a:hover {
+    color: #fffe89;
+}
+
+
+
+
+
 
 /* ----------------------------------------------------------- Specific styles */
 
@@ -265,8 +282,3 @@ div.stream {
     padding: 20px 0px;
     clear: both;
 }
-.msg {
-    color: blue;
-    font-weight: bold;
-}
-

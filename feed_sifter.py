@@ -31,7 +31,7 @@ class FeedInfo(object):
 class StreamItem(object):
     """ Contains all the data needed to display one item / post / tweet in a stream """
 
-    def __init__(self, feed_obj, link, title, author, description, content, date, images, audio, video):
+    def __init__(self, feed_obj, link, title, author, description, content, date, images, audios, videos):
         self.feed_obj = feed_obj
         self.link = link
         self.title = title
@@ -41,8 +41,8 @@ class StreamItem(object):
         self.date = date
         self.nice_date = time.strftime("%a, %d %b %Y", date)
         self.images = images               # A list of urls
-        self.audio = audio                 # A list of urls
-        self.video = video                 # A list of urls
+        self.audios = audios                 # A list of urls
+        self.videos = videos                 # A list of urls
 
     def __str__(self):
         return "StreamItem object, title: %s." % self.title

@@ -1,30 +1,45 @@
-/* Function getElementsByClassName(node,classname) by Dustin Diaz, found here: 
-http://stackoverflow.com/questions/1933602/
-how-to-getelementbyclass-instead-of-getelementbyid-with-javascript*/
-function getElementsByClassName(node,classname) {
-  if (node.getElementsByClassName) { // use native implementation if available
-    return node.getElementsByClassName(classname);
-  } else {
-    return (function getElementsByClass(searchClass,node) {
-        if ( node == null )
-          node = document;
-        var classElements = [],
-            els = node.getElementsByTagName("*"),
-            elsLen = els.length,
-            pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)"), i, j;
-
-        for (i = 0, j = 0; i < elsLen; i++) {
-          if ( pattern.test(els[i].className) ) {
-              classElements[j] = els[i];
-              j++;
-          }
-        }
-        return classElements;
-    })(classname, node);
-  }
+function init() {
+    loadStreams();
+    addListeners();
 }
 
-// --------------------------------------------------------- GLOBAL VARS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function loadStreams() {
+    var html = "";
+
+    for (var i=0; i<jsonStreams.length; i++) {
+        html += "<div class='stream'>";
+        html += "<h2><span class='streamTitleList' id='";
+        html += jsonStreams[i]['stream_name'];
+        html += "List'>";
+        html += jsonStreams[i]['stream_name'];
+        html += "</span> <span class='remove_stream'>(remove stream)</span></h2>";
+        html += "<ul id='";
+        html += jsonStreams[i]['stream_name'];
+        html += "ListReally'>";
+
+        for (var j=0; j<jsonStreams[i]['feeds'].length; j++) {
+            html += "<li><a class='";
+            html += jsonStreams[i]['stream_name'];
+            html += "' id='";
+            html += jsonStreams[i]['feeds'][j]['name'];
+            html += "' href='";
+            html += jsonStreams[i]['feeds'][j]['url'];
+            html += "'>";
+            html += jsonStreams[i]['feeds'][j]['name'];
+            html += "</a> <span class='remove_feed'>(remove feed)</span></li>";
+        }
+        html += "</ul>";
+        html += "<button class='addFeedToStream' id='";
+        html += jsonStreams[i]['stream_name'];
+        html += "'>Add a feed to this stream</button>";
+        html += "</div> <!--.stream-->";
+    }
+
+    document.getElementById('streamsGoHere').innerHTML = html;
+}
+
+
+// ----- GLOBAL VARS
 
 var listObj;
 var streamName;
@@ -35,7 +50,6 @@ function newFeedFooClose() {
 function addStreamClose() {
     document.getElementById('addStream').style.display = 'none';
 }
-
 
 function saveAllChangesClose() {
     document.getElementById("saveAllChanges").style.display = 'none';
@@ -61,7 +75,7 @@ function reallyAddFeed() {
     newHtml += fUrl;
     newHtml += "'>";
     newHtml += fName;
-    newHtml += "</a> <span class='msg' style='color:blue;font-size:0.8em;'>To finish adding this feed, you'll have to save your settings by clicking the SAVE ALL button at the bottom of this page.</span></li>";
+    newHtml += "</a> <p class='msg'>Not yet saved: to finish adding this feed, you'll have to save your settings by clicking the SAVE ALL button at the bottom of this page.</p></li>";
 
     listObj.innerHTML += newHtml;
     newFeedFooClose();    
@@ -144,7 +158,7 @@ function addListeners() {
         // Only add event listener if the isn't one already
         if (typeof(objs[i].onclick) != "function") {
             objs[i].addEventListener('click', function (e) {
-                e.target.parentNode.parentNode.innerHTML = "STREAM REMOVED (if you didn't want to do that, just reload the page.)";
+                e.target.parentNode.parentNode.innerHTML += "<p class='msg'>Marked for removal: to permanently remove this, click SAVE at the bottom of this page.</p>";
             }, false);
         }
     }
@@ -155,7 +169,7 @@ function addListeners() {
         // Only add event listener if the isn't one already
         if (typeof(fobjs[j].onclick) != "function") {
             fobjs[j].addEventListener('click', function (e) {
-                e.target.parentNode.innerHTML = "FEED REMOVED (if you didn't want to do that, just reload the page.)";
+                e.target.parentNode.innerHTML += "<p class='msg'>Marked for removal: to permanently remove this, click SAVE at the bottom of this page.</p>";
             }, false);
         }
     }

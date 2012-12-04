@@ -1,5 +1,0 @@
-<div class='fancy'>
-
-    <h3><a id="{{ stream_title }}List" href='{{ stream_url }}'>{{ stream_title }}</a> </h3>
-
-</div> <!--.fancy-->

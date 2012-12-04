@@ -11,6 +11,8 @@ Settings | Feed Reader
 
 {% block javascript %}
 
+<script type='text/javascript' src='{{ GLOBS.MEDIA_DIR }}js/utils.js'></script>
+<script type='text/javascript' src='{{ GLOBS.MEDIA_DIR }}js/jsonFoo.js'></script>
 <script type='text/javascript' src='{{ GLOBS.MEDIA_DIR }}js/settings.js'></script>
 
 {% endblock %}
@@ -74,43 +76,19 @@ Settings | Feed Reader
 <div id="saveAllChanges">
     <p id="saveAllChangesClose" onclick="saveAllChangesClose()">close</p>
     <h3>Save all changes</h3>
-    <p>To save your changes, please right-click the file below and save it as FIXME streams.json. 
+    <p>To save your changes, please right-click the file below and 
+        save it as {{ GLOBS.JSON_DIR }}streams.json. You'll probably
+        need to overwrite an existing file.</p>
     <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
     <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
 </div>
 
-<div id="streamsGoHere">
-
 <p>This is the place to add, remove, and organise your feeds.</p>
 
+<div id="streamsGoHere">
 
 
-{% for s in streams %}
 
-<div class='stream'>
-
-    <h2><a class="streamTitleList" id="{{ s.title }}List" href='{{ s.filepath }}'>
-        {{ s.title }}</a> <span class='remove_stream'>(remove stream)</span></h2>
-
-    <ul id="{{ s.title }}ListReally">
-
-        {% for f in s.feeds %}
-
-
-        <li><a class='{{ s.title }}' id='{{ f.name }}' href='{{ f.url }}'>
-            {{ f.name }}</a> <span class='remove_feed'>(remove feed)</span></li>
-
-        {% endfor %}
-
-    </ul>
-
-    <button class='addFeedToStream' id='{{ s.title }}'>
-        Add a feed to this stream
-    </button>
-
-</div> <!--.stream-->
-
-{% endfor %}
 
 </div> <!--#streamsGoHere-->
 
