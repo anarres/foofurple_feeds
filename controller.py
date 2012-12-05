@@ -17,7 +17,6 @@ def display_wait_page():
 def display_home_page():
     webbrowser.open('%sindex.html' % OUTPUT_DIR)
 
-
 def get_parsed_data(urls=[]):
     """ Use Feedcache and FeedParser to get and cache the feeds """
 

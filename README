@@ -1,0 +1,24 @@
+An RSS/Atom feed reader. It's a desktop application which 
+writes its output to HTML files and uses the webbrowser
+as a GUI. This gives the best of both worlds: the speed
+and flexibility of a Desktop app, and since no third-party
+service like Google Reader is used there are no privacy 
+concerns, while catering to the fact that most people 
+dislike using stand-alone apps and prefer using something
+that looks like a website.
+
+The work of fetching and parsing feeds is done by 
+Feed Parser and Feed Cache. 
+
+The user has to install this as an app, and 'run' it in
+the usual way by selecting the desired app from an 
+application menu. Instead of launching a GUI, a 
+webbrowser is launched.
+
+Since the webbrowser can't save text files on its own,
+ when the user makes changes to their settings they 
+are given a link to a (data url) text file and asked 
+to save it to the appropriate location.
+
+
+
