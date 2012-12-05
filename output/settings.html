@@ -61,6 +61,10 @@ Settings | Feed Reader
 
 
 
+    <li><a href='/home/katie/prog/foofurple_feeds/output/test-stream.html'>Test Stream</a></li>
+
+
+
 </ul>
 
 
@@ -91,9 +95,9 @@ Settings | Feed Reader
     <h3>Add a new feed:</h3>
     <p>
         Feed name:
-        <input type='text' id="elephant" />
+        <input type='text' id="feedNameInput" />
         Feed url:
-        <input type='text' id="walrus" />
+        <input type='text' id="feedNameButton" />
         <button onclick="reallyAddFeed()">Submit</button>
     </p>
 </div>
@@ -110,7 +114,7 @@ Settings | Feed Reader
     <p id="saveAllChangesClose" onclick="saveAllChangesClose()">close</p>
     <h3>Save all changes</h3>
     <p>To save your changes, please right-click the file below and 
-        save it as /home/katie/prog/foofurple_feeds/json/streams.json. You'll probably
+        save it as streams.json. You'll probably
         need to overwrite an existing file.</p>
     <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
     <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
@@ -125,7 +129,8 @@ Settings | Feed Reader
 
 </div> <!--#streamsGoHere-->
 
-<button onclick='addStream()'>Create a new stream</button>
+<button id="addStreamButton" onclick='addStream()'>Create a new stream</button>
+ (A stream is a place to group a collection of feeds together.)
 <button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 
 

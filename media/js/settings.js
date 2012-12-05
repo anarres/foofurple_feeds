@@ -34,12 +34,11 @@ function loadStreams() {
         html += "'>Add a feed to this stream</button>";
         html += "</div> <!--.stream-->";
     }
-
     document.getElementById('streamsGoHere').innerHTML = html;
 }
 
 
-// ----- GLOBAL VARS
+/* ----- GLOBAL VARS ----- */
 
 var listObj;
 var streamName;
@@ -63,8 +62,8 @@ function addFeedToStream(e) {
 }
 
 function reallyAddFeed() {
-    var fName = document.getElementById('elephant').value;
-    var fUrl = document.getElementById('walrus').value;
+    var fName = document.getElementById('feedNameInput').value;
+    var fUrl = document.getElementById('feedNameButton').value;
 
     var newHtml = "<li><a class='";
     newHtml += streamName;
@@ -100,12 +99,11 @@ function reallyAddStream() {
     addStreamClose();
 }
 
-
 function saveAllChanges() {
 
     //construct the new JSON file
     var ulArray = getElementsByClassName(document, 'streamTitleList');
-    var output = "[";
+    var output = "var jsonStreams = /*STARTJSON*/[";
 
     for (var i=0; i<ulArray.length; i++) {
         output += "{\"stream_name\":\"";
@@ -130,7 +128,7 @@ function saveAllChanges() {
             output += ",";
         }
     }
-    output += "]";
+    output += "]/*ENDJSON*/;";
 
     //encodeURIComponent(content);
     var uriFoo = "data:text/json;UTF-8," + output;
@@ -158,7 +156,7 @@ function addListeners() {
         // Only add event listener if the isn't one already
         if (typeof(objs[i].onclick) != "function") {
             objs[i].addEventListener('click', function (e) {
-                e.target.parentNode.parentNode.innerHTML += "<p class='msg'>Marked for removal: to permanently remove this, click SAVE at the bottom of this page.</p>";
+                e.target.parentNode.parentNode.innerHTML += "<p class='msg'>This stream has been marked for removal: to complete the removal process this, click SAVE at the bottom of this page.</p>";
             }, false);
         }
     }
@@ -169,7 +167,7 @@ function addListeners() {
         // Only add event listener if the isn't one already
         if (typeof(fobjs[j].onclick) != "function") {
             fobjs[j].addEventListener('click', function (e) {
-                e.target.parentNode.innerHTML += "<p class='msg'>Marked for removal: to permanently remove this, click SAVE at the bottom of this page.</p>";
+                e.target.parentNode.innerHTML += "<p class='msg'>This feed has been marked for removal: to complete the removal process this, click SAVE at the bottom of this page.</p>";
             }, false);
         }
     }

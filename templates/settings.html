@@ -58,9 +58,9 @@ Settings | Feed Reader
     <h3>Add a new feed:</h3>
     <p>
         Feed name:
-        <input type='text' id="elephant" />
+        <input type='text' id="feedNameInput" />
         Feed url:
-        <input type='text' id="walrus" />
+        <input type='text' id="feedNameButton" />
         <button onclick="reallyAddFeed()">Submit</button>
     </p>
 </div>
@@ -92,7 +92,8 @@ Settings | Feed Reader
 
 </div> <!--#streamsGoHere-->
 
-<button onclick='addStream()'>Create a new stream</button>
+<button id="addStreamButton" onclick='addStream()'>Create a new stream</button>
+ (A stream is a place to group a collection of feeds together.)
 <button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 
 {% endblock %}

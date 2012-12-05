@@ -8,7 +8,7 @@ import webbrowser
 import cache
 import webpagifier
 import feed_sifter
-from settings import OUTPUT_DIR, JSON_DIR
+from settings import OUTPUT_DIR, MEDIA_DIR
 from feed_utils import _slugify
 
 def display_wait_page():
@@ -75,7 +75,14 @@ def unique_title_and_slug(streams,s):
 
 def main():
     display_wait_page()
-    json_streams = json.loads(open('%sstreams.json' % JSON_DIR,'r').read())
+    json_foo = open('%sjs/jsonFoo.js' % MEDIA_DIR,'r').read()
+    start_delimiter = """/*STARTJSON*/"""
+    end_delimiter = """/*ENDJSON*/"""
+    json_foo = json_foo.split(start_delimiter)[1]
+    json_foo = json_foo.split(end_delimiter)[0]
+
+    json_streams = json.loads(json_foo)
+
     streams = []
 
     for s in json_streams:

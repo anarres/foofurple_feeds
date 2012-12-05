@@ -237,12 +237,9 @@ div.fancy h3 a:hover {
 }
 .streamItem {
     border-top: 3px solid #34b8ba;
-    max-width: 700px;
-    min-width: 200px;
 }
 div.feed_icon {
     width: 80px;
-    height: 100%;
     float: left;
 }
 div.default_icon {
