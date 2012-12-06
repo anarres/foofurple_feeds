@@ -21,7 +21,7 @@ def get_parsed_data(urls=[]):
     """ Use Feedcache and FeedParser to get and cache the feeds """
 
     parsed_datums = []
-    print 'Saving feed data to ./.feedcache'
+    print "Saving feed data to ./.feedcache"
     storage = shelve.open('.feedcache')
     try:
         fc = cache.Cache(storage)

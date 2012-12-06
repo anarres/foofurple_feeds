@@ -39,25 +39,22 @@ h1, h1 a {
 }
 h2 {
     font-family: Georgia, serif;
-    padding: 20px 0px;
-    padding-bottom: 10px;
+    padding: 10px 0px;
 }
 #main h2 {
     font-size: 1.6em;
+    padding-bottom: 20px;
 }
 p {
     line-height: 1.2em;
     padding: 7px 0px;
 }
-
 p.msg {
     color: blue;
     font-size:0.8em;
     padding-top: 0px;
     padding-bottom: 10px;
 }
-
-
 a {
     color: #aa0000;
     text-decoration: none;
@@ -82,26 +79,6 @@ input.radioButton {
 button {
     margin: 10px 0px;
 }
-button.bigButton {
-    font-size: 1.5em;
-}
-button.addFeedToStream, button#addStreamButton {
-    margin: 0px;
-    padding: 0px;
-    font-size: 1em;
-    border: none;
-    color: blue;
-    text-decoration: underline;
-    background-color: #ffffff;
-}
-button.addFeedToStream:hover, button#addStreamButton:hover {
-    background-color: #fffe89;
-}
-button#addStreamButton {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 1.5em;
-}
 input, textarea {
     cursor: text;
 }
@@ -114,7 +91,7 @@ input, textarea {
     min-width: 200px;
     margin-left: 10px;
     margin-bottom: 100px;
-    margin-top: 40px;
+    margin-top: 20px;
     float: left;
 }
 #main * {
@@ -173,9 +150,17 @@ input, textarea {
 #settings_nav a {
     padding: 2px 8px;
     padding-left: 0px;
-    font-weight: bold;
-    font-size: 0.8em;
+    font-weight: normal;
+    font-size: 0.75em;
+    color: #424242;
 }
+#settings_nav a:hover {
+    color: #aa00b1;
+}
+
+
+
+
 
 /* Footer */
 #footer {
@@ -200,25 +185,40 @@ div.fancy {
     width: 150px;
     min-height: 100px;
     float: left;
-    padding: 0px 20px;
     margin: 15px;
     background-image: url('/home/katie/prog/foofurple_feeds/media/images/button-bg.png');
     background-size: 100% 100%;
 }
 div.fancy h3 a {
+    display: block;
     color: #fdfae2;
+    font-weight: normal;
+    font-size: 0.8em;
+    width: 150px;
+    height: 100px;
+    text-align: center;
 }
 div.fancy h3 a:hover {
     color: #fffe89;
 }
 
+/* Settings page */
 
-
-
-
-
-/* ----------------------------------------------------------- Specific styles */
-
+div.stream {
+    padding: 5px 10px;
+    padding-bottom: 20px;
+    clear: both;
+    border-radius: 3px;
+    border: 1px solid grey;
+    margin: 40px 0px;
+}
+div.stream h3 {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+div.stream p {
+    padding: 2px 0px;
+}
 #newFeedFoo, #addStream, #saveAllChanges {
     padding:10px;
     padding-top:5px;
@@ -235,6 +235,34 @@ div.fancy h3 a:hover {
     cursor: pointer;
     float: right;
 }
+button.bigButton {
+    font-size: 1.3em;
+    margin-top: 50px;
+    padding: 5px;
+}
+button.addFeedToStream {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    background-color: #ffffff;
+}
+button.addFeedToStream:hover {
+    background-color: #fffe89;
+}
+span.remove_stream, span.remove_feed {
+    font-size: 0.8em;
+    color: #aa0000;
+    cursor: pointer;
+}
+span.remove_stream:hover, span.remove_feed:hover {
+    color: #aa00b1;
+}
+
+/* Main display of stream / feed items */
+
 .streamItem {
     border-top: 3px solid #34b8ba;
     max-width: 700px;
@@ -256,12 +284,6 @@ div.default_icon {
 div.default_icon a {
     font-size: 0.8em;
 }
-div.feed_icon img {
-    max-width: 80px;
-    height: auto;
-    border: 3px solid #34b8ba;
-    border-radius: 3px;
-}
 div.item_main {
     max-width: 800px;
     margin-left: 100px;
@@ -277,11 +299,6 @@ div.item_meta {
 }
 div.item_meta a {
     font-size: 1.4em;
-}
-div.item_main_main {
-}
-div.wp-caption {
-    font-size: 0.8em;
 }
 div.enclosures {
     font-size: 0.8em;
@@ -300,13 +317,11 @@ div.list_item img {
     width: 40px;
     height: 40px;
 }
-.remove_stream, .remove_feed {
-    font-size: 0.6em;
-    color: red;
-    cursor: pointer;
-)
-div.stream {
-    margin: 20px 0px;
-    padding: 20px 0px;
-    clear: both;
+div.feed_icon img {
+    max-width: 80px;
+    height: auto;
+    border: 3px solid #34b8ba;
+    border-radius: 3px;
 }
+
+

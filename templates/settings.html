@@ -23,7 +23,7 @@ Settings | Feed Reader
 
 <ul>
     <li><a href='index.html'>Home</a></li>
-    <li class='current'><a href='settings.html'>Set-up</a></li>
+    <li class='current'><a href='settings.html'>Settings</a></li>
     <li><a href='appearance.html'>Appearance</a></li>
     <li><a href='about.html'>About</a></li>
 </ul>
@@ -53,8 +53,13 @@ Settings | Feed Reader
 
 {% block main_content %}
 
+<h2>Settings</h2>
+
+
+<p>This is the place to add, remove, and organise your feeds.</p>
+
 <div id="newFeedFoo">
-    <p id="newFeedFooClose" onclick="newFeedFooClose()">close</p>
+    <p id="newFeedFooClose" onclick="newFeedFooClose()"><img src='{{ GLOBS.MEDIA_DIR }}images/close_icon.png' alt='close'></p>
     <h3>Add a new feed:</h3>
     <p>
         Feed name:
@@ -65,7 +70,7 @@ Settings | Feed Reader
     </p>
 </div>
 <div id="addStream">
-    <p id="addStreamClose" onclick="addStreamClose()">close</p>
+    <p id="addStreamClose" onclick="addStreamClose()"><img src='{{ GLOBS.MEDIA_DIR }}images/close_icon.png' alt='close'></p>
     <h3>Add a new stream</h3>
     <p>
         Stream name:
@@ -74,16 +79,17 @@ Settings | Feed Reader
     </p>
 </div>
 <div id="saveAllChanges">
-    <p id="saveAllChangesClose" onclick="saveAllChangesClose()">close</p>
+    <p id="saveAllChangesClose" onclick="saveAllChangesClose()"><img src='{{ GLOBS.MEDIA_DIR }}images/close_icon.png' alt='close'></p>
     <h3>Save all changes</h3>
     <p>To save your changes, please right-click the file below and 
         save it as {{ GLOBS.JSON_DIR }}streams.json. You'll probably
         need to overwrite an existing file.</p>
-    <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
+    <p><a id="saveAllChangesLink" href="">
+        <img src='{{ GLOBS.MEDIA_DIR }}images/save.png' alt='save'>
+    Save all changes</a></p>
     <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
 </div>
 
-<p>This is the place to add, remove, and organise your feeds.</p>
 
 <div id="streamsGoHere">
 
@@ -92,8 +98,7 @@ Settings | Feed Reader
 
 </div> <!--#streamsGoHere-->
 
-<button id="addStreamButton" onclick='addStream()'>Create a new stream</button>
- (A stream is a place to group a collection of feeds together.)
+<button id="addStreamButton" onclick='addStream()'>New Set of Feeds</button>
 <button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 
 {% endblock %}

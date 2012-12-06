@@ -10,6 +10,10 @@ Settings | Feed Reader
 
 
 </title>
+
+<meta name="description" content="DESCRIPTION GOES HERE">
+
+<link rel="icon" type="image/png" href="/home/katie/prog/foofurple_feeds/media/images/dinoIcon2.png">
 <link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/media/css/style.css"></link>
 
 
@@ -78,7 +82,7 @@ Settings | Feed Reader
 
 <ul>
     <li><a href='index.html'>Home</a></li>
-    <li class='current'><a href='settings.html'>Set-up</a></li>
+    <li class='current'><a href='settings.html'>Settings</a></li>
     <li><a href='appearance.html'>Appearance</a></li>
     <li><a href='about.html'>About</a></li>
 </ul>
@@ -90,8 +94,13 @@ Settings | Feed Reader
 <div id="main">
     
 
+<h2>Settings</h2>
+
+
+<p>This is the place to add, remove, and organise your feeds.</p>
+
 <div id="newFeedFoo">
-    <p id="newFeedFooClose" onclick="newFeedFooClose()">close</p>
+    <p id="newFeedFooClose" onclick="newFeedFooClose()"><img src='/home/katie/prog/foofurple_feeds/media/images/close_icon.png' alt='close'></p>
     <h3>Add a new feed:</h3>
     <p>
         Feed name:
@@ -102,7 +111,7 @@ Settings | Feed Reader
     </p>
 </div>
 <div id="addStream">
-    <p id="addStreamClose" onclick="addStreamClose()">close</p>
+    <p id="addStreamClose" onclick="addStreamClose()"><img src='/home/katie/prog/foofurple_feeds/media/images/close_icon.png' alt='close'></p>
     <h3>Add a new stream</h3>
     <p>
         Stream name:
@@ -111,16 +120,17 @@ Settings | Feed Reader
     </p>
 </div>
 <div id="saveAllChanges">
-    <p id="saveAllChangesClose" onclick="saveAllChangesClose()">close</p>
+    <p id="saveAllChangesClose" onclick="saveAllChangesClose()"><img src='/home/katie/prog/foofurple_feeds/media/images/close_icon.png' alt='close'></p>
     <h3>Save all changes</h3>
     <p>To save your changes, please right-click the file below and 
         save it as streams.json. You'll probably
         need to overwrite an existing file.</p>
-    <p><a id="saveAllChangesLink" href="">Save all changes</a></p>
+    <p><a id="saveAllChangesLink" href="">
+        <img src='/home/katie/prog/foofurple_feeds/media/images/save.png' alt='save'>
+    Save all changes</a></p>
     <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
 </div>
 
-<p>This is the place to add, remove, and organise your feeds.</p>
 
 <div id="streamsGoHere">
 
@@ -129,8 +139,7 @@ Settings | Feed Reader
 
 </div> <!--#streamsGoHere-->
 
-<button id="addStreamButton" onclick='addStream()'>Create a new stream</button>
- (A stream is a place to group a collection of feeds together.)
+<button id="addStreamButton" onclick='addStream()'>Create a new set of feeds</button>
 <button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 
 
@@ -146,7 +155,7 @@ Settings | Feed Reader
 
 <div id="footer">
 <div id="footer_inner">
-<p>Feeds were last updated on Wed Dec  5 18:14:06 2012</p>
+<p>Feeds were last updated on Thu Dec  6 15:40:46 2012</p>
 </div>
 </div>
 

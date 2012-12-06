@@ -7,12 +7,20 @@ function loadStreams() {
     var html = "";
 
     for (var i=0; i<jsonStreams.length; i++) {
+        var number = i+1;
         html += "<div class='stream'>";
-        html += "<h2><span class='streamTitleList' id='";
+        html += "<h3>";
+        html += "Set of feeds ";
+        html += number;
+        html += "</h3>";
+        html += "<span class='streamTitleList' id='";
         html += jsonStreams[i]['stream_name'];
         html += "List'>";
+        html += "Name: <input type='text' style='display:inline;' value='";
         html += jsonStreams[i]['stream_name'];
-        html += "</span> <span class='remove_stream'>(remove stream)</span></h2>";
+        html += "'>";
+        html += "</span> <span class='remove_stream'>(remove stream)</span></p>";
+        html += "Feeds:<br>";
         html += "<ul id='";
         html += jsonStreams[i]['stream_name'];
         html += "ListReally'>";
