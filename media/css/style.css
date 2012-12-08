@@ -278,9 +278,6 @@ span.remove_stream:hover, span.remove_feed:hover {
     color: #dc0000;
 }
 
-
-
-
 /* Main display of stream / feed items */
 
 .streamItem {
@@ -293,8 +290,6 @@ div.feed_icon {
     height: 100%;
     float: left;
 }
-
-
 
 div.default_icon {
     background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');

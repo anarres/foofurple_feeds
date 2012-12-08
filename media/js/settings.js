@@ -9,16 +9,11 @@ function loadStreams() {
     for (var i=0; i<jsonStreams.length; i++) {
         var number = i+1;
         html += "<div class='stream'>";
-
-
         html += "<span class='remove_stream'>(remove the entire set)</span>";
-
         html += "<h3>";
         html += "Set of feeds ";
         html += number;
         html += "</h3>";
-
-
         html += "<span class='streamTitleList' id='";
         html += jsonStreams[i]['stream_name'];
         html += "List'>";
@@ -26,7 +21,6 @@ function loadStreams() {
         html += jsonStreams[i]['stream_name'];
         html += "'>";
         html += "</span>";
-
         html += "<h3>Feeds:</h3>";
         html += "<ul id='";
         html += jsonStreams[i]['stream_name'];
@@ -93,17 +87,35 @@ function addStream() {
     document.getElementById('addStream').style.display = "block";
 }
 function reallyAddStream() {
+
     var newStreamName = document.getElementById('newStreamName').value;
     var myDiv = document.getElementById("streamsGoHere");
-    var html = "<div class='stream'> <h2><a class='streamTitleList' id='";
+    var html = "<div class='stream'>";
+    html += "<span class='remove_stream'>(remove the entire set)</span>";
+
+    html += "<h3>";
+    html += "Set of feeds: ";
+    html += "</h3>";
+
+    html += "<span class='streamTitleList' id='";
     html += newStreamName;
-    html += "List' href=''>";
+    html += "List'>";
+    html += "<h3>Name:</h3> <input type='text' class='streamNameInput' value='";
     html += newStreamName;
-    html += "</a> <span class='remove_stream'>(remove stream)</span></h2> <ul id='";
+    html += "'>";
+    html += "</span>";
+
+    html += "<h3>Feeds:</h3>";
+    html += "<ul id='";
     html += newStreamName;
-    html += "ListReally'>  </ul>  <button class='addFeedToStream' id='";
+    html += "ListReally'>";
+
+    html += "</ul>";
+    html += "<button class='addFeedToStream' id='";
     html += newStreamName;
-    html += "'>Add a feed to this stream </button></div> <!--.stream-->";
+    html += "'>Add a feed to this set</button>";
+    html += "</div> <!--.stream-->";
+
     myDiv.innerHTML += html;
     addListeners();
     addStreamClose();
@@ -146,12 +158,11 @@ function saveAllChanges() {
     document.getElementById('saveAllChanges').style.display="block";
 }
 
-
-function renameThisFunction1(e) {
-    e.target.parentNode.innerHTML += "<p class='msg'>This feed has been marked for removal: to complete the removal process this, click SAVE at the bottom of this page.</p>";
+function removeFeed(e) {
+    e.target.innerHTML = "<p class='msg'>This feed has been marked for removal: to complete the removal process this, click SAVE at the bottom of this page.</p>";
 }
-function renameThisFunction2(e) {
-    e.target.parentNode.parentNode.innerHTML += "<p class='msg'>This stream has been marked for removal: to complete the removal process this, click SAVE at the bottom of this page.</p>";
+function removeStream(e) {
+    e.target.parentNode.innerHTML = "<p>MARKED FOR REMOVAL</p>";
 }
 
 
@@ -174,7 +185,7 @@ function addListeners() {
         // Only add event listener if the isn't one already
         if (typeof(objs[i].onclick) != "function") {
             objs[i].addEventListener('click', function (e) {
-                renameThisFunction2(e);
+                removeStream(e);
             }, false);
         }
     }
@@ -185,7 +196,7 @@ function addListeners() {
         // Only add event listener if the isn't one already
         if (typeof(fobjs[j].onclick) != "function") {
             fobjs[j].addEventListener('click', function (e) {
-                renameThisFunction1(e);
+                removeFeed(e);
             }, false);
         }
     }
