@@ -83,8 +83,6 @@ Settings | Feed Reader
 <ul>
     <li><a href='index.html'>Home</a></li>
     <li class='current'><a href='settings.html'>Settings</a></li>
-    <li><a href='appearance.html'>Appearance</a></li>
-    <li><a href='about.html'>About</a></li>
 </ul>
 
 
@@ -96,15 +94,17 @@ Settings | Feed Reader
 
 <h2>Settings</h2>
 
+<p>This is the place to add and remove feeds. If you wish, you can group the feeds that you want to be displayed together in sets.</p>
 
-<p>This is the place to add, remove, and organise your feeds.</p>
+<p>Once you're satisfied with your changes, click SAVE ALL CHANGES at the bottom of this page, and you'll
+be prompted to save a settings file.</p>
+
+<p>If you don't want to save your changes, just reload this page to start anew.</p>
 
 <div id="newFeedFoo">
     <p id="newFeedFooClose" onclick="newFeedFooClose()"><img src='/home/katie/prog/foofurple_feeds/media/images/close_icon.png' alt='close'></p>
     <h3>Add a new feed:</h3>
     <p>
-        Feed name:
-        <input type='text' id="feedNameInput" />
         Feed url:
         <input type='text' id="feedNameButton" />
         <button onclick="reallyAddFeed()">Submit</button>
@@ -112,9 +112,9 @@ Settings | Feed Reader
 </div>
 <div id="addStream">
     <p id="addStreamClose" onclick="addStreamClose()"><img src='/home/katie/prog/foofurple_feeds/media/images/close_icon.png' alt='close'></p>
-    <h3>Add a new stream</h3>
+    <h3>Add a new set of feeds:</h3>
     <p>
-        Stream name:
+        Name:
         <input type='text' id="newStreamName" />
         <button onclick="reallyAddStream()">Submit</button>
     </p>
@@ -139,7 +139,7 @@ Settings | Feed Reader
 
 </div> <!--#streamsGoHere-->
 
-<button id="addStreamButton" onclick='addStream()'>Create a new set of feeds</button>
+<button id="addStreamButton" onclick='addStream()'>New Set of Feeds</button>
 <button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 
 
@@ -155,7 +155,7 @@ Settings | Feed Reader
 
 <div id="footer">
 <div id="footer_inner">
-<p>Feeds were last updated on Thu Dec  6 15:40:46 2012</p>
+<p>Feeds last updated on Saturday 8 December at 01:14.</p>
 </div>
 </div>
 

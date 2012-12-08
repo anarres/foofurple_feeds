@@ -9,7 +9,7 @@ import cache
 import webpagifier
 import feed_sifter
 from settings import OUTPUT_DIR, MEDIA_DIR
-from feed_utils import _slugify
+from utils import slugify
 
 def display_wait_page():
     webbrowser.open('%swait.html' % OUTPUT_DIR)
@@ -61,12 +61,12 @@ def unique_title_and_slug(streams,s):
             title = s['stream_name'] + str(c)
             if not title_match(streams, title):
                 break
-    slug = _slugify(title)
+    slug = slugify(title)
     if slug_match(streams, slug):
         c = 1
         while True:
             c += 1
-            slug = _slugify(title) + str(c)
+            slug = slugify(title) + str(c)
             if not slug_match(streams, slug):
                 break
     return (title, slug)

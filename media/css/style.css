@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Helvetica, sans-serif;
-    color: #1e0f01;
+    color: #000000;
 }
 html, body {
     height: 100%;
@@ -21,12 +21,13 @@ html, body {
 #footer_inner {
     max-width: 700px;
     margin: 0px auto;
-    border-top: 3px solid #34b8ba;
+    border-top: 2px solid #34b8ba;
 }
 h2, h3, h4, h5, h6 {
     font-size: 1.3em;
     font-weight: normal;
     padding: 10px 0px;
+    color: #424242;
 }
 h1, h1 a {
     font-family: Georgia, serif;
@@ -34,8 +35,7 @@ h1, h1 a {
     font-size: 0.8em;
     padding: 0px;
     text-align: center;
-    color: #34b8ba;
-    color: #006466;
+    color: #424242;
 }
 h2 {
     font-family: Georgia, serif;
@@ -60,7 +60,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #aa00b1;
+    color: #dc0000;
 }
 li {
     list-style: none;
@@ -117,7 +117,7 @@ input, textarea {
     margin: 4px 0px;
 }
 #nav li.current {
-    border: 2px solid #34b8ba;
+    border: 1px solid #34b8ba;
     background-color:#e6fbff;
 }
 #nav h3 {
@@ -144,23 +144,18 @@ input, textarea {
     margin-left: 4px;
 }
 #settings_nav li.current {
-    border: 2px solid #34b8ba;
+    border: 1px solid #34b8ba;
     background-color:#e6fbff;
 }
 #settings_nav a {
     padding: 2px 8px;
     padding-left: 0px;
+    font-size: 0.8em;
     font-weight: normal;
-    font-size: 0.75em;
-    color: #424242;
 }
 #settings_nav a:hover {
-    color: #aa00b1;
+    color: #dc0000;
 }
-
-
-
-
 
 /* Footer */
 #footer {
@@ -180,7 +175,7 @@ input, textarea {
 /* Splash home page */
 div.fancy {
     border-radius:10px;
-    border: 3px solid grey;
+    border: 2px solid grey;
     text-align: center;
     width: 150px;
     min-height: 100px;
@@ -203,27 +198,34 @@ div.fancy h3 a:hover {
 }
 
 /* Settings page */
-
 div.stream {
     padding: 5px 10px;
     padding-bottom: 20px;
     clear: both;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid grey;
     margin: 40px 0px;
 }
 div.stream h3 {
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding: 0px;
 }
 div.stream p {
     padding: 2px 0px;
+}
+div.stream li {
+    border-bottom: 1px dotted grey;
+}
+div.stream li a {
+    color: #000000;
+}
+div.stream li a:hover {
+    text-decoration: underline;
 }
 #newFeedFoo, #addStream, #saveAllChanges {
     padding:10px;
     padding-top:5px;
     background-color: white;
-    border:3px solid grey;
+    border:2px solid grey;
     border-radius: 5px;
     position:fixed;
     top:10px;
@@ -235,10 +237,18 @@ div.stream p {
     cursor: pointer;
     float: right;
 }
+#newFeedFoo, #addStream h3 {
+    font-size: 1em;
+    font-weight:bold;
+}
+input.streamNameInput {
+    width: 190px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+}
 button.bigButton {
-    font-size: 1.3em;
-    margin-top: 50px;
     padding: 5px;
+    width: 100%;
 }
 button.addFeedToStream {
     margin: 0px;
@@ -253,18 +263,28 @@ button.addFeedToStream:hover {
     background-color: #fffe89;
 }
 span.remove_stream, span.remove_feed {
-    font-size: 0.8em;
     color: #aa0000;
     cursor: pointer;
 }
-span.remove_stream:hover, span.remove_feed:hover {
-    color: #aa00b1;
+span.remove_feed {
+    display: block;
+    float: right;
 }
+span.remove_stream {
+    display: block;
+    float: right;
+}
+span.remove_stream:hover, span.remove_feed:hover {
+    color: #dc0000;
+}
+
+
+
 
 /* Main display of stream / feed items */
 
 .streamItem {
-    border-top: 3px solid #34b8ba;
+    border-top: 2px solid #34b8ba;
     max-width: 700px;
     min-width: 200px;
 }
@@ -273,12 +293,16 @@ div.feed_icon {
     height: 100%;
     float: left;
 }
+
+
+
 div.default_icon {
     background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');
     padding: 3px;
     min-height: 60px;
     text-align: center;
-    border: 3px solid #34b8ba;
+    border: 2px solid #34b8ba;
+    border-top: none;
     border-radius: 3px;
 }
 div.default_icon a {
@@ -320,7 +344,8 @@ div.list_item img {
 div.feed_icon img {
     max-width: 80px;
     height: auto;
-    border: 3px solid #34b8ba;
+    border: 2px solid #34b8ba;
+    border-top: none;
     border-radius: 3px;
 }
 
