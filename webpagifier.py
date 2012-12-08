@@ -7,7 +7,7 @@ from jinja2.environment import Environment
 import logging
 import datetime
 
-from settings import *
+from settings import BASE_DIR, OUTPUT_DIR, GLOBS
 import feed_sifter
 from utils import nice_now
 
@@ -19,7 +19,20 @@ def date_msg():
     msg = "Feeds last updated on %s." % now
     return msg
 
+def make_wait_page():
+    tmpl = env.get_template('wait.html')
+    f = open('%swait.html' % OUTPUT_DIR, 'w')
+    f.write(tmpl.render({'GLOBS':GLOBS}))
+    f.close()
+
+
 def make_all_the_webpages(streams):
+
+    # Write the style.css
+    tmpl = env.get_template('style.css')
+    f = open('%sstyle.css' % OUTPUT_DIR, 'w')
+    f.write(tmpl.render({'GLOBS':GLOBS}))
+    f.close()
 
     footer = date_msg()
 
@@ -37,7 +50,6 @@ def make_all_the_webpages(streams):
 
     # Write the stream pages 
     for s in streams:
-
         tmpl = env.get_template('stream.html')
         f = open(s.filepath, 'w')
         foo = tmpl.render({'stream':s,'streams':streams,'GLOBS':GLOBS,'footer':footer})

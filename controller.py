@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import json
 import shelve
 import webbrowser
+import json
 
 import cache
 import webpagifier
 import feed_sifter
-from settings import OUTPUT_DIR, MEDIA_DIR
+from settings import OUTPUT_DIR, JS_DIR
 from utils import slugify
 
 def display_wait_page():
@@ -73,15 +73,16 @@ def unique_title_and_slug(streams,s):
 
 
 def main():
+    webpagifier.make_wait_page()
     display_wait_page()
-    json_foo = open('%sjs/jsonFoo.js' % MEDIA_DIR,'r').read()
+
+    json_foo = open('%sjsonFoo.js' % JS_DIR,'r').read()
     start_delimiter = """/*STARTJSON*/"""
     end_delimiter = """/*ENDJSON*/"""
     json_foo = json_foo.split(start_delimiter)[1]
     json_foo = json_foo.split(end_delimiter)[0]
 
     json_streams = json.loads(json_foo)
-
     streams = []
 
     for s in json_streams:

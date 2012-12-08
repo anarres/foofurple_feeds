@@ -3,8 +3,7 @@
 #
 # feed_sifter.py
 # takes data from feedparser/feedcache and repackages it 
-# so as to be displays in 'streams' or sets of feeds.
-#
+# so as to be displays in 'streams' or sets of feeds.#
 #
 #
 
@@ -12,7 +11,7 @@ import shelve
 import time
 
 import cache
-from settings import *
+from settings import OUTPUT_DIR
 
 #
 # CLASSES TO HOLD THE REPACKAGED DATA

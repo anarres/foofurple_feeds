@@ -181,7 +181,7 @@ div.fancy {
     min-height: 100px;
     float: left;
     margin: 15px;
-    background-image: url('/home/katie/prog/foofurple_feeds/media/images/button-bg.png');
+    background-image: url('/home/katie/prog/foofurple_feeds/images/button-bg.png');
     background-size: 100% 100%;
 }
 div.fancy h3 a {
@@ -292,7 +292,7 @@ div.feed_icon {
 }
 
 div.default_icon {
-    background-image: url('/home/katie/prog/foofurple_feeds/media/images/default.png');
+    background-image: url('/home/katie/prog/foofurple_feeds/images/default.png');
     padding: 3px;
     min-height: 60px;
     text-align: center;
@@ -343,5 +343,4 @@ div.feed_icon img {
     border-top: none;
     border-radius: 3px;
 }
-
 

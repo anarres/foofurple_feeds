@@ -1,0 +1,347 @@
+/* Overall layout */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, sans-serif;
+    color: #000000;
+}
+html, body {
+    height: 100%;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+#footer, #push {
+	height: 142px; /* .push must be the same height as .footer */
+    clear: both;
+}
+#footer_inner {
+    max-width: 700px;
+    margin: 0px auto;
+    border-top: 2px solid #34b8ba;
+}
+h2, h3, h4, h5, h6 {
+    font-size: 1.3em;
+    font-weight: normal;
+    padding: 10px 0px;
+    color: #424242;
+}
+h1, h1 a {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 0px;
+    text-align: center;
+    color: #424242;
+}
+h2 {
+    font-family: Georgia, serif;
+    padding: 10px 0px;
+}
+#main h2 {
+    font-size: 1.6em;
+    padding-bottom: 20px;
+}
+p {
+    line-height: 1.2em;
+    padding: 7px 0px;
+}
+p.msg {
+    color: blue;
+    font-size:0.8em;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+a {
+    color: #aa0000;
+    text-decoration: none;
+}
+a:hover {
+    color: #dc0000;
+}
+li {
+    list-style: none;
+}
+input, button {
+    display: block;
+    padding: 3px 5px;
+    border: 1px solid #424242;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 1px 0px;
+}
+input.radioButton {
+    display: inline;
+}
+button {
+    margin: 10px 0px;
+}
+input, textarea {
+    cursor: text;
+}
+#container {
+    max-width: 920px;
+    margin: 0px auto;
+}
+#main {
+    max-width: 700px;
+    min-width: 200px;
+    margin-left: 10px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    float: left;
+}
+#main * {
+    max-width: 100%;
+}
+#side {
+    width: 180px;
+    padding-right:20px;
+    float: left;
+}
+#side * {
+    max-width: 100%;
+}
+
+/* Nav */ 
+#nav {
+    margin: 2px 0px;
+}
+#nav li {
+    list-style: none;
+    border-radius: 6px;
+    padding: 2px 4px;
+    margin: 4px 0px;
+}
+#nav li.current {
+    border: 1px solid #34b8ba;
+    background-color:#e6fbff;
+}
+#nav h3 {
+    padding-top:20px;
+    padding-bottom: 0px;
+    text-align: left;
+}
+#nav a {
+    font-weight: normal;
+}
+
+/* settings_nav */ 
+#settings_nav {
+    margin: 2px 0px;
+    margin-right: 60px;
+    text-align: right;
+    float: right;
+}
+#settings_nav li {
+    display: inline;
+    list-style: none;
+    border-radius: 6px;
+    padding: 2px 4px;
+    margin-left: 4px;
+}
+#settings_nav li.current {
+    border: 1px solid #34b8ba;
+    background-color:#e6fbff;
+}
+#settings_nav a {
+    padding: 2px 8px;
+    padding-left: 0px;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+#settings_nav a:hover {
+    color: #dc0000;
+}
+
+/* Footer */
+#footer {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px 0px;
+    padding: 5px 0px;
+    clear: both;
+}
+
+/* Header */
+#header img {
+    width: 120px;
+    height: auto;
+}
+
+/* Splash home page */
+div.fancy {
+    border-radius:10px;
+    border: 2px solid grey;
+    text-align: center;
+    width: 150px;
+    min-height: 100px;
+    float: left;
+    margin: 15px;
+    background-image: url('{{ GLOBS.IMAGES_DIR }}button-bg.png');
+    background-size: 100% 100%;
+}
+div.fancy h3 a {
+    display: block;
+    color: #fdfae2;
+    font-weight: normal;
+    font-size: 0.8em;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+}
+div.fancy h3 a:hover {
+    color: #fffe89;
+}
+
+/* Settings page */
+div.stream {
+    padding: 5px 10px;
+    padding-bottom: 20px;
+    clear: both;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin: 40px 0px;
+}
+div.stream h3 {
+    padding: 0px;
+}
+div.stream p {
+    padding: 2px 0px;
+}
+div.stream li {
+    border-bottom: 1px dotted grey;
+}
+div.stream li a {
+    color: #000000;
+}
+div.stream li a:hover {
+    text-decoration: underline;
+}
+#newFeedFoo, #addStream, #saveAllChanges {
+    padding:10px;
+    padding-top:5px;
+    background-color: white;
+    border:2px solid grey;
+    border-radius: 5px;
+    position:fixed;
+    top:10px;
+    left:10px;
+    z-index:2;
+    display: none;
+}
+#newFeedFooClose, #addStreamClose, #saveAllChangesClose {
+    cursor: pointer;
+    float: right;
+}
+#newFeedFoo, #addStream h3 {
+    font-size: 1em;
+    font-weight:bold;
+}
+input.streamNameInput {
+    width: 190px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+}
+button.bigButton {
+    padding: 5px;
+    width: 100%;
+}
+button.addFeedToStream {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    background-color: #ffffff;
+}
+button.addFeedToStream:hover {
+    background-color: #fffe89;
+}
+span.remove_stream, span.remove_feed {
+    color: #aa0000;
+    cursor: pointer;
+}
+span.remove_feed {
+    display: block;
+    float: right;
+}
+span.remove_stream {
+    display: block;
+    float: right;
+}
+span.remove_stream:hover, span.remove_feed:hover {
+    color: #dc0000;
+}
+
+/* Main display of stream / feed items */
+
+.streamItem {
+    border-top: 2px solid #34b8ba;
+    max-width: 700px;
+    min-width: 200px;
+}
+div.feed_icon {
+    width: 80px;
+    height: 100%;
+    float: left;
+}
+
+div.default_icon {
+    background-image: url('{{ GLOBS.IMAGES_DIR }}default.png');
+    padding: 3px;
+    min-height: 60px;
+    text-align: center;
+    border: 2px solid #34b8ba;
+    border-top: none;
+    border-radius: 3px;
+}
+div.default_icon a {
+    font-size: 0.8em;
+}
+div.item_main {
+    max-width: 800px;
+    margin-left: 100px;
+}
+div.item_main img {
+    max-width: 500px;
+    height: auto;
+}
+div.item_meta {
+    font-size: 0.8em;
+    padding-bottom: 10px;
+    padding-top: 3px;
+}
+div.item_meta a {
+    font-size: 1.4em;
+}
+div.enclosures {
+    font-size: 0.8em;
+    padding-top: 5px;
+}
+div.read_more {
+    padding-top: 20px;
+    padding-bottom: 3px;
+    font-size: 0.8em;
+    text-align: right;
+}
+div.list_item {
+    font-size: 0.8em;
+}
+div.list_item img {
+    width: 40px;
+    height: 40px;
+}
+div.feed_icon img {
+    max-width: 80px;
+    height: auto;
+    border: 2px solid #34b8ba;
+    border-top: none;
+    border-radius: 3px;
+}
+
+
