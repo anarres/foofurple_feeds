@@ -1,6 +1,45 @@
-function init() {
-    loadStreams();
-    addListeners();
+function getFeedHtml(stream_name, feed_name, feed_url) {
+    var html = "<li><a class='";
+    html += stream_name;
+    html += "' id='";
+    html += feed_name;
+    html += "' href='";
+    html += feed_url;
+    html += "'>";
+    html += feed_name;
+    html += "</a> <span class='remove_feed'>(remove feed)</span></li>";
+    return html;
+}
+
+function getStreamHtml(number, streamName, feedsArray) {
+    var html = "";
+    html += "<div class='stream'>";
+    html += "<span class='remove_stream'>(remove the entire set)</span>";
+    html += "<h3>";
+    html += "Set of feeds ";
+    html += number;
+    html += "</h3>";
+    html += "<span class='streamTitleList' id='";
+    html += streamName;
+    html += "List'>";
+    html += "<h3>Name:</h3> <input type='text' class='streamNameInput' value='";
+    html += streamName;
+    html += "'>";
+    html += "</span>";
+    html += "<h3>Feeds:</h3>";
+    html += "<ul id='";
+    html += streamName;
+    html += "ListReally'>";
+    for (var j=0; j<feedsArray.length; j++) {
+        var newHtml = getFeedHtml(streamName, feedsArray[j]['name'], feedsArray[j]['url']);
+        html += newHtml;
+    }
+    html += "</ul>";
+    html += "<button class='addFeedToStream' id='";
+    html += streamName;
+    html += "'>Add a feed to this set</button>";
+    html += "</div> <!--.stream-->";
+    return html;
 }
 
 function loadStreams() {
@@ -8,114 +47,114 @@ function loadStreams() {
 
     for (var i=0; i<jsonStreams.length; i++) {
         var number = i+1;
-        html += "<div class='stream'>";
-        html += "<span class='remove_stream'>(remove the entire set)</span>";
-        html += "<h3>";
-        html += "Set of feeds ";
-        html += number;
-        html += "</h3>";
-        html += "<span class='streamTitleList' id='";
-        html += jsonStreams[i]['stream_name'];
-        html += "List'>";
-        html += "<h3>Name:</h3> <input type='text' class='streamNameInput' value='";
-        html += jsonStreams[i]['stream_name'];
-        html += "'>";
-        html += "</span>";
-        html += "<h3>Feeds:</h3>";
-        html += "<ul id='";
-        html += jsonStreams[i]['stream_name'];
-        html += "ListReally'>";
-
-        for (var j=0; j<jsonStreams[i]['feeds'].length; j++) {
-            html += "<li><a class='";
-            html += jsonStreams[i]['stream_name'];
-            html += "' id='";
-            html += jsonStreams[i]['feeds'][j]['name'];
-            html += "' href='";
-            html += jsonStreams[i]['feeds'][j]['url'];
-            html += "'>";
-            html += jsonStreams[i]['feeds'][j]['name'];
-            html += "</a> <span class='remove_feed'>(remove feed)</span></li>";
-        }
-        html += "</ul>";
-        html += "<button class='addFeedToStream' id='";
-        html += jsonStreams[i]['stream_name'];
-        html += "'>Add a feed to this set</button>";
-        html += "</div> <!--.stream-->";
+        var newHtml = getStreamHtml(number, jsonStreams[i]['stream_name'], jsonStreams[i]['feeds']);
+        html += newHtml;
     }
     document.getElementById('streamsGoHere').innerHTML = html;
 }
 
+function init() {
+    loadStreams();
+    addListeners();
+}
 
-/* ----- GLOBAL VARS ----- */
+function addListeners() {
 
-var listObj;
-var streamName;
+    var kobjs = getElementsByClassName(document, 'addFeedToStream');
+    for (var f=0; f<kobjs.length; f++) {
 
-function newFeedFooClose() {
-    document.getElementById("newFeedFoo").style.display = 'none';
+        // Only add event listener if the isn't one already
+        if (typeof(kobjs[f].onclick) != "function") {
+            kobjs[f].addEventListener('click', function (e) {
+                addFeedToStream(e);
+            }, false);
+        }
+    }
+    var objs = getElementsByClassName(document, 'remove_stream');
+    for (var i=0; i<objs.length; i++) {
+
+        // Only add event listener if the isn't one already
+        if (typeof(objs[i].onclick) != "function") {
+            objs[i].addEventListener('click', function (e) {
+                markStreamForRemoval(e);
+            }, false);
+        }
+    }
+    var fobjs = getElementsByClassName(document, 'remove_feed');
+    for (var j=0; j<fobjs.length; j++) {
+
+        // Only add event listener if the isn't one already
+        if (typeof(fobjs[j].onclick) != "function") {
+            fobjs[j].addEventListener('click', function (e) {
+                markFeedForRemoval(e);
+            }, false);
+        }
+    }
+    var gobjs = getElementsByClassName(document, 'add_feed');
+    for (var k=0; k<gobjs.length; k++) {
+        gobjs[k].addEventListener('click', function (e) {
+            var parentDiv = e.target.parentNode;
+            var childArray = parentDiv.childNodes;
+            var feedName = childArray[1].value;
+            var feedUrl = childArray[3].value;
+            var fooObj = parentDiv.parentNode;
+            fooObj.innerHTML += "FOO!!"; 
+        }, false);
+    }
+}
+
+
+/* ---  Functions to open divs --- */
+
+function displayAddStream() {
+    document.getElementById('addStream').style.display = "block";
+}
+function displayAddFeed() {
+    document.getElementById("newFeed").style.display = 'block';
+}
+
+
+/* --- Functions to close divs by setting them to display:none --- */
+
+function newFeedClose() {
+    document.getElementById("newFeed").style.display = 'none';
 }
 function addStreamClose() {
     document.getElementById('addStream').style.display = 'none';
 }
-
 function saveAllChangesClose() {
     document.getElementById("saveAllChanges").style.display = 'none';
 }
 
-function addFeedToStream(e) {
-    document.getElementById("newFeedFoo").style.display = 'block';
-    streamName = e.target.id;
-    var listId = "" + e.target.id + "ListReally";
-    listObj = document.getElementById(listId);
+/* --- */
+
+function markFeedForRemoval(e) {
+    e.target.parentNode.innerHTML = "<p>MARKED FOR REMOVAL</p>";
+}
+function markStreamForRemoval(e) {
+    e.target.parentNode.innerHTML = "<p>MARKED FOR REMOVAL</p>";
 }
 
-function reallyAddFeed() {
-    var fUrl = document.getElementById('feedNameButton').value;
-
-    var newHtml = "<li><a class='newFeed' href='";
-    newHtml += streamName;
-    newHtml += fUrl;
-    newHtml += "'>";
-    newHtml += fUrl;
-    newHtml += "</a> <p class='msg'>Not yet saved: to finish adding this feed, you'll have to save your settings by clicking the SAVE ALL button at the bottom of this page.</p></li>";
-
-    listObj.innerHTML += newHtml;
-    newFeedFooClose();    
+function addFeedToStream(e) {
+    var streamName = e.target.id;
+    document.getElementById("newFeedStreamName").value = streamName;
+    displayAddFeed();
+}
+function addFeed() {
+    var feed_url = document.getElementById('feedNameButton').value;
+    var streamName = document.getElementById('newFeedStreamName').value;
+    var newHtml = getFeedHtml(streamName, 'New feed', feed_url);
+    var targetId = streamName + "ListReally";
+    document.getElementById(targetId).innerHTML += newHtml;
+    newFeedClose();    
 }
 function addStream() {
-    document.getElementById('addStream').style.display = "block";
-}
-function reallyAddStream() {
-
     var newStreamName = document.getElementById('newStreamName').value;
     var myDiv = document.getElementById("streamsGoHere");
-    var html = "<div class='stream'>";
-    html += "<span class='remove_stream'>(remove the entire set)</span>";
-
-    html += "<h3>";
-    html += "Set of feeds: ";
-    html += "</h3>";
-
-    html += "<span class='streamTitleList' id='";
-    html += newStreamName;
-    html += "List'>";
-    html += "<h3>Name:</h3> <input type='text' class='streamNameInput' value='";
-    html += newStreamName;
-    html += "'>";
-    html += "</span>";
-
-    html += "<h3>Feeds:</h3>";
-    html += "<ul id='";
-    html += newStreamName;
-    html += "ListReally'>";
-
-    html += "</ul>";
-    html += "<button class='addFeedToStream' id='";
-    html += newStreamName;
-    html += "'>Add a feed to this set</button>";
-    html += "</div> <!--.stream-->";
-
+    var emptyArray = [];
+    var ulArray = getElementsByClassName(document, 'streamTitleList');
+    var number = ulArray.length + 1;
+    var html = getStreamHtml(number, newStreamName, emptyArray);
     myDiv.innerHTML += html;
     addListeners();
     addStreamClose();
@@ -132,6 +171,9 @@ function saveAllChanges() {
         output += ulArray[i].id.slice(0,-4);
         output += "\",";
         output += "\"feeds\": [";
+
+        // THIS IS WHERE I'M NOT PICKING UP THE NEW FEEDS
+
         var listItems = getElementsByClassName(document,ulArray[i].id.slice(0,-4));
         for (var j=0; j<listItems.length; j++) {
             output += "{\"name\":\"";
@@ -157,62 +199,4 @@ function saveAllChanges() {
     document.getElementById('saveAllChangesLink').setAttribute('href', uriFoo);
     document.getElementById('saveAllChanges').style.display="block";
 }
-
-function removeFeed(e) {
-    e.target.innerHTML = "<p class='msg'>This feed has been marked for removal: to complete the removal process this, click SAVE at the bottom of this page.</p>";
-}
-function removeStream(e) {
-    e.target.parentNode.innerHTML = "<p>MARKED FOR REMOVAL</p>";
-}
-
-
-function addListeners() {
-
-    var kobjs = getElementsByClassName(document, 'addFeedToStream');
-    for (var f=0; f<kobjs.length; f++) {
-
-        // Only add event listener if the isn't one already
-        if (typeof(kobjs[f].onclick) != "function") {
-            kobjs[f].addEventListener('click', function (e) {
-                addFeedToStream(e);
-            }, false);
-        }
-    }
-
-    var objs = getElementsByClassName(document, 'remove_stream');
-    for (var i=0; i<objs.length; i++) {
-
-        // Only add event listener if the isn't one already
-        if (typeof(objs[i].onclick) != "function") {
-            objs[i].addEventListener('click', function (e) {
-                removeStream(e);
-            }, false);
-        }
-    }
-
-    var fobjs = getElementsByClassName(document, 'remove_feed');
-    for (var j=0; j<fobjs.length; j++) {
-
-        // Only add event listener if the isn't one already
-        if (typeof(fobjs[j].onclick) != "function") {
-            fobjs[j].addEventListener('click', function (e) {
-                removeFeed(e);
-            }, false);
-        }
-    }
-
-    var gobjs = getElementsByClassName(document, 'add_feed');
-    for (var k=0; k<gobjs.length; k++) {
-        gobjs[k].addEventListener('click', function (e) {
-            var parentDiv = e.target.parentNode;
-            var childArray = parentDiv.childNodes;
-            var feedName = childArray[1].value;
-            var feedUrl = childArray[3].value;
-            var fooObj = parentDiv.parentNode;
-            fooObj.innerHTML += "FOO!!"; 
-        }, false);
-    }
-}
-
-
 

@@ -60,14 +60,17 @@ be prompted to save a settings file.</p>
 
 <p>If you don't want to save your changes, just reload this page to start anew.</p>
 
-<div id="newFeedFoo">
-    <p id="newFeedFooClose" onclick="newFeedFooClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
+<div id="newFeed">
+    <p id="newFeedClose" onclick="newFeedClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
     <h3>Add a new feed:</h3>
     <p>
         Feed url:
         <input type='text' id="feedNameButton" />
-        <button onclick="reallyAddFeed()">Submit</button>
+        <button onclick="addFeed()">Submit</button>
     </p>
+
+    <input type="hidden" id="newFeedStreamName" value="None">
+
 </div>
 <div id="addStream">
     <p id="addStreamClose" onclick="addStreamClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
@@ -75,14 +78,14 @@ be prompted to save a settings file.</p>
     <p>
         Name:
         <input type='text' id="newStreamName" />
-        <button onclick="reallyAddStream()">Submit</button>
+        <button onclick="addStream()">Submit</button>
     </p>
 </div>
 <div id="saveAllChanges">
     <p id="saveAllChangesClose" onclick="saveAllChangesClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
     <h3>Save all changes</h3>
     <p>To save your changes, please right-click the file below and 
-        save it as {{ GLOBS.JSON_DIR }}streams.json. You'll probably
+        save it as {{ GLOBS.JS_DIR }}jsonFoo.js. You'll probably
         need to overwrite an existing file.</p>
     <p><a id="saveAllChangesLink" href="">
         <img src='{{ GLOBS.IMAGES_DIR }}save.png' alt='save'>
@@ -98,7 +101,7 @@ be prompted to save a settings file.</p>
 
 </div> <!--#streamsGoHere-->
 
-<button id="addStreamButton" onclick='addStream()'>New Set of Feeds</button>
+<button id="addStreamButton" onclick='displayAddStream()'>New Set of Feeds</button>
 <button class='bigButton' onclick='saveAllChanges()'>SAVE ALL CHANGES</button>
 
 {% endblock %}

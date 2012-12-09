@@ -221,7 +221,7 @@ div.stream li a {
 div.stream li a:hover {
     text-decoration: underline;
 }
-#newFeedFoo, #addStream, #saveAllChanges {
+#newFeed, #addStream, #saveAllChanges {
     padding:10px;
     padding-top:5px;
     background-color: white;
@@ -233,11 +233,11 @@ div.stream li a:hover {
     z-index:2;
     display: none;
 }
-#newFeedFooClose, #addStreamClose, #saveAllChangesClose {
+#newFeedClose, #addStreamClose, #saveAllChangesClose {
     cursor: pointer;
     float: right;
 }
-#newFeedFoo, #addStream h3 {
+#newFeed, #addStream h3 {
     font-size: 1em;
     font-weight:bold;
 }
