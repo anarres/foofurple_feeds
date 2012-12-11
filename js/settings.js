@@ -22,7 +22,9 @@ function getStreamHtml(number, streamName, feedsArray) {
     html += "<span class='streamTitleList' id='";
     html += streamName;
     html += "List'>";
-    html += "<h3>Name:</h3> <input type='text' class='streamNameInput' value='";
+    html += "<h3>Name:</h3> <input type='text' class='streamNameInput' id='";
+    html += streamName;
+    html += "NameInput' value='";
     html += streamName;
     html += "'>";
     html += "</span>";
@@ -168,11 +170,22 @@ function saveAllChanges() {
 
     for (var i=0; i<ulArray.length; i++) {
         output += "{\"stream_name\":\"";
-        output += ulArray[i].id.slice(0,-4);
+        var tempName = ulArray[i].id.slice(0,-4);
+        tempName += "NameInput";
+        var streamName = document.getElementById(tempName).value;
+
+        output += streamName;
+
+
+
+
+
+
+
+        //output += ulArray[i].id.slice(0,-4);
         output += "\",";
         output += "\"feeds\": [";
 
-        // THIS IS WHERE I'M NOT PICKING UP THE NEW FEEDS
 
         var listItems = getElementsByClassName(document,ulArray[i].id.slice(0,-4));
         for (var j=0; j<listItems.length; j++) {

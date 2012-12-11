@@ -2,8 +2,9 @@
 # coding: utf-8
 #
 # feed_sifter.py
-# takes data from feedparser/feedcache and repackages it 
-# so as to be displays in 'streams' or sets of feeds.#
+# takes data from feedparser/feedcache and repackages it
+# so as to be displays in 'streams' or sets of feeds.
+#
 #
 #
 
@@ -11,7 +12,7 @@ import shelve
 import time
 
 import cache
-from settings import OUTPUT_DIR
+from settings import *
 
 #
 # CLASSES TO HOLD THE REPACKAGED DATA
@@ -22,7 +23,7 @@ class FeedInfo(object):
     def __init__(self, link, title, logo):
         self.link = link
         self.title = title
-        self.logo = logo     
+        self.logo = logo
     def __str__(self):
         return "FeedInfo object: title: %s, link: %s, logo: %s." % (self.title, self.link, self.logo)
 
@@ -39,9 +40,9 @@ class StreamItem(object):
         self.content = content
         self.date = date
         self.nice_date = time.strftime("%a, %d %b %Y", date)
-        self.images = images               # A list of urls
-        self.audios = audios                 # A list of urls
-        self.videos = videos                 # A list of urls
+        self.images = images # A list of urls
+        self.audios = audios # A list of urls
+        self.videos = videos # A list of urls
 
     def __str__(self):
         return "StreamItem object, title: %s." % self.title
@@ -68,17 +69,17 @@ class Stream(object):
 #
 def get_info( stream_data ):
     """ Takes the feedparser/feedcache data for a stream
-        and packages it as a list of StreamItem objects """
+and packages it as a list of StreamItem objects """
 
     stream_items = []
     for d in stream_data:
-        feed_info_obj = FeedInfo( get_feed_link(d.feed), 
+        feed_info_obj = FeedInfo( get_feed_link(d.feed),
             get_feed_title(d.feed), get_feed_logo(d.feed) )
 
         for e in d.entries:
-            e_info_obj = StreamItem(feed_info_obj, get_entry_link(e), 
-                get_entry_title(e), get_entry_author(e), 
-                get_entry_description(e), get_entry_content(e), 
+            e_info_obj = StreamItem(feed_info_obj, get_entry_link(e),
+                get_entry_title(e), get_entry_author(e),
+                get_entry_description(e), get_entry_content(e),
                 get_entry_date(e), get_images(e), get_audio(e), get_video(e))
             stream_items.append(e_info_obj)
 
@@ -135,11 +136,11 @@ def get_entry_author(e):
 def get_entry_description(e):
     return e.description
     """
-    try:
-        return e.description
-    except:
-        return "UNKNOWN"
-    """
+try:
+return e.description
+except:
+return "UNKNOWN"
+"""
 
 def get_entry_content(e):
     try:

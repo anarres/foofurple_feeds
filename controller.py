@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import json
 import shelve
 import webbrowser
-import json
+import feedparser
 
 import cache
 import webpagifier
@@ -73,21 +74,34 @@ def unique_title_and_slug(streams,s):
 
 
 def main():
-    webpagifier.make_wait_page()
     display_wait_page()
-
     json_foo = open('%sjsonFoo.js' % JS_DIR,'r').read()
     start_delimiter = """/*STARTJSON*/"""
     end_delimiter = """/*ENDJSON*/"""
     json_foo = json_foo.split(start_delimiter)[1]
     json_foo = json_foo.split(end_delimiter)[0]
-
     json_streams = json.loads(json_foo)
-    streams = []
 
+    # Check if any feeds are in need of a title
+    overwrite_json = False
+    for s in json_streams:
+
+        for f in s['feeds']:
+
+            if f['name'] == "New feed":
+                overwrite_json = True
+                d = feedparser.parse(f['url'])
+                f['name'] = d['feed']['title']
+
+    if overwrite_json:
+        output = "var jsonStreams = /*STARTJSON*/%s/*ENDJSON*/;" % json.dumps(json_streams)
+        f = open("%sjsonFoo.js" % JS_DIR, 'w')
+        f.write(output)
+        f.close()
+
+    streams = []
     for s in json_streams:
         (stream_name, stream_slug) = unique_title_and_slug(streams, s)
-
         urls = []
         feeds = []
         for f in s['feeds']:
@@ -103,5 +117,6 @@ def main():
     display_home_page()
 
 main()
+
 
 
