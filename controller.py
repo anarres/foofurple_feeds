@@ -91,7 +91,11 @@ def main():
             if f['name'] == "New feed":
                 overwrite_json = True
                 d = feedparser.parse(f['url'])
-                f['name'] = d['feed']['title']
+                try:
+                    f['name'] = d['feed']['title']
+                except:
+                    pass
+
 
     if overwrite_json:
         output = "var jsonStreams = /*STARTJSON*/%s/*ENDJSON*/;" % json.dumps(json_streams)

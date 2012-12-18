@@ -39,7 +39,7 @@ class StreamItem(object):
         self.description = description
         self.content = content
         self.date = date
-        self.nice_date = time.strftime("%a, %d %b %Y", date)
+        self.nice_date = date                   #time.strftime("%a, %d %b %Y", date)
         self.images = images # A list of urls
         self.audios = audios # A list of urls
         self.videos = videos # A list of urls
