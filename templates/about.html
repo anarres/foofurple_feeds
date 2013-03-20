@@ -1,54 +1,25 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"></meta>
-<title>
- 
+
+{% block title %} 
 
 Settings | Feed Reader
 
-
-</title>
-
-<meta name="description" content="DESCRIPTION GOES HERE">
-
-<link rel="icon" type="image/png" href="/home/katie/prog/foofurple_feeds/images/dinoIcon2.png">
-<link rel="stylesheet" type="text/css" href="/home/katie/prog/foofurple_feeds/output/style.css"></link>
+{% endblock %}
 
 
 
-<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/js/utils.js'></script>
-<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/js/jsonFoo.js'></script>
-<script type='text/javascript' src='/home/katie/prog/foofurple_feeds/js/settings.js'></script>
+{% block javascript %}
 
- 
+<script type='text/javascript' src='{{ GLOBS.JS_DIR }}utils.js'></script>
+<script type='text/javascript' src='{{ GLOBS.JS_DIR }}jsonFoo.js'></script>
+<script type='text/javascript' src='{{ GLOBS.JS_DIR }}settings.js'></script>
 
-</head>
-<body onload="init()">
+{% endblock %}
 
-<div id="wrapper">
 
-<div id="container">
 
-<div id="side">
-    <a href="/home/katie/prog/foofurple_feeds/output/index.html">
-        <img src="/home/katie/prog/foofurple_feeds/images/dinoLogo.png" 
-            alt="Cute baby dinosaur logo">
-    </a>
-    <br>
-    <h1><a href="index.html">Feed Reader</a></h1>
-
-    <div id="nav">
-
-         
-
-    </div> <!--#nav-->
-
-</div>
-
-<div id="settings_nav">
-     
+{% block settings_nav %} 
 
 <ul>
     <li><a href='index.html'>Sets of Feeds</a></li>
@@ -56,12 +27,11 @@ Settings | Feed Reader
     <li class='current'><a href='about.html'>About</a></li>
 </ul>
 
+{% endblock %}
 
-</div> <!--#settings_nav-->
 
 
-<div id="main">
-    
+{% block main_content %}
 
 
 
@@ -109,22 +79,5 @@ Foofurple doesn't mean anything, we just wanted a distinctive name and we think 
 
 </div> <!--#main-->
 
+{% endblock %}
 
-</div> <!--#main-->
-
-
-</div> <!--#container-->
-
-
-<div id="push"></div>
-
-</div> <!-- close wrapper --> 
-
-<div id="footer">
-<div id="footer_inner">
-<p>Feeds last updated on Wednesday 20 March at 18:13.</p>
-</div>
-</div>
-
-</body>
-</html>

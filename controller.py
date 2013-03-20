@@ -9,18 +9,17 @@ import feedparser
 import cache
 import webpagifier
 import feed_sifter
-from settings import OUTPUT_DIR, JS_DIR
+from settings import OUTPUT_DIR, JS_DIR, TEMPLATES_DIR
 from utils import slugify
 
 def display_wait_page():
-    webbrowser.open('%swait.html' % OUTPUT_DIR)
+    webbrowser.open('%swait.html' % TEMPLATES_DIR)
 
 def display_home_page():
     webbrowser.open('%sindex.html' % OUTPUT_DIR)
 
 def get_parsed_data(urls=[]):
     """ Use Feedcache and FeedParser to get and cache the feeds """
-
     parsed_datums = []
     print "Saving feed data to ./.feedcache"
     storage = shelve.open('.feedcache')

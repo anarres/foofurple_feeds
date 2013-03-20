@@ -45,7 +45,14 @@ def make_all_the_webpages(streams):
     # Write the settings page
     tmpl = env.get_template('settings.html')
     f = open('%ssettings.html' % OUTPUT_DIR, 'w')
-    f.write(tmpl.render({'title':'Settings','streams':streams,'GLOBS':GLOBS,'footer':footer}))
+    f.write(tmpl.render({'title':'Settings','GLOBS':GLOBS,'footer':footer}))
+    f.close()
+
+
+    # Write the about page
+    tmpl = env.get_template('about.html')
+    f = open('%sabout.html' % OUTPUT_DIR, 'w')
+    f.write(tmpl.render({'title':'About','GLOBS':GLOBS,'footer':footer}))
     f.close()
 
     # Write the stream pages 

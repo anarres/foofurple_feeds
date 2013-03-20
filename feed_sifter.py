@@ -134,13 +134,10 @@ def get_entry_author(e):
         return "?"
 
 def get_entry_description(e):
-    return e.description
-    """
-try:
-return e.description
-except:
-return "UNKNOWN"
-"""
+    try:
+        return e.description
+    except:
+        return "UNKNOWN"
 
 def get_entry_content(e):
     try:

@@ -22,31 +22,12 @@ Settings | Feed Reader
 {% block settings_nav %} 
 
 <ul>
-    <li><a href='index.html'>Home</a></li>
+    <li><a href='index.html'>Sets of Feeds</a></li>
     <li class='current'><a href='settings.html'>Settings</a></li>
+    <li><a href='about.html'>About</a></li>
 </ul>
 
 {% endblock %}
-
-
-
-
-{% block nav %}
-
-<h2>My Streams:</h2>
-
-<ul>
-
-{% for stre in streams %}
-
-    <li><a href='{{ stre.filepath }}'>{{ stre.title }}</a></li>
-
-{% endfor %}
-
-</ul>
-
-{% endblock %}
-
 
 
 {% block main_content %}
@@ -90,15 +71,9 @@ be prompted to save a settings file.</p>
     <p><a id="saveAllChangesLink" href="">
         <img src='{{ GLOBS.IMAGES_DIR }}save.png' alt='save'>
     Save all changes</a></p>
-    <p>Confused? Read <a href="">why do I have to save a text file?</a></p>
 </div>
 
-
 <div id="streamsGoHere">
-
-
-
-
 </div> <!--#streamsGoHere-->
 
 <button id="addStreamButton" onclick='displayAddStream()'>New Set of Feeds</button>
