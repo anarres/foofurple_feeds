@@ -35,7 +35,7 @@ h2 {
 }
 h1, h1 a {
     font-weight: normal;
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 0px;
     text-align: left;
     color: #424242;
@@ -62,7 +62,7 @@ li {
 }
 input, button {
     display: block;
-    padding: 3px 5px;
+    padding: 1px 5px;
     border: 1px solid #424242;
     border-radius: 3px;
     cursor: pointer;
@@ -181,8 +181,7 @@ div.fancy {
     min-height: 100px;
     float: left;
     margin: 15px;
-    background-color: blue;
-    background-image: url('/home/katie/prog/foofurple_feeds/images/button-bg.png');
+    background-color: #0a7074;
     background-size: 100% 100%;
 }
 div.fancy h3 a {

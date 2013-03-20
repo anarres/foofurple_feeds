@@ -13,7 +13,8 @@ from settings import OUTPUT_DIR, JS_DIR, TEMPLATES_DIR
 from utils import slugify
 
 def display_wait_page():
-    webbrowser.open('%swait.html' % TEMPLATES_DIR)
+    webpagifier.make_wait_page()
+    webbrowser.open('%swait.html' % OUTPUT_DIR)
 
 def display_home_page():
     webbrowser.open('%sindex.html' % OUTPUT_DIR)
