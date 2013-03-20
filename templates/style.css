@@ -7,6 +7,7 @@
 }
 html, body {
     height: 100%;
+    font-size: 16px;
 }
 #wrapper {
 	min-height: 100%;
@@ -29,21 +30,15 @@ h2, h3, h4, h5, h6 {
     padding: 10px 0px;
     color: #424242;
 }
+h2 {
+    font-size: 1.6em;
+}
 h1, h1 a {
-    font-family: Georgia, serif;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 0.8em;
     padding: 0px;
-    text-align: center;
+    text-align: left;
     color: #424242;
-}
-h2 {
-    font-family: Georgia, serif;
-    padding: 10px 0px;
-}
-#main h2 {
-    font-size: 1.6em;
-    padding-bottom: 20px;
 }
 p {
     line-height: 1.2em;
@@ -67,7 +62,7 @@ li {
 }
 input, button {
     display: block;
-    padding: 3px 5px;
+    padding: 1px 5px;
     border: 1px solid #424242;
     border-radius: 3px;
     cursor: pointer;
@@ -105,6 +100,10 @@ input, textarea {
 #side * {
     max-width: 100%;
 }
+#side img {
+    width: 90px;
+    height: auto;
+}
 
 /* Nav */ 
 #nav {
@@ -112,22 +111,28 @@ input, textarea {
 }
 #nav li {
     list-style: none;
-    border-radius: 6px;
-    padding: 2px 4px;
-    margin: 4px 0px;
+    border-radius: 2px;
+    padding: 5px 4px;
+    margin: 7px 0px;
+
+    text-align: right;
 }
 #nav li.current {
-    border: 1px solid #34b8ba;
     background-color:#e6fbff;
 }
 #nav h3 {
     padding-top:20px;
     padding-bottom: 0px;
-    text-align: left;
+    text-align: right;
 }
 #nav a {
+    font-size: 0.9em;
     font-weight: normal;
 }
+#nav li.current a {
+    color: #424242;
+}
+    
 
 /* settings_nav */ 
 #settings_nav {
@@ -143,45 +148,40 @@ input, textarea {
     padding: 2px 4px;
     margin-left: 4px;
 }
-#settings_nav li.current {
-    border: 1px solid #34b8ba;
-    background-color:#e6fbff;
-}
 #settings_nav a {
     padding: 2px 8px;
     padding-left: 0px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: normal;
 }
 #settings_nav a:hover {
     color: #dc0000;
 }
 
+#settings_nav li.current a {
+    color: #aaa;
+}
+
 /* Footer */
 #footer {
-    font-size: 0.8em;
+    font-size: 0.9em;
     text-align: center;
     margin: 5px 0px;
     padding: 5px 0px;
     clear: both;
 }
 
-/* Header */
-#header img {
-    width: 120px;
-    height: auto;
-}
 
 /* Splash home page */
 div.fancy {
-    border-radius:10px;
+    border-radius:5px;
     border: 2px solid grey;
     text-align: center;
     width: 150px;
     min-height: 100px;
     float: left;
     margin: 15px;
-    background-image: url('{{ GLOBS.IMAGES_DIR }}button-bg.png');
+    background-color: #0a7074;
     background-size: 100% 100%;
 }
 div.fancy h3 a {
@@ -289,6 +289,7 @@ div.feed_icon {
     width: 80px;
     height: 100%;
     float: left;
+    margin-right: 10px;
 }
 
 div.default_icon {
@@ -305,7 +306,6 @@ div.default_icon a {
 }
 div.item_main {
     max-width: 800px;
-    margin-left: 100px;
 }
 div.item_main img {
     max-width: 500px;
