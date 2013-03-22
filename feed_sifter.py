@@ -31,13 +31,12 @@ class FeedInfo(object):
 class StreamItem(object):
     """ Contains all the data needed to display one item / post / tweet in a stream """
 
-    def __init__(self, feed_obj, link, title, author, description, content, date, images, audios, videos):
+    def __init__(self, feed_obj, link, title, author, description, date, images, audios, videos):
         self.feed_obj = feed_obj
         self.link = link
         self.title = title
         self.author = author
         self.description = description
-        self.content = content
         self.date = date
         self.nice_date = date                   #time.strftime("%a, %d %b %Y", date)
         self.images = images # A list of urls
@@ -55,7 +54,8 @@ class Stream(object):
     def __init__(self, title, slug, feeds, stream_items):
         self.title = title
         self.slug = slug
-        self.filepath = "%s%s.html" % (OUTPUT_DIR, slug)
+        self.filename = "%s.html" % slug
+        self.filepath = os.path.join(OUTPUT_DIR, self.filename)            #"%s%s.html" % (OUTPUT_DIR, slug)
         self.feeds = feeds
         self.stream_items = stream_items
 
@@ -79,7 +79,7 @@ and packages it as a list of StreamItem objects """
         for e in d.entries:
             e_info_obj = StreamItem(feed_info_obj, get_entry_link(e),
                 get_entry_title(e), get_entry_author(e),
-                get_entry_description(e), get_entry_content(e),
+                get_entry_description(e),
                 get_entry_date(e), get_images(e), get_audio(e), get_video(e))
             stream_items.append(e_info_obj)
 
@@ -138,7 +138,7 @@ def get_entry_description(e):
         return e.description
     except:
         return "UNKNOWN"
-
+"""
 def get_entry_content(e):
     try:
         return e.content.value
@@ -147,6 +147,7 @@ def get_entry_content(e):
             return e.content
         except:
             return 0
+"""
 
 def get_entry_date(e):
     try:

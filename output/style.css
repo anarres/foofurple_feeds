@@ -2,7 +2,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Arial Black", Gadget, sans-serif;
     color: #000000;
 }
 html, body {
@@ -31,7 +31,8 @@ h2, h3, h4, h5, h6 {
     color: #424242;
 }
 h2 {
-    font-size: 1.6em;
+    font-size: 1.8em;
+    font-weight: normal;
 }
 h1, h1 a {
     font-weight: normal;
@@ -83,7 +84,7 @@ input, textarea {
 }
 #main {
     max-width: 700px;
-    min-width: 200px;
+    //min-width: 200px;
     margin-left: 10px;
     margin-bottom: 100px;
     margin-top: 20px;
@@ -159,7 +160,8 @@ input, textarea {
 }
 
 #settings_nav li.current a {
-    color: #aaa;
+    color: #424242;
+    background-color:#e6fbff;
 }
 
 /* Footer */
@@ -170,7 +172,6 @@ input, textarea {
     padding: 5px 0px;
     clear: both;
 }
-
 
 /* Splash home page */
 div.fancy {
@@ -283,7 +284,6 @@ span.remove_stream:hover, span.remove_feed:hover {
 .streamItem {
     border-top: 2px solid #34b8ba;
     max-width: 700px;
-    min-width: 200px;
 }
 div.feed_icon {
     width: 80px;
@@ -293,7 +293,7 @@ div.feed_icon {
 }
 
 div.default_icon {
-    background-image: url('/home/katie/prog/foofurple_feeds/images/default.png');
+    background-image: url('/home/katie/prog/foofurple_feeds/imagesdefault.png');
     padding: 3px;
     min-height: 60px;
     text-align: center;
@@ -343,4 +343,3 @@ div.feed_icon img {
     border-top: none;
     border-radius: 3px;
 }
-

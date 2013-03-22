@@ -1,10 +1,10 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 import json
 import shelve
 import webbrowser
 import feedparser
+import os
 
 import cache
 import webpagifier
@@ -14,13 +14,17 @@ from utils import slugify
 
 def display_wait_page():
     webpagifier.make_wait_page()
-    webbrowser.open('%swait.html' % OUTPUT_DIR)
+    path = os.path.join(OUTPUT_DIR, "wait.html")
+    webbrowser.open(path)
 
 def display_home_page():
-    webbrowser.open('%sindex.html' % OUTPUT_DIR)
+    path = os.path.join(OUTPUT_DIR, "index.html")
+    webbrowser.open(path)
+
 
 def get_parsed_data(urls=[]):
     """ Use Feedcache and FeedParser to get and cache the feeds """
+
     parsed_datums = []
     print "Saving feed data to ./.feedcache"
     storage = shelve.open('.feedcache')
@@ -75,7 +79,8 @@ def unique_title_and_slug(streams,s):
 
 def main():
     display_wait_page()
-    json_foo = open('%sjsonFoo.js' % JS_DIR,'r').read()
+    json_path = os.path.join(JS_DIR, "jsonFoo.js")
+    json_foo = open(json_path, 'r').read()
     start_delimiter = """/*STARTJSON*/"""
     end_delimiter = """/*ENDJSON*/"""
     json_foo = json_foo.split(start_delimiter)[1]
@@ -99,7 +104,7 @@ def main():
 
     if overwrite_json:
         output = "var jsonStreams = /*STARTJSON*/%s/*ENDJSON*/;" % json.dumps(json_streams)
-        f = open("%sjsonFoo.js" % JS_DIR, 'w')
+        f = open(json_path, 'w')
         f.write(output)
         f.close()
 

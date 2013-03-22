@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 from jinja2 import Template
@@ -6,13 +5,14 @@ from jinja2 import FileSystemLoader
 from jinja2.environment import Environment
 import logging
 import datetime
+import os
 
-from settings import BASE_DIR, OUTPUT_DIR, GLOBS
+from settings import BASE_DIR, OUTPUT_DIR, TEMPLATES_DIR, GLOBS
 import feed_sifter
 from utils import nice_now
 
 env = Environment()
-env.loader = FileSystemLoader('%stemplates/' % BASE_DIR)
+env.loader = FileSystemLoader(TEMPLATES_DIR)
 
 def date_msg():
     now = nice_now()
@@ -21,7 +21,8 @@ def date_msg():
 
 def make_wait_page():
     tmpl = env.get_template('wait.html')
-    f = open('%swait.html' % OUTPUT_DIR, 'w')
+    path = os.path.join(OUTPUT_DIR, "wait.html")
+    f = open(path, 'w')
     f.write(tmpl.render({'GLOBS':GLOBS}))
     f.close()
 
@@ -30,7 +31,8 @@ def make_all_the_webpages(streams):
 
     # Write the style.css
     tmpl = env.get_template('style.css')
-    f = open('%sstyle.css' % OUTPUT_DIR, 'w')
+    path = os.path.join(OUTPUT_DIR, "style.css")
+    f = open(path, 'w')
     f.write(tmpl.render({'GLOBS':GLOBS}))
     f.close()
 
@@ -38,20 +40,22 @@ def make_all_the_webpages(streams):
 
     # Write the index page
     tmpl = env.get_template('index.html')
-    f = open('%sindex.html' % OUTPUT_DIR, 'w')
+    path = os.path.join(OUTPUT_DIR, "index.html")
+    f = open(path, 'w')
     f.write(tmpl.render({'title':'About','streams':streams,'GLOBS':GLOBS,'footer':footer}))
     f.close()
 
     # Write the settings page
     tmpl = env.get_template('settings.html')
-    f = open('%ssettings.html' % OUTPUT_DIR, 'w')
+    path = os.path.join(OUTPUT_DIR, "settings.html")
+    f = open(path, 'w')
     f.write(tmpl.render({'title':'Settings','GLOBS':GLOBS,'footer':footer}))
     f.close()
 
-
     # Write the about page
     tmpl = env.get_template('about.html')
-    f = open('%sabout.html' % OUTPUT_DIR, 'w')
+    path = os.path.join(OUTPUT_DIR, "about.html")
+    f = open(path, 'w')
     f.write(tmpl.render({'title':'About','GLOBS':GLOBS,'footer':footer}))
     f.close()
 
