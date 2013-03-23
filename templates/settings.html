@@ -11,9 +11,9 @@ Settings | Feed Reader
 
 {% block javascript %}
 
-<script type='text/javascript' src='{{ GLOBS.JS_DIR }}utils.js'></script>
-<script type='text/javascript' src='{{ GLOBS.JS_DIR }}jsonFoo.js'></script>
-<script type='text/javascript' src='{{ GLOBS.JS_DIR }}settings.js'></script>
+<script type='text/javascript' src='utils.js'></script>
+<script type='text/javascript' src='jsonFoo.js'></script>
+<script type='text/javascript' src='settings.js'></script>
 
 {% endblock %}
 
@@ -42,7 +42,7 @@ be prompted to save a settings file.</p>
 <p>If you don't want to save your changes, just reload this page to start anew.</p>
 
 <div id="newFeed">
-    <p id="newFeedClose" onclick="newFeedClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
+    <p id="newFeedClose" onclick="newFeedClose()"><img src='FIXME' alt='close'></p>
     <h3>Add a new feed:</h3>
     <p>
         Feed url:
@@ -54,7 +54,7 @@ be prompted to save a settings file.</p>
 
 </div>
 <div id="addStream">
-    <p id="addStreamClose" onclick="addStreamClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
+    <p id="addStreamClose" onclick="addStreamClose()"><img src='FIXME' alt='close'></p>
     <h3>Add a new set of feeds:</h3>
     <p>
         Name:
@@ -63,10 +63,10 @@ be prompted to save a settings file.</p>
     </p>
 </div>
 <div id="saveAllChanges">
-    <p id="saveAllChangesClose" onclick="saveAllChangesClose()"><img src='{{ GLOBS.IMAGES_DIR }}close_icon.png' alt='close'></p>
+    <p id="saveAllChangesClose" onclick="saveAllChangesClose()"><img src='FIXME' alt='close'></p>
     <h3>Save all changes</h3>
     <p>To save your changes, please right-click the file below and 
-        save it as {{ GLOBS.JS_DIR }}jsonFoo.js. You'll probably
+        save it as {{ GLOBS.JSON_PATH }}. You'll probably
         need to overwrite an existing file.</p>
     <p><a id="saveAllChangesLink" href="">
         <img src='{{ GLOBS.IMAGES_DIR }}save.png' alt='save'>

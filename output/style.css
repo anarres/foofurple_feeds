@@ -78,13 +78,15 @@ button {
 input, textarea {
     cursor: text;
 }
+label {
+    font-weight: bold;
+}
 #container {
     max-width: 920px;
     margin: 0px auto;
 }
 #main {
     max-width: 700px;
-    //min-width: 200px;
     margin-left: 10px;
     margin-bottom: 100px;
     margin-top: 20px;
@@ -146,8 +148,8 @@ input, textarea {
     display: inline;
     list-style: none;
     border-radius: 6px;
-    padding: 2px 4px;
-    margin-left: 4px;
+    padding: 4px 8px;
+    margin: 0px 4px;
 }
 #settings_nav a {
     padding: 2px 8px;
@@ -159,9 +161,11 @@ input, textarea {
     color: #dc0000;
 }
 
+#settings_nav li.current {
+    //background-color:#e6fbff;
+}
 #settings_nav li.current a {
     color: #424242;
-    background-color:#e6fbff;
 }
 
 /* Footer */
@@ -266,6 +270,7 @@ button.addFeedToStream:hover {
 span.remove_stream, span.remove_feed {
     color: #aa0000;
     cursor: pointer;
+    font-size: 0.9em;
 }
 span.remove_feed {
     display: block;

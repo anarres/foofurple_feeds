@@ -21,6 +21,12 @@
 
 <div id="container">
 
+<div id="settings_nav">
+    {% block settings_nav %} {% endblock %}
+</div> <!--#settings_nav-->
+
+<div style="clear:both;"></div>
+
 <div id="side">
     <a href="index.html">
         <img src="{{ GLOBS.LOGO_PATH }}" 
@@ -36,11 +42,6 @@
     </div> <!--#nav-->
 
 </div>
-
-<div id="settings_nav">
-    {% block settings_nav %} {% endblock %}
-</div> <!--#settings_nav-->
-
 
 <div id="main">
     {% block main_content %} {% endblock %}

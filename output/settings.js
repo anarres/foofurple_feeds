@@ -15,20 +15,25 @@ function getStreamHtml(number, streamName, feedsArray) {
     var html = "";
     html += "<div class='stream'>";
     html += "<span class='remove_stream'>(remove the entire set)</span>";
-    html += "<h3>";
-    html += "Set of feeds ";
-    html += number;
-    html += "</h3>";
+
+
+
+
+
     html += "<span class='streamTitleList' id='";
     html += streamName;
     html += "List'>";
-    html += "<h3>Name:</h3> <input type='text' class='streamNameInput' id='";
+    html += "<label for='";
+    html += streamName;
+    html += "'>Name of set of feeds ";
+    html += number;
+    html += ": </label> <input type='text' class='streamNameInput' id='";
     html += streamName;
     html += "NameInput' value='";
     html += streamName;
     html += "'>";
     html += "</span>";
-    html += "<h3>Feeds:</h3>";
+    html += "<br><label>Feeds:</label>";
     html += "<ul id='";
     html += streamName;
     html += "ListReally'>";
@@ -175,12 +180,6 @@ function saveAllChanges() {
         var streamName = document.getElementById(tempName).value;
 
         output += streamName;
-
-
-
-
-
-
 
         //output += ulArray[i].id.slice(0,-4);
         output += "\",";
