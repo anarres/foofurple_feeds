@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "Arial Black", Gadget, sans-serif;
-    color: #000000;
+    color: #000;
 }
 html, body {
     height: 100%;
@@ -28,22 +28,22 @@ h2, h3, h4, h5, h6 {
     font-size: 1.3em;
     font-weight: normal;
     padding: 10px 0px;
-    color: #424242;
 }
 h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: normal;
+    padding-top: 15px;
 }
+
 h1, h1 a {
     font-weight: normal;
     font-size: 0.8em;
     padding: 0px;
     text-align: left;
-    color: #424242;
+    color: #000;
 }
 p {
-    line-height: 1.2em;
-    padding: 7px 0px;
+    padding: 10px 0px;
 }
 p.msg {
     color: blue;
@@ -107,6 +107,22 @@ label {
     width: 90px;
     height: auto;
 }
+
+/* About page */
+div.longText p {
+    line-height: 1.5em;
+}
+div.longText h2 {
+    padding: 15px 0px;
+}
+div.longText h3 {
+    font-size: 1.3em;
+    font-weight: normal;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+
+
 
 /* Nav */ 
 #nav {
